@@ -15,7 +15,7 @@ export default function WhoCanJoin({ onOpenRegister }: WhoCanJoinProps) {
         {/* Left Column: Dark Photo (Partnering / Piggyback at dusk near water) */}
         <div className="relative h-72 sm:h-96 lg:h-auto overflow-hidden group">
           <Image
-            src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1000&auto=format&fit=crop"
+            src="/images/IMG_3116.PNG"
             alt="Parkour partners training near the water at dusk"
             fill
             sizes="(max-width: 1024px) 100vw, 33vw"

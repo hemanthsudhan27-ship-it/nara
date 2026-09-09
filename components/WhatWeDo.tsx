@@ -16,8 +16,7 @@ const DISCIPLINES: Discipline[] = [
     title: "Parkour",
     description:
       "Learn to move through your environment with better control, strength, coordination and awareness.",
-    image:
-      "https://images.unsplash.com/photo-1519766304817-4f37bda74a29?q=80&w=800&auto=format&fit=crop",
+    image: "/images/IMG_3115.PNG",
   },
   {
     id: "freerunning",
@@ -25,8 +24,7 @@ const DISCIPLINES: Discipline[] = [
     title: "Freerunning",
     description:
       "Explore movement through flow, creativity, style and personal expression.",
-    image:
-      "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?q=80&w=800&auto=format&fit=crop",
+    image: "/images/IMG_3117.PNG",
   },
   {
     id: "tricking",
@@ -34,8 +32,7 @@ const DISCIPLINES: Discipline[] = [
     title: "Tricking",
     description:
       "A dynamic combination of kicks, spins, flips and martial-arts-inspired movement.",
-    image:
-      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800&auto=format&fit=crop",
+    image: "/images/IMG_3116.PNG",
   },
   {
     id: "workshops",

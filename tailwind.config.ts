@@ -25,9 +25,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        headline: ["'Crossfly'", "sans-serif"],
-        body: ["var(--font-body)", "Inter", "sans-serif"],
-        script: ["var(--font-script)", "Caveat", "cursive"],
+        headline: ["'Bebas Neue'", "var(--font-headline)", "sans-serif"],
+        body: ["'Poppins'", "var(--font-body)", "sans-serif"],
+        sub: ["'Poppins'", "var(--font-body)", "sans-serif"],
+        mono: ["'Poppins'", "ui-monospace", "monospace"],
       },
       letterSpacing: {
         tighter: "-0.04em",

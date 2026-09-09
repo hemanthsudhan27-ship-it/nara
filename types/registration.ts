@@ -5,6 +5,7 @@ export interface RegistrationData {
   sessionBatch: string;
   message?: string;
   upiReference?: string;
+  bankAccountName?: string;
   amount: number;
   screenshotBase64?: string;
   screenshotName?: string;

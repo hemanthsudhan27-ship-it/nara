@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
-import HandwrittenAccent from "@/components/HandwrittenAccent";
 import { useRegister } from "@/context/RegisterContext";
 
 const DISCIPLINES_DETAILED = [
@@ -18,8 +17,7 @@ const DISCIPLINES_DETAILED = [
       "Cat Leaps & Wall Climbs",
       "Parkour Roll & Shock Dissipation",
     ],
-    image:
-      "https://images.unsplash.com/photo-1519766304817-4f37bda74a29?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/IMG_3115.PNG",
   },
   {
     num: "02",
@@ -32,8 +30,7 @@ const DISCIPLINES_DETAILED = [
       "Flow Line Sequencing",
       "Bar Swings & Lache Transfers",
     ],
-    image:
-      "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/IMG_3117.PNG",
   },
   {
     num: "03",
@@ -46,8 +43,7 @@ const DISCIPLINES_DETAILED = [
       "Aerials & Webster Flips",
       "Corkscrews & Swing-Through Combos",
     ],
-    image:
-      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/IMG_3116.PNG",
   },
   {
     num: "04",
@@ -99,13 +95,6 @@ export default function WhatWeDoPage() {
               From pure utilitarian obstacle traversal to creative flow and explosive
               acrobatics. Explore the 5 pillars of the NARA movement method.
             </p>
-          </div>
-
-          <div className="absolute right-8 bottom-4 hidden lg:block">
-            <HandwrittenAccent
-              text="MOVEMENT IN MANY FORMS"
-              rotate="-rotate-2"
-            />
           </div>
         </div>
       </section>

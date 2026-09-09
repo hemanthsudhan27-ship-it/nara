@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ZoomIn, X, Instagram } from "lucide-react";
-import HandwrittenAccent from "@/components/HandwrittenAccent";
 
 interface GalleryItem {
   id: string;
@@ -121,13 +120,6 @@ export default function GalleryPage() {
               Action frames, sunset sessions, and athlete progression along the
               Malabar coast of Kerala.
             </p>
-          </div>
-
-          <div className="absolute right-8 bottom-4 hidden lg:block">
-            <HandwrittenAccent
-              text="CALICUT MOVES DIFFERENTLY"
-              rotate="rotate-2"
-            />
           </div>
         </div>
       </section>

@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { MapPin, Mail, Phone, MessageSquare, Instagram, Clock, Send, CheckCircle2 } from "lucide-react";
-import HandwrittenAccent from "@/components/HandwrittenAccent";
 import { useRegister } from "@/context/RegisterContext";
 
 export default function ContactPage() {
@@ -38,13 +37,6 @@ export default function ContactPage() {
               session fees? Reach out to the Team NARA coaches.
             </p>
           </div>
-
-          <div className="absolute right-8 bottom-4 hidden lg:block">
-            <HandwrittenAccent
-              text="CALICUT MOVES DIFFERENTLY"
-              rotate="-rotate-1"
-            />
-          </div>
         </div>
       </section>
 
@@ -62,8 +54,17 @@ export default function ContactPage() {
                   WHERE WE MEET
                 </h2>
                 <p className="text-sm text-neutral-400 leading-relaxed">
-                  Our outdoor sessions meet primarily along the scenic South Beach
-                  corridor of Calicut. Look for the orange Team NARA gear!
+                  Currently, we conduct our outdoor Parkour &amp; Freerunning classes at
+                  different locations across Calicut. Led by Trainer{" "}
+                  <a
+                    href="https://instagram.com/dadubruce"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-orange font-bold hover:underline"
+                  >
+                    @dadubruce
+                  </a>
+                  .
                 </p>
               </div>
 
@@ -71,30 +72,28 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="p-5 rounded-2xl bg-[#1C1C1C] border border-white/10 space-y-2">
                   <div className="flex items-center gap-2.5 text-brand-orange font-bold text-sm uppercase font-headline">
-                    <MapPin className="w-4 h-4" />
-                    <span>South Beach Promenade (Primary Spot)</span>
+                    <Clock className="w-4 h-4" />
+                    <span>Class Schedule</span>
                   </div>
-                  <p className="text-xs text-neutral-300">
-                    Near South Beach Open Stage &amp; Breakwater walkway, Kozhikode,
-                    Kerala 673001.
+                  <p className="text-sm font-bold text-white">
+                    Monday, Wednesday &amp; Friday • 6:00 AM – 7:30 AM
                   </p>
                   <div className="flex items-center gap-2 text-[11px] font-mono text-neutral-400 pt-1">
-                    <Clock className="w-3.5 h-3.5 text-brand-orange" />
-                    <span>Sat &amp; Sun: 6:30 AM &amp; 5:00 PM</span>
+                    <MapPin className="w-3.5 h-3.5 text-brand-orange" />
+                    <span>Different outdoor spots across Calicut</span>
                   </div>
                 </div>
 
                 <div className="p-5 rounded-2xl bg-[#1C1C1C] border border-white/10 space-y-2">
                   <div className="flex items-center gap-2.5 text-brand-orange font-bold text-sm uppercase font-headline">
                     <MapPin className="w-4 h-4" />
-                    <span>Mananchira Urban Square</span>
+                    <span>Fees &amp; Requirements</span>
                   </div>
                   <p className="text-xs text-neutral-300">
-                    Opposite Crown Theatre perimeter walls, Kozhikode.
+                    Admission Fee: <strong className="text-white">₹2,500</strong> (one-time) • Monthly Fee: <strong className="text-white">₹2,000</strong>
                   </p>
-                  <div className="flex items-center gap-2 text-[11px] font-mono text-neutral-400 pt-1">
-                    <Clock className="w-3.5 h-3.5 text-brand-orange" />
-                    <span>Weekday drills: Tue &amp; Thu 6:00 AM</span>
+                  <div className="text-[11px] text-brand-orange font-mono pt-1">
+                    ⚠ Required: Bring your own yoga mat &amp; water bottle
                   </div>
                 </div>
               </div>

@@ -14,8 +14,9 @@ export function RegisterProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedBatch, setSelectedBatch] = useState<string | undefined>(undefined);
 
-  const openRegister = (batch?: string) => {
-    setSelectedBatch(batch);
+  const openRegister = (batch?: unknown) => {
+    const validBatch = typeof batch === "string" ? batch : undefined;
+    setSelectedBatch(validBatch);
     setIsOpen(true);
   };
 

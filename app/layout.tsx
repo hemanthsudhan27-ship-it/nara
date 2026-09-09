@@ -1,30 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Anton, Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import { RegisterProvider } from "@/context/RegisterContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SplashScreen from "@/components/SplashScreen";
 import TitleReveal from "@/components/TitleReveal";
-
-const fontHeadline = Anton({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-headline",
-  display: "swap",
-});
-
-const fontBody = Inter({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-const fontScript = Caveat({
-  subsets: ["latin"],
-  variable: "--font-script",
-  display: "swap",
-});
+import ScrollToTop from "@/components/ScrollToTop";
+import MobileJoinBar from "@/components/MobileJoinBar";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -79,12 +61,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fontHeadline.variable} ${fontBody.variable} ${fontScript.variable} scroll-smooth`}
+      className="scroll-smooth"
     >
       <head>
-        <link href="https://fonts.cdnfonts.com/css/crossfly" rel="stylesheet" />
-        <link rel="icon" href="/logo/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo/logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className="bg-[#141414] text-neutral-100 antialiased selection:bg-brand-orange selection:text-white font-body flex flex-col min-h-screen">
         <RegisterProvider>
@@ -93,6 +82,8 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <ScrollToTop />
+          <MobileJoinBar />
         </RegisterProvider>
       </body>
     </html>

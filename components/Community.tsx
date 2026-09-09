@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import HandwrittenAccent from "./HandwrittenAccent";
 
 export default function Community() {
   return (
@@ -40,14 +39,6 @@ export default function Community() {
                 From beachside concrete benches to seaside promenades, we transform
                 the city of Calicut into our canvas.
               </p>
-            </div>
-
-            <div className="pt-2">
-              <HandwrittenAccent
-                text="SAME CITY BIGGER MOVEMENT"
-                rotate="-rotate-1"
-                className="mt-2"
-              />
             </div>
           </div>
 

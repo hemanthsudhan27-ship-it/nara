@@ -63,12 +63,11 @@ export async function POST(request: Request) {
       fullName: body.fullName.trim(),
       phone: body.phone.trim(),
       email: body.email.trim(),
-      sessionBatch: body.sessionBatch || "General Outdoor Session",
+      sessionBatch: body.sessionBatch || "Outdoor Parkour & Freerunning (Mon, Wed & Fri 6:00 AM)",
       message: body.message?.trim() || "",
-      amount: body.amount || 799,
+      amount: body.amount || 2500,
       upiReference: body.upiReference.trim(),
-      screenshotUrl: fullScreenshotUrl || screenshotUrl,
-      screenshotName: body.screenshotName,
+      bankAccountName: body.bankAccountName?.trim() || "",
       status: "PENDING_VERIFICATION",
     };
 
@@ -77,23 +76,26 @@ export async function POST(request: Request) {
 
     // Construct formatted WhatsApp message
     const messageLines = [
-      "🔥 *TEAM NARA — SESSION BOOKING & PAYMENT PROOF*",
+      "🔥 *TEAM NARA — OUTDOOR CLASS ADMISSION*",
       "",
       `📋 *Registration ID:* ${registrationId}`,
-      `👤 *Name:* ${body.fullName.trim()}`,
+      `👤 *Student Name:* ${body.fullName.trim()}`,
       `📞 *Phone:* ${body.phone.trim()}`,
       `✉️ *Email:* ${body.email.trim()}`,
-      `🏃 *Session Batch:* ${body.sessionBatch || "General Outdoor Session"}`,
-      `💰 *Amount:* ₹${body.amount || 799}`,
+      `🏃 *Class:* ${body.sessionBatch || "Outdoor Parkour & Freerunning"}`,
+      `💰 *Admission Fee Paid:* ₹${body.amount || 2500} (Monthly Fee: ₹2,000)`,
+      `🏦 *Name as in Bank Account:* ${body.bankAccountName?.trim() || "N/A"}`,
       `💳 *UPI Ref / UTR:* ${body.upiReference.trim()}`,
+      `👟 *Trainer:* @dadubruce`,
+      `📅 *Schedule:* Mon, Wed & Fri • 6:00 AM – 7:30 AM`,
+      `🧘 *Requirements:* Yoga mat & bottle of water`,
+      `📸 *Payment Screenshot:* (Attaching screenshot below in this chat)`,
+      "",
+      `🎉 _"We look forward to seeing you in class!"_`,
     ];
 
     if (body.message?.trim()) {
-      messageLines.push(`📝 *Notes:* ${body.message.trim()}`);
-    }
-
-    if (body.screenshotName) {
-      messageLines.push("", `📸 *Payment Screenshot:* ${body.screenshotName} (Attached)`);
+      messageLines.push("", `📝 *Notes:* ${body.message.trim()}`);
     }
 
     const whatsappText = messageLines.join("\n");

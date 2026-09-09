@@ -2,8 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { MapPin, Calendar, Award, ArrowRight } from "lucide-react";
-import HandwrittenAccent from "./HandwrittenAccent";
+import { ArrowRight, MapPin, Calendar, Award } from "lucide-react";
 
 interface SessionsProps {
   onOpenRegister: (batch?: string) => void;
@@ -24,75 +23,94 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
             <div className="inline-flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-brand-orange" />
               <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-brand-orange font-mono">
-                TRAIN WITH US
+                OUTDOOR CLASSES • CALICUT
               </span>
             </div>
 
             {/* Headline */}
             <h2 className="font-headline font-black text-3xl xs:text-4xl sm:text-6xl md:text-7xl tracking-[0.04em] sm:tracking-[0.06em] leading-[0.98] uppercase text-brand-dark">
-              OUTDOOR PARKOUR <br className="hidden sm:inline" />
-              <span className="text-brand-orange">SESSIONS</span>
+              PARKOUR &amp; <br className="hidden sm:inline" />
+              <span className="text-brand-orange">FREERUNNING</span>
             </h2>
 
-            {/* Two Short Paragraphs */}
+            {/* Realistic Copy */}
             <div className="space-y-4 text-neutral-700 text-sm sm:text-base lg:text-lg leading-relaxed font-normal max-w-xl">
               <p>
-                Our sessions run outdoors across Calicut&apos;s coastline, public parks,
-                and architectural plazas. Designed for anyone who wants to learn
-                parkour, build raw functional strength, improve spatial coordination,
-                and discover what their body is truly capable of.
+                Currently, we conduct our outdoor Parkour &amp; Freerunning classes at
+                different locations across Calicut. Led by certified trainer{" "}
+                <a
+                  href="https://instagram.com/dadubruce"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-brand-orange hover:underline inline-flex items-center gap-0.5"
+                >
+                  @dadubruce
+                </a>
+                .
               </p>
               <p>
-                No gymnastics or athletic background required. We meet every mover
-                exactly where they are at—progressing safely from grounded fundamentals,
-                balance drills, and low vaults to dynamic flow and explosive freerunning.
+                Learn real parkour fundamentals, build functional strength, master vault
+                mechanics, and progress safely from grounded drills to dynamic movement flow.
               </p>
             </div>
 
-            {/* CTA + Mobile Handwritten Accent */}
+            {/* Schedule & Fee Highlights Box */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-white border border-neutral-200/80 shadow-sm space-y-3 max-w-xl">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                <div>
+                  <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-neutral-500 block">
+                    Class Schedule
+                  </span>
+                  <p className="font-extrabold text-neutral-900 mt-0.5">
+                    Mon, Wed &amp; Fri
+                  </p>
+                  <p className="text-xs text-neutral-600">6:00 AM – 7:30 AM</p>
+                </div>
+                <div>
+                  <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-neutral-500 block">
+                    Fee Structure
+                  </span>
+                  <p className="font-extrabold text-brand-orange mt-0.5">
+                    Admission Fee: ₹2,500
+                  </p>
+                  <p className="text-xs text-neutral-600">Monthly Fee: ₹2,000</p>
+                </div>
+              </div>
+              <div className="pt-2 border-t border-neutral-100 flex items-center gap-2 text-xs text-neutral-600">
+                <span className="text-brand-orange font-bold font-mono">REQUIRED:</span>
+                <span>Bring your own yoga mat &amp; water bottle for every session.</span>
+              </div>
+            </div>
+
+            {/* CTA */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6">
               <button
-                onClick={() => onOpenRegister("Weekend Sunset Session — Calicut Beach (5:00 PM)")}
+                onClick={() => onOpenRegister("Outdoor Parkour & Freerunning — Mon, Wed & Fri (6:00 AM – 7:30 AM)")}
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-brand-orange hover:bg-brand-orange-hover text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition shadow-lg shadow-brand-orange/20 active:scale-98"
               >
-                <span>Register for a Session</span>
+                <span>Register for Admission (₹2,500)</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-
-              <div className="sm:hidden">
-                <HandwrittenAccent
-                  text="CALICUT MOVES DIFFERENTLY"
-                  rotate="-rotate-2"
-                />
-              </div>
             </div>
           </div>
 
-          {/* Right Column: Visual Photo + Handwritten Accent */}
+          {/* Right Column: Visual Photo */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Image Frame with Gritty Offset Accent */}
+              {/* Image Frame */}
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900 group">
                 <Image
                   src="/images/IMG_3115.PNG"
-                  alt="Parkour session training along palm-lined seaside promenade in Calicut"
+                  alt="Parkour & Freerunning outdoor class in Calicut led by trainer @dadubruce"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-mono tracking-wider uppercase bg-black/40 backdrop-blur-md px-3 py-2 rounded-lg border border-white/20">
-                  Calicut Beach Coastal Plaza • 06:30 AM
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90" />
+                <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-mono tracking-wider uppercase bg-black/60 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-white/20 space-y-0.5">
+                  <p className="font-bold text-brand-orange">Trainer: @dadubruce</p>
+                  <p className="text-[11px] text-neutral-300">Mon, Wed &amp; Fri • 6:00 AM – 7:30 AM</p>
                 </div>
-              </div>
-
-              {/* Handwritten Accent Float on Desktop */}
-              <div className="hidden sm:block absolute -top-8 -right-6 z-20">
-                <HandwrittenAccent
-                  text="CALICUT MOVES DIFFERENTLY"
-                  rotate="rotate-3"
-                  className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-brand-orange/20"
-                />
               </div>
             </div>
           </div>
@@ -107,49 +125,49 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
             </div>
             <div>
               <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-500 font-mono">
-                Location
+                Locations
               </span>
               <h3 className="text-base sm:text-lg font-black font-headline uppercase text-brand-dark mt-0.5">
-                Calicut Beach
+                Across Calicut
               </h3>
               <p className="text-xs text-neutral-600 mt-1">
-                South Beach Promenade, Kozhikode, Kerala
+                Outdoor spots &amp; coastal grounds in Kozhikode
               </p>
             </div>
           </div>
 
-          {/* Stat 2: Sessions */}
+          {/* Stat 2: Schedule */}
           <div className="flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white/80 border border-neutral-200/80 shadow-sm hover:border-brand-orange/40 transition">
             <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange flex-shrink-0">
               <Calendar className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
               <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-500 font-mono">
-                Sessions
+                Class Schedule
               </span>
               <h3 className="text-base sm:text-lg font-black font-headline uppercase text-brand-dark mt-0.5">
-                Regular Outdoor
+                Mon, Wed &amp; Fri
               </h3>
               <p className="text-xs text-neutral-600 mt-1">
-                Weekend morning/sunset and weekday drills
+                ⏰ 6:00 AM – 7:30 AM
               </p>
             </div>
           </div>
 
-          {/* Stat 3: Level */}
+          {/* Stat 3: Fees & Trainer */}
           <div className="flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white/80 border border-neutral-200/80 shadow-sm hover:border-brand-orange/40 transition">
             <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange flex-shrink-0">
               <Award className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
               <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-500 font-mono">
-                Level
+                Fees &amp; Trainer
               </span>
               <h3 className="text-base sm:text-lg font-black font-headline uppercase text-brand-dark mt-0.5">
-                All Levels Welcome
+                ₹2,500 Adm • @dadubruce
               </h3>
               <p className="text-xs text-neutral-600 mt-1">
-                Beginners to experienced practitioners
+                Monthly: ₹2,000 • Bring yoga mat &amp; water
               </p>
             </div>
           </div>

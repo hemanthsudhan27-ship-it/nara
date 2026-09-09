@@ -23,7 +23,7 @@ export default function CtaBanner({ onOpenRegister }: CtaBannerProps) {
             </span>
 
             <h2
-              onClick={onOpenRegister}
+              onClick={() => onOpenRegister()}
               className="cursor-pointer group flex flex-wrap items-center gap-2.5 sm:gap-3 font-headline font-black text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight uppercase tracking-[0.04em] sm:tracking-[0.06em] select-none hover:text-black transition-colors duration-200"
             >
               <span>START MOVING WITH US.</span>

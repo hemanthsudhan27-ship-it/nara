@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { Users, HeartHandshake, ShieldCheck, Sparkles, Instagram, ArrowRight } from "lucide-react";
-import HandwrittenAccent from "@/components/HandwrittenAccent";
 import { useRegister } from "@/context/RegisterContext";
 
 const COMMUNITY_RULES = [
@@ -63,13 +62,6 @@ export default function CommunityPage() {
               More than training sessions, Team NARA is a close-knit movement family.
               United by passion, discipline, and the pursuit of human potential.
             </p>
-          </div>
-
-          <div className="absolute right-8 bottom-4 hidden lg:block">
-            <HandwrittenAccent
-              text="SAME CITY BIGGER MOVEMENT"
-              rotate="rotate-2"
-            />
           </div>
         </div>
       </section>

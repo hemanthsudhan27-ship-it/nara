@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Shield, Heart, Compass, CheckCircle2 } from "lucide-react";
-import HandwrittenAccent from "@/components/HandwrittenAccent";
 import { useRegister } from "@/context/RegisterContext";
 
 export default function AboutPage() {
@@ -27,13 +26,6 @@ export default function AboutPage() {
               Born on the seaside promenades of Kozhikode, Team NARA is Kerala&apos;s
               pioneering collective dedicated to Parkour, Freerunning, and Tricking.
             </p>
-          </div>
-
-          <div className="absolute right-8 bottom-4 hidden lg:block">
-            <HandwrittenAccent
-              text="MOVEMENT PEOPLE A BETTER TOMORROW"
-              rotate="rotate-2"
-            />
           </div>
         </div>
       </section>
@@ -66,13 +58,6 @@ export default function AboutPage() {
                   Today, Team NARA has evolved into an active brotherhood and sisterhood
                   of traceurs, trickers, and movers of all skill levels across Kerala.
                 </p>
-              </div>
-
-              <div className="pt-4">
-                <HandwrittenAccent
-                  text="SAME CITY BIGGER MOVEMENT"
-                  rotate="-rotate-2"
-                />
               </div>
             </div>
 

@@ -3,7 +3,7 @@
 // TODO: replace manual UPI verification with Razorpay Checkout integration once live
 import React, { useState } from "react";
 import Image from "next/image";
-import { Check, Copy, AlertCircle, Upload, ShieldCheck } from "lucide-react";
+import { Check, Copy, AlertCircle, ShieldCheck } from "lucide-react";
 import { RegistrationData } from "@/types/registration";
 
 interface PaymentStepProps {
@@ -24,43 +24,14 @@ export default function PaymentStep({
   error,
 }: PaymentStepProps) {
   const [copied, setCopied] = useState(false);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(formData.screenshotBase64 || null);
   const upiId = "teamnara@upi";
 
   const handleCopyUpi = () => {
-    navigator.clipboard.writeText(upiId);
+    if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(upiId).catch(() => {});
+    }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      if (file.size > 10 * 1024 * 1024) {
-        alert("Screenshot image size is too large (max 10MB). Please select a smaller file.");
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = () => {
-        const base64 = reader.result as string;
-        setPreviewUrl(base64);
-        setFormData((prev) => ({
-          ...prev,
-          screenshotBase64: base64,
-          screenshotName: file.name,
-        }));
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleRemoveScreenshot = () => {
-    setPreviewUrl(null);
-    setFormData((prev) => ({
-      ...prev,
-      screenshotBase64: undefined,
-      screenshotName: undefined,
-    }));
   };
 
   return (
@@ -69,18 +40,30 @@ export default function PaymentStep({
         <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
           <div>
             <span className="text-xs font-semibold tracking-widest text-brand-orange uppercase">
-              Admission Fee
+              Admission Fee (One-Time)
             </span>
-            <h4 className="text-2xl font-bold font-headline">
+            <h4 className="text-2xl sm:text-3xl font-bold font-headline text-white">
               ₹{formData.amount}
             </h4>
+            <span className="text-[11px] text-neutral-400 font-mono block">
+              + Monthly Fee: ₹2,000
+            </span>
           </div>
           <div className="text-right">
-            <span className="text-xs text-neutral-400">Selected Batch</span>
-            <p className="text-sm font-medium text-white truncate max-w-[180px]">
-              {formData.sessionBatch || "Weekend Session"}
+            <span className="text-xs text-neutral-400">Class &amp; Schedule</span>
+            <p className="text-xs sm:text-sm font-semibold text-white truncate max-w-[200px]">
+              Mon, Wed &amp; Fri • 6:00 AM
+            </p>
+            <p className="text-[11px] text-brand-orange font-mono">
+              Trainer: @dadubruce
             </p>
           </div>
+        </div>
+
+        {/* Gear Requirement Reminder */}
+        <div className="mb-4 p-2.5 rounded-xl bg-brand-orange/10 border border-brand-orange/25 flex items-center gap-2 text-xs text-neutral-200">
+          <span className="text-sm">🧘</span>
+          <span><strong>Required:</strong> Bring your own yoga mat &amp; water bottle to every class.</span>
         </div>
 
         {/* QR Code & Instructions */}
@@ -98,11 +81,11 @@ export default function PaymentStep({
           <div className="space-y-2 text-center sm:text-left flex-1">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-medium">
               <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Manual UPI Verification</span>
+              <span>Admission Verification</span>
             </div>
             <p className="text-xs text-neutral-300 leading-relaxed">
-              Scan the QR code using Google Pay, PhonePe, Paytm, or any UPI app,
-              or pay directly to the UPI ID below.
+              Pay the ₹2,500 admission fee using Google Pay, PhonePe, Paytm, or any UPI app,
+              or transfer directly to the UPI ID below.
             </p>
 
             <div className="flex items-center justify-center sm:justify-start gap-2 pt-1">
@@ -157,63 +140,44 @@ export default function PaymentStep({
           </p>
         </div>
 
-        {/* Screenshot Upload with Preview */}
+        {/* Name as in Bank Account */}
         <div>
-          <div className="flex items-center justify-between mb-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-300">
-              Payment Screenshot
-            </label>
-            <span className="text-[11px] text-[#25D366] font-medium flex items-center gap-1">
-              📲 Sent to +91 7907318843
+          <label
+            htmlFor="bankAccountName"
+            className="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5"
+          >
+            Name as in Bank Account <span className="text-brand-orange">*</span>
+          </label>
+          <input
+            id="bankAccountName"
+            name="bankAccountName"
+            type="text"
+            required
+            placeholder="e.g. Rahul K / As shown in GPay, PhonePe or Bank"
+            value={formData.bankAccountName || ""}
+            onChange={(e) =>
+              setFormData({ ...formData, bankAccountName: e.target.value })
+            }
+            className="w-full px-4 py-2.5 sm:py-3 bg-[#181818] border border-white/10 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-brand-orange transition text-base sm:text-sm"
+          />
+          <p className="text-[11px] text-neutral-400 mt-1">
+            The account holder name from which the UPI payment was sent.
+          </p>
+        </div>
+
+        {/* WhatsApp Payment Screenshot Upload Clause */}
+        <div className="p-4 rounded-xl bg-[#25D366]/10 border border-[#25D366]/30 text-left space-y-2">
+          <div className="flex items-center gap-2">
+            <svg className="w-4 h-4 fill-[#25D366] flex-shrink-0" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#25D366]">
+              Payment Verification Notice
             </span>
           </div>
-
-          {previewUrl ? (
-            <div className="relative p-3 bg-[#181818] border border-white/20 rounded-xl flex items-center gap-3">
-              <div className="relative w-14 h-14 rounded-lg overflow-hidden border border-white/10 flex-shrink-0 bg-black">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={previewUrl}
-                  alt="Payment receipt preview"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-xs font-semibold text-white truncate">
-                  {formData.screenshotName || "Payment Receipt"}
-                </p>
-                <p className="text-[11px] text-brand-orange flex items-center gap-1 mt-0.5">
-                  <Check className="w-3 h-3" /> Ready for WhatsApp & verification
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={handleRemoveScreenshot}
-                className="p-1.5 rounded-lg text-neutral-400 hover:text-red-400 hover:bg-white/5 transition text-xs"
-                title="Remove screenshot"
-              >
-                ✕
-              </button>
-            </div>
-          ) : (
-            <label className="flex flex-col items-center justify-center gap-1.5 w-full px-4 py-4 border border-dashed border-white/20 hover:border-brand-orange/60 rounded-xl cursor-pointer bg-[#181818]/60 transition group">
-              <div className="flex items-center gap-2">
-                <Upload className="w-4 h-4 text-neutral-400 group-hover:text-brand-orange transition" />
-                <span className="text-xs font-medium text-neutral-300 group-hover:text-white transition">
-                  Attach payment screenshot (Image / Receipt)
-                </span>
-              </div>
-              <span className="text-[11px] text-neutral-500">
-                Automatically forwards with booking info to WhatsApp (+91 7907318843)
-              </span>
-              <input
-                type="file"
-                accept="image/*"
-                className="hidden"
-                onChange={handleFileChange}
-              />
-            </label>
-          )}
+          <p className="text-xs text-neutral-200 leading-relaxed">
+            📢 <strong>Please upload / send the screenshot of the payment to WhatsApp</strong> (+91 7907318843). When you submit this form, WhatsApp will open automatically with your admission details and Bank Account Name pre-filled. Simply attach your payment screenshot directly in the WhatsApp chat.
+          </p>
         </div>
       </div>
 
@@ -236,7 +200,7 @@ export default function PaymentStep({
         </button>
         <button
           type="submit"
-          disabled={isSubmitting || !formData.upiReference?.trim()}
+          disabled={isSubmitting || !formData.upiReference?.trim() || !formData.bankAccountName?.trim()}
           className="w-full sm:w-2/3 py-3.5 sm:py-3 px-4 rounded-xl bg-brand-orange hover:bg-brand-orange-hover disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold text-sm tracking-wide transition flex items-center justify-center gap-2 shadow-lg shadow-brand-orange/20 active:scale-98"
         >
           {isSubmitting ? (

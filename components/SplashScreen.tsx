@@ -79,6 +79,7 @@ export default function SplashScreen() {
         playsInline
         onPlaying={startFiveSecondTimer}
         onLoadedData={startFiveSecondTimer}
+        onError={dismissSplash}
         className="absolute inset-0 w-full h-full object-cover"
       />
 

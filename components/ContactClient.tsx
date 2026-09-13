@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { MapPin, Mail, Clock, Send, CheckCircle2, ArrowRight } from "lucide-react";
+import { MapPin, Mail, Clock, Send, CheckCircle2, ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { useRegister } from "@/context/RegisterContext";
 
 export default function ContactClient() {
@@ -114,6 +114,22 @@ export default function ContactClient() {
                   DIRECT CONTACT
                 </span>
                 <div className="space-y-3 text-sm text-neutral-300">
+                  <a
+                    href="tel:+918593912936"
+                    className="flex items-center gap-3 hover:text-brand-orange transition"
+                  >
+                    <Phone className="w-4 h-4 text-brand-orange" />
+                    <span>+91 85939 12936</span>
+                  </a>
+                  <a
+                    href="https://wa.me/918593912936"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 hover:text-[#25D366] transition"
+                  >
+                    <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                    <span>+91 85939 12936 (WhatsApp)</span>
+                  </a>
                   <div className="flex items-center gap-3">
                     <Mail className="w-4 h-4 text-brand-orange" />
                     <span>teamnara.in@gmail.com</span>
@@ -211,7 +227,7 @@ export default function ContactClient() {
                       id="contact"
                       type="text"
                       required
-                      placeholder="+91 98765 43210 or email@example.com"
+                      placeholder="+91 85939 12936 or email@example.com"
                       value={inquiryData.contact}
                       onChange={(e) =>
                         setInquiryData({ ...inquiryData, contact: e.target.value })

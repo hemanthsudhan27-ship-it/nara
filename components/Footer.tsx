@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, MapPin, Mail, ArrowUp } from "lucide-react";
+import { Instagram, MapPin, Mail, ArrowUp, Phone } from "lucide-react";
 
 const WHATSAPP_COMMUNITY_LINK = "https://chat.whatsapp.com/teamnara"; // Replace with real invite link
 
@@ -111,6 +111,12 @@ export default function Footer() {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-brand-orange flex-shrink-0 mt-0.5" />
                 <span>South Beach Promenade &amp; Coastal Spots, Kozhikode, Kerala 673001</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                <a href="tel:+918593912936" className="hover:text-white transition">
+                  +91 85939 12936
+                </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-orange flex-shrink-0" />

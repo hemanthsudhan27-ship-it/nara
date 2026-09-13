@@ -3,7 +3,7 @@ import { RegistrationData, RegistrationResponse } from "@/types/registration";
 import fs from "fs/promises";
 import path from "path";
 
-const WHATSAPP_NUMBER = "917907318843"; // +91 7907318843
+const WHATSAPP_NUMBER = "918593912936"; // +91 85939 12936
 
 export async function POST(request: Request) {
   try {

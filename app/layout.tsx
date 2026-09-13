@@ -119,7 +119,7 @@ const jsonLdOrganization = {
   url: "https://teamnara.in",
   logo: "https://teamnara.in/logo/logo.png",
   image: "https://teamnara.in/images/IMG_3116.PNG",
-  telephone: "+91-9876543210",
+  telephone: "+91 85939 12936",
   email: "teamnara.in@gmail.com",
   priceRange: "₹2000 - ₹2500",
   address: {

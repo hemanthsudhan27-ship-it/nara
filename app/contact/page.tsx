@@ -34,7 +34,7 @@ const jsonLdContact = {
     "@type": "SportsClub",
     name: "Team NARA Parkour",
     email: "teamnara.in@gmail.com",
-    telephone: "+91-9876543210",
+    telephone: "+91 85939 12936",
     address: {
       "@type": "PostalAddress",
       streetAddress: "South Beach Promenade, Beach Rd",

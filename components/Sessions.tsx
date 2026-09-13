@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, MapPin, Calendar, Award } from "lucide-react";
 
 interface SessionsProps {
@@ -83,7 +84,7 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
             </div>
 
             {/* CTA */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <button
                 onClick={() => onOpenRegister("Outdoor Parkour & Freerunning — Mon, Wed & Fri (6:00 AM – 7:30 AM)")}
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-brand-orange hover:bg-brand-orange-hover text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition shadow-lg shadow-brand-orange/20 active:scale-98"
@@ -91,6 +92,12 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
                 <span>Register for Admission (₹2,500)</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
+              <Link
+                href="/sessions"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 sm:py-4 bg-black/5 hover:bg-black/10 text-brand-dark font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl border border-neutral-300 transition"
+              >
+                View Full Details &amp; FAQs
+              </Link>
             </div>
           </div>
 
@@ -101,7 +108,7 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900 group">
                 <Image
                   src="/images/IMG_3115.PNG"
-                  alt="Parkour & Freerunning outdoor class in Calicut led by trainer @dadubruce"
+                  alt="Outdoor Parkour & Freerunning morning training class on Calicut South Beach promenade led by coach @dadubruce"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"

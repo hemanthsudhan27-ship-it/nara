@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowRight, Instagram, Check } from "lucide-react";
 
 interface CtaBannerProps {
@@ -36,6 +37,15 @@ export default function CtaBanner({ onOpenRegister }: CtaBannerProps) {
               Reserve your spot for our next Calicut coastal session. Beginner friendly,
               progression-first coaching.
             </p>
+
+            <div className="pt-2">
+              <Link
+                href="/sessions"
+                className="inline-flex items-center gap-2 text-xs uppercase font-mono font-bold tracking-wider text-black bg-white/90 hover:bg-white px-4 py-2 rounded-xl transition shadow"
+              >
+                <span>View Class Schedule &amp; Fees (₹2,500) →</span>
+              </Link>
+            </div>
           </div>
 
           {/* Right Side: Features List + Instagram Handle */}

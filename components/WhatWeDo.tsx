@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Discipline {
   id: string;
@@ -81,15 +82,16 @@ export default function WhatWeDo() {
         {/* 5-Column Grid (stack on mobile, scroll/grid on desktop) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
           {DISCIPLINES.map((item) => (
-            <div
+            <Link
               key={item.id}
+              href="/what-we-do"
               className="group relative flex flex-col bg-brand-dark-card rounded-2xl border border-white/10 overflow-hidden hover:border-brand-orange/60 transition-all duration-300 hover:-translate-y-1.5 shadow-lg shadow-black/40"
             >
               {/* Image Container with high contrast overlay */}
               <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden bg-neutral-900">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={`Team NARA ${item.title} discipline and movement coaching in Calicut, Kerala`}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
                   className="object-cover object-center group-hover:scale-110 filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500 ease-out"
@@ -114,13 +116,13 @@ export default function WhatWeDo() {
                 </div>
 
                 <div className="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] font-mono uppercase tracking-widest text-neutral-500 group-hover:text-brand-orange transition-colors">
-                  <span>Explore</span>
+                  <span>Explore Curriculum</span>
                   <span className="group-hover:translate-x-1 transition-transform">
                     →
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

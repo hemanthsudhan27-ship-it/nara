@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Community() {
   return (
@@ -40,6 +42,16 @@ export default function Community() {
                 the city of Calicut into our canvas.
               </p>
             </div>
+
+            <div className="pt-2">
+              <Link
+                href="/community"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-black hover:bg-neutral-900 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow"
+              >
+                <span>Read Our Community Story &amp; Ethos</span>
+                <ArrowRight className="w-4 h-4 text-brand-orange" />
+              </Link>
+            </div>
           </div>
 
           {/* Right Column: Photo of 4 people silhouetted at ocean sunset */}
@@ -49,7 +61,7 @@ export default function Community() {
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900 group">
                 <Image
                   src="/images/IMG_3116.PNG"
-                  alt="Team NARA athletes from behind running towards the sunset horizon over Calicut coast"
+                  alt="Team NARA movement community running along the coastline during Sunday sunset jam in Calicut Kerala"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"

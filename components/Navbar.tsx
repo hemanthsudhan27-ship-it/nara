@@ -64,7 +64,7 @@ export default function Navbar({ onOpenRegister }: NavbarProps) {
           <div className="relative w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0">
             <Image
               src="/logo/logo.png"
-              alt="Team NARA Logo"
+              alt="Team NARA Parkour and Freerunning Collective Calicut Kerala - Official Logo"
               width={40}
               height={40}
               priority

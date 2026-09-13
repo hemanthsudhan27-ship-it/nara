@@ -32,7 +32,7 @@ export default function Footer() {
               <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
                 <Image
                   src="/logo/logo.png"
-                  alt="Team NARA Logo"
+                  alt="Team NARA Parkour, Freerunning & Tricking Collective Calicut Kerala - Emblem Logo"
                   width={48}
                   height={48}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200"
@@ -86,7 +86,7 @@ export default function Footer() {
           {/* Nav Links Repeated */}
           <div className="md:col-span-3 space-y-4">
             <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
-              Navigation
+              Explore Pages
             </h4>
             <ul className="space-y-2.5">
               {FOOTER_NAV.map((link) => (
@@ -116,15 +116,45 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-brand-orange flex-shrink-0" />
                 <span>teamnara.in@gmail.com</span>
               </div>
-              <div className="pt-2">
+              <div className="pt-2 flex flex-col gap-1.5">
+                <Link
+                  href="/sessions"
+                  className="text-xs text-brand-orange hover:underline font-mono uppercase font-bold"
+                >
+                  Outdoor Parkour Classes &amp; Fees (₹2,500) →
+                </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-brand-orange hover:underline font-mono uppercase"
+                  className="text-xs text-neutral-400 hover:text-white font-mono uppercase"
                 >
-                  <span>View Location Directions &amp; Guide →</span>
+                  Training Spots &amp; Directions →
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* SEO Keyword Hub / Movement Directory Strip */}
+        <div className="py-6 border-b border-white/10 text-[11px] text-neutral-400 space-y-2">
+          <p className="font-mono uppercase text-brand-orange font-bold tracking-wider">
+            Popular Movement Searches &amp; Topics:
+          </p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1.5 font-normal">
+            <Link href="/sessions" className="hover:text-white transition">Parkour Classes Calicut</Link>
+            <span className="text-neutral-600">•</span>
+            <Link href="/what-we-do" className="hover:text-white transition">Freerunning Flow Kerala</Link>
+            <span className="text-neutral-600">•</span>
+            <Link href="/sessions" className="hover:text-white transition">Parkour Training Fees Kozhikode</Link>
+            <span className="text-neutral-600">•</span>
+            <Link href="/community" className="hover:text-white transition">Calicut Beach Sunset Jams</Link>
+            <span className="text-neutral-600">•</span>
+            <Link href="/what-we-do" className="hover:text-white transition">Martial Arts Tricking Kerala</Link>
+            <span className="text-neutral-600">•</span>
+            <Link href="/gallery" className="hover:text-white transition">Kerala Traceurs Action Frames</Link>
+            <span className="text-neutral-600">•</span>
+            <Link href="/about" className="hover:text-white transition">Coach Dadubruce Movement Method</Link>
+            <span className="text-neutral-600">•</span>
+            <Link href="/contact" className="hover:text-white transition">South Beach Promenade Spot Guide</Link>
           </div>
         </div>
 

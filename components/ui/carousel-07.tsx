@@ -273,7 +273,7 @@ const Card = ({ slide, index, total, progress, config }: CardProps) => {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={slide.image}
-        alt={slide.title}
+        alt={`${slide.title} - ${slide.description} | Team NARA Parkour Calicut`}
         className="absolute inset-0 w-full h-full object-cover pointer-events-none transition-transform duration-700 group-hover:scale-110"
       />
 

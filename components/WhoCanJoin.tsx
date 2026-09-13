@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 interface WhoCanJoinProps {
@@ -16,7 +17,7 @@ export default function WhoCanJoin({ onOpenRegister }: WhoCanJoinProps) {
         <div className="relative h-72 sm:h-96 lg:h-auto overflow-hidden group">
           <Image
             src="/images/IMG_3116.PNG"
-            alt="Parkour partners training near the water at dusk"
+            alt="Team NARA movement athletes practicing partner coordination drills at sunset in Calicut, Kerala"
             fill
             sizes="(max-width: 1024px) 100vw, 33vw"
             className="object-cover object-center filter grayscale contrast-125 brightness-75 group-hover:scale-105 group-hover:brightness-90 transition-all duration-700"
@@ -69,7 +70,7 @@ export default function WhoCanJoin({ onOpenRegister }: WhoCanJoinProps) {
             </li>
           </ul>
 
-          <div className="pt-2">
+          <div className="pt-2 flex flex-wrap items-center gap-3">
             <button
               onClick={() => onOpenRegister()}
               className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-7 py-3.5 bg-brand-orange hover:bg-brand-orange-hover text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition shadow-lg shadow-brand-orange/20 active:scale-98"
@@ -77,6 +78,12 @@ export default function WhoCanJoin({ onOpenRegister }: WhoCanJoinProps) {
               <span>Join a Session</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
+            <Link
+              href="/sessions"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-neutral-300 hover:text-white text-xs font-bold uppercase tracking-wider border border-white/10 transition"
+            >
+              <span>View Training Schedule</span>
+            </Link>
           </div>
         </div>
 

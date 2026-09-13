@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://teamnara.in/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://teamnara.in/images/IMG_3117.PNG</image:loc>
+      <image:title>Team NARA Parkour Athletes Jumping on Calicut Seaside Promenade</image:title>
+      <image:caption>Outdoor parkour and freerunning training along the coastline of Kozhikode, Kerala</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://teamnara.in/images/IMG_3116.PNG</image:loc>
+      <image:title>Team NARA Movement Community at Sunset Beach Jam</image:title>
+      <image:caption>Parkour and tricking community sunset session at Calicut South Beach</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://teamnara.in/sessions</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://teamnara.in/images/IMG_3115.PNG</image:loc>
+      <image:title>Outdoor Parkour &amp; Freerunning Morning Classes in Calicut</image:title>
+      <image:caption>Coach Dadubruce leading outdoor obstacle movement drills in Kozhikode</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://teamnara.in/what-we-do</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://teamnara.in/images/IMG_3115.PNG</image:loc>
+      <image:title>Parkour Obstacle Traversal Fundamentals</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://teamnara.in/about</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://teamnara.in/images/IMG_3116.PNG</image:loc>
+      <image:title>Origins of Team NARA Parkour Collective Calicut</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://teamnara.in/community</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://teamnara.in/images/IMG_3116.PNG</image:loc>
+      <image:title>Team NARA Sunday Sunset Community Jam Calicut Beach</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://teamnara.in/gallery</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://teamnara.in/photos/IMG_2282.webp</image:loc>
+      <image:title>Sea Wall Precision Jump in Calicut</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://teamnara.in/photos/IMG_2899.webp</image:loc>
+      <image:title>South Beach Promenade Parkour Squad Drills</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://teamnara.in/contact</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+</urlset>

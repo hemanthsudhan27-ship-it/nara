@@ -24,7 +24,7 @@ export default function PaymentStep({
   error,
 }: PaymentStepProps) {
   const [copied, setCopied] = useState(false);
-  const upiId = "teamnara@upi";
+  const upiId = "sarathnad-2@okicici";
 
   const handleCopyUpi = () => {
     if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
@@ -71,7 +71,7 @@ export default function PaymentStep({
           <div className="relative w-36 h-36 bg-white p-2 rounded-xl flex-shrink-0 shadow-lg border-2 border-brand-orange/40">
             <Image
               src="/upi-qr.svg"
-              alt="Team NARA UPI Payment QR Code"
+              alt="Team NARA Official UPI Payment QR Code for Parkour Admission Fee in Calicut Kerala"
               width={144}
               height={144}
               className="w-full h-full object-contain"

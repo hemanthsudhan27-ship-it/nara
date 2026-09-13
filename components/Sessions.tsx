@@ -38,16 +38,7 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
             <div className="space-y-4 text-neutral-700 text-sm sm:text-base lg:text-lg leading-relaxed font-normal max-w-xl">
               <p>
                 Currently, we conduct our outdoor Parkour &amp; Freerunning classes at
-                different locations across Calicut. Led by certified trainer{" "}
-                <a
-                  href="https://instagram.com/dadubruce"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-brand-orange hover:underline inline-flex items-center gap-0.5"
-                >
-                  @dadubruce
-                </a>
-                .
+                different locations across Calicut. Led by experienced Team NARA trainers.
               </p>
               <p>
                 Learn real parkour fundamentals, build functional strength, master vault
@@ -108,14 +99,14 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900 group">
                 <Image
                   src="/images/IMG_3115.PNG"
-                  alt="Outdoor Parkour & Freerunning morning training class on Calicut South Beach promenade led by coach @dadubruce"
+                  alt="Outdoor Parkour & Freerunning morning training class on Calicut South Beach promenade led by Team NARA coaches"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90" />
                 <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-mono tracking-wider uppercase bg-black/60 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-white/20 space-y-0.5">
-                  <p className="font-bold text-brand-orange">Trainer: @dadubruce</p>
+                  <p className="font-bold text-brand-orange">Coaching: Team NARA</p>
                   <p className="text-[11px] text-neutral-300">Mon, Wed &amp; Fri • 6:00 AM – 7:30 AM</p>
                 </div>
               </div>
@@ -161,17 +152,17 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
             </div>
           </div>
 
-          {/* Stat 3: Fees & Trainer */}
+          {/* Stat 3: Fees & Coaching */}
           <div className="flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white/80 border border-neutral-200/80 shadow-sm hover:border-brand-orange/40 transition">
             <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange flex-shrink-0">
               <Award className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
               <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-500 font-mono">
-                Fees &amp; Trainer
+                Fees &amp; Coaching
               </span>
               <h3 className="text-base sm:text-lg font-black font-headline uppercase text-brand-dark mt-0.5">
-                ₹2,500 Adm • @dadubruce
+                ₹2,500 Adm • Team NARA
               </h3>
               <p className="text-xs text-neutral-600 mt-1">
                 Monthly: ₹2,000 • Bring yoga mat &amp; water

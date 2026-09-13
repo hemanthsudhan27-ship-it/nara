@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 const STATS = [
-  { icon: Users, label: "Trainer", value: "@dadubruce" },
+  { icon: Users, label: "Coaching", value: "Experienced Team" },
   { icon: CalendarCheck, label: "Class Days", value: "Mon / Wed / Fri" },
   { icon: Zap, label: "Morning Class", value: "6:00 – 7:30 AM" },
 ];
@@ -17,7 +17,7 @@ const STATS = [
 const HOW_IT_WORKS = [
   { step: "01", title: "Apply for Admission", desc: "Admission Fee ₹2,500 (Monthly: ₹2,000) via quick UPI." },
   { step: "02", title: "Show Up Outdoors", desc: "Mon, Wed & Fri at 6:00 AM across Calicut. Bring yoga mat & water." },
-  { step: "03", title: "Move with @dadubruce", desc: "Step-by-step parkour progressions from basics to dynamic flow." },
+  { step: "03", title: "Move with Coaches", desc: "Step-by-step parkour progressions from basics to dynamic flow." },
 ];
 
 export default function Hero({ onOpenRegister }: HeroProps) {

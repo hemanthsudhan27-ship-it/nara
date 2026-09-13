@@ -86,7 +86,7 @@ export async function POST(request: Request) {
       `💰 *Admission Fee Paid:* ₹${body.amount || 2500} (Monthly Fee: ₹2,000)`,
       `🏦 *Name as in Bank Account:* ${body.bankAccountName?.trim() || "N/A"}`,
       `💳 *UPI Ref / UTR:* ${body.upiReference.trim()}`,
-      `👟 *Trainer:* @dadubruce`,
+      `👟 *Coaching:* Team NARA Trainers`,
       `📅 *Schedule:* Mon, Wed & Fri • 6:00 AM – 7:30 AM`,
       `🧘 *Requirements:* Yoga mat & bottle of water`,
       `📸 *Payment Screenshot:* (Attaching screenshot below in this chat)`,

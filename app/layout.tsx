@@ -3,7 +3,6 @@ import "./globals.css";
 import { RegisterProvider } from "@/context/RegisterContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import SplashScreen from "@/components/SplashScreen";
 import TitleReveal from "@/components/TitleReveal";
 import ScrollToTop from "@/components/ScrollToTop";
 import MobileJoinBar from "@/components/MobileJoinBar";
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Team NARA Parkour Calicut",
   },
   description:
-    "Team NARA is Kerala's premier street movement collective based in Calicut (Kozhikode). Join structured outdoor parkour, freerunning, and tricking training along the coast. Classes led by certified coach @dadubruce.",
+    "Team NARA is Kerala's premier street movement collective based in Calicut (Kozhikode). Join structured outdoor parkour, freerunning, and tricking training along the coast. Classes led by experienced coaches.",
   keywords: [
     "Parkour",
     "Parkour Calicut",
@@ -41,7 +40,7 @@ export const metadata: Metadata = {
     "movement community Kerala",
     "urban acrobatics Calicut",
     "outdoor fitness Kozhikode",
-    "Dadubruce parkour coach",
+    "parkour coach Calicut",
     "obstacle training Kerala",
     "traceur Kerala",
   ],
@@ -151,13 +150,12 @@ const jsonLdOrganization = {
   ],
   coach: {
     "@type": "Person",
-    name: "Dadubruce",
-    jobTitle: "Head Coach & Movement Specialist",
-    sameAs: "https://instagram.com/dadubruce",
+    name: "Team NARA Coaches",
+    jobTitle: "Parkour & Movement Specialists",
+    sameAs: "https://instagram.com/teamnara.in",
   },
   sameAs: [
     "https://instagram.com/teamnara.in",
-    "https://instagram.com/dadubruce",
   ],
 };
 
@@ -206,7 +204,6 @@ export default function RootLayout({
       </head>
       <body className="bg-[#141414] text-neutral-100 antialiased selection:bg-brand-orange selection:text-white font-body flex flex-col min-h-screen">
         <RegisterProvider>
-          <SplashScreen />
           <TitleReveal />
           <Navbar />
           <main className="flex-1">{children}</main>

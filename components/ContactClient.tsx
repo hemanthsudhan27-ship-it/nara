@@ -56,16 +56,7 @@ export default function ContactClient() {
                 </h2>
                 <p className="text-sm text-neutral-400 leading-relaxed">
                   Currently, we conduct our outdoor Parkour &amp; Freerunning classes at
-                  different locations across Calicut (including South Beach promenade and Mananchira Square). Led by Trainer{" "}
-                  <a
-                    href="https://instagram.com/dadubruce"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-brand-orange font-bold hover:underline"
-                  >
-                    @dadubruce
-                  </a>
-                  .
+                  different locations across Calicut (including South Beach promenade and Mananchira Square). Led by experienced Team NARA trainers.
                 </p>
               </div>
 

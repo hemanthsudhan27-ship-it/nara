@@ -69,7 +69,7 @@ export default function PaymentStep({
                 Mon, Wed &amp; Fri • 6:00 AM
               </p>
               <p className="text-[11px] text-brand-orange font-mono">
-                Trainer: @dadubruce
+                Team NARA Coaching
               </p>
             </div>
           </div>

@@ -23,8 +23,8 @@ export const BATCHES: Batch[] = [
     location: "Different outdoor locations across Calicut",
     focus: "Grounded fundamentals, vault mechanics, safety rolling, precision landings, functional mobility, and explosive freerunning flow.",
     level: "All Levels (Complete beginners warmly guided)",
-    trainer: "@dadubruce",
-    trainerLink: "https://instagram.com/dadubruce",
+    trainer: "Team NARA Coaches",
+    trainerLink: "https://instagram.com/teamnara.in",
     admissionFee: 2500,
     monthlyFee: 2000,
     badge: "Official Class",
@@ -48,8 +48,8 @@ export const FAQS = [
     a: "Currently, we conduct our outdoor Parkour & Freerunning classes at different locations across Calicut, including coastal beach promenades, South Beach ledges, and architectural plazas.",
   },
   {
-    q: "Who is the trainer leading the Team NARA classes?",
-    a: "Classes are conducted by certified trainer @dadubruce. You can check out his movement profile on Instagram @dadubruce.",
+    q: "Who is leading the Team NARA classes?",
+    a: "Classes are conducted by experienced Team NARA trainers. You can check out our movement collective on Instagram @teamnara.in.",
   },
   {
     q: "What are the mandatory requirements for every training session?",

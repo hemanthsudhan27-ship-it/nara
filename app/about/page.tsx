@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Calicut parkour history",
     "Traceur collective Kozhikode",
     "Street movement Kerala",
-    "Dadubruce parkour coach",
+    "Team NARA coaches",
     "Parkour philosophy Calicut",
   ],
   alternates: {

@@ -5,14 +5,14 @@ import { FAQS } from "@/lib/sessionsData";
 export const metadata: Metadata = {
   title: "Parkour & Freerunning Classes Calicut | Schedule & Fees",
   description:
-    "Outdoor Parkour & Freerunning training in Calicut (Kozhikode). Classes held Mon, Wed & Fri (6:00 AM – 7:30 AM) led by coach @dadubruce. ₹2,500 admission, beginners warmly guided.",
+    "Outdoor Parkour & Freerunning training in Calicut (Kozhikode). Classes held Mon, Wed & Fri (6:00 AM – 7:30 AM) led by experienced coaches. ₹2,500 admission, beginners warmly guided.",
   keywords: [
     "Parkour classes Calicut",
     "Parkour training Kozhikode",
     "Freerunning classes Kerala",
     "Parkour schedule Calicut",
     "Parkour fees Kerala",
-    "Dadubruce parkour coach",
+    "Parkour coach Calicut",
     "Learn parkour Calicut",
     "Outdoor movement sessions Kerala",
     "Calicut beach morning workouts",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Parkour & Freerunning Classes in Calicut | Team NARA",
     description:
-      "Join outdoor parkour and freerunning training across Calicut with coach @dadubruce. Structured morning batches for beginners and advanced movers.",
+      "Join outdoor parkour and freerunning training across Calicut with experienced coaches. Structured morning batches for beginners and advanced movers.",
     url: "https://teamnara.in/sessions",
     images: [
       {
@@ -62,9 +62,9 @@ const jsonLdCourse = {
   },
   instructor: {
     "@type": "Person",
-    name: "Dadubruce",
-    jobTitle: "Lead Parkour Coach",
-    sameAs: "https://instagram.com/dadubruce",
+    name: "Team NARA Coaches",
+    jobTitle: "Parkour & Freerunning Coaches",
+    sameAs: "https://instagram.com/teamnara.in",
   },
   offers: {
     "@type": "Offer",

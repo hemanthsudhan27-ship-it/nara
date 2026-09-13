@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: [
     "Contact Team NARA",
     "Parkour coach Calicut contact",
-    "Dadubruce contact",
+    "Team NARA contact",
     "Calicut parkour phone number",
     "Parkour training location Kozhikode",
     "Join Team NARA",

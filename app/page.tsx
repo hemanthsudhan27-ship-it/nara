@@ -4,7 +4,7 @@ import HomeClient from "@/components/HomeClient";
 export const metadata: Metadata = {
   title: "Team NARA | Parkour • Freerunning • Tricking | Calicut, Kerala",
   description:
-    "Official Team NARA website. Kerala's premier parkour, freerunning, and tricking community in Calicut (Kozhikode). Join morning outdoor classes, beginner vaults, and coastal beach jams led by coach @dadubruce.",
+    "Official Team NARA website. Kerala's premier parkour, freerunning, and tricking community in Calicut (Kozhikode). Join morning outdoor classes, beginner vaults, and coastal beach jams led by experienced coaches.",
   alternates: {
     canonical: "https://teamnara.in",
   },

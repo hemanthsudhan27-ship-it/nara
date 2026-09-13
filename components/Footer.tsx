@@ -158,7 +158,7 @@ export default function Footer() {
             <span className="text-neutral-600">•</span>
             <Link href="/gallery" className="hover:text-white transition">Kerala Traceurs Action Frames</Link>
             <span className="text-neutral-600">•</span>
-            <Link href="/about" className="hover:text-white transition">Coach Dadubruce Movement Method</Link>
+            <Link href="/about" className="hover:text-white transition">Team NARA Movement Method</Link>
             <span className="text-neutral-600">•</span>
             <Link href="/contact" className="hover:text-white transition">South Beach Promenade Spot Guide</Link>
           </div>

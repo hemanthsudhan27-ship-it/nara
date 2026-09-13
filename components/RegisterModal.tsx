@@ -122,7 +122,7 @@ export default function RegisterModal({
       `💰 *Admission Fee:* ₹${formData.amount} (Monthly: ₹2,000)`,
       `🏦 *Name as in Bank Account:* ${formData.bankAccountName?.trim() || "N/A"}`,
       `💳 *UPI Ref / UTR:* ${formData.upiReference?.trim()}`,
-      `👟 *Trainer:* @dadubruce`,
+      `👟 *Coaching:* Team NARA Trainers`,
       `📅 *Schedule:* Mon, Wed & Fri • 6:00 AM – 7:30 AM`,
       `🧘 *Requirements:* Yoga mat & bottle of water`,
       `📸 *Payment Screenshot:* (Attaching screenshot below in this chat)`,
@@ -304,7 +304,7 @@ export default function RegisterModal({
                     Outdoor Parkour &amp; Freerunning
                   </span>
                   <span className="text-[11px] font-mono text-neutral-300">
-                    Trainer: <strong className="text-brand-orange">@dadubruce</strong>
+                    Coaching: <strong className="text-brand-orange">Team NARA</strong>
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-neutral-300 border-t border-white/5 pt-2">

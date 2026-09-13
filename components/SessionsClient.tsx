@@ -46,16 +46,7 @@ export default function SessionsClient() {
             </h1>
             <p className="text-base sm:text-xl text-neutral-300 font-normal leading-relaxed pt-2">
               Currently, we conduct our outdoor Parkour &amp; Freerunning classes at
-              different locations across Calicut. Led by Trainer{" "}
-              <a
-                href="https://instagram.com/dadubruce"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-brand-orange font-bold hover:underline"
-              >
-                @dadubruce
-              </a>
-              .
+              different locations across Calicut. Led by experienced Team NARA trainers.
             </p>
           </div>
         </div>
@@ -228,18 +219,18 @@ export default function SessionsClient() {
                   </div>
                 </div>
 
-                {/* Trainer Highlight */}
+                {/* Coaching Highlight */}
                 <div className="p-4 rounded-2xl bg-[#1c1c1c] border border-white/10 flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-brand-orange/20 border border-brand-orange/30 flex items-center justify-center text-brand-orange font-headline text-xl font-bold flex-shrink-0">
-                    DB
+                    TN
                   </div>
                   <div className="flex-1 min-w-0">
                     <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-wider block">
-                      Lead Coach
+                      Coaching Team
                     </span>
-                    <h5 className="text-base font-bold text-white truncate">Trainer @dadubruce</h5>
+                    <h5 className="text-base font-bold text-white truncate">Team NARA Coaches</h5>
                     <a
-                      href="https://instagram.com/dadubruce"
+                      href="https://instagram.com/teamnara.in"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs text-brand-orange hover:underline inline-flex items-center gap-1 font-mono"

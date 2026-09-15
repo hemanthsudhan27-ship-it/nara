@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 import { RegistrationData, RegistrationResponse } from "@/types/registration";
-import fs from "fs/promises";
-import path from "path";
 
 const WHATSAPP_NUMBER = "918593912936"; // +91 85939 12936
 
@@ -9,13 +7,13 @@ export async function POST(request: Request) {
   try {
     const body: RegistrationData = await request.json();
 
-    // Validate incoming payload
-    if (!body.fullName || !body.phone || !body.email || !body.upiReference) {
+    // Validate required fields
+    if (!body.fullName || !body.phone || !body.email) {
       return NextResponse.json<RegistrationResponse>(
         {
           success: false,
-          message: "Missing required registration details or UPI reference",
-          error: "All required fields (Full Name, Phone, Email, UPI Reference) must be provided.",
+          message: "Missing required registration details",
+          error: "Full Name, Phone, and Email are required.",
         },
         { status: 400 }
       );
@@ -25,53 +23,20 @@ export async function POST(request: Request) {
       1000 + Math.random() * 9000
     )}`;
 
-    // Handle payment screenshot file storage if uploaded
-    let screenshotUrl: string | undefined = undefined;
-    if (body.screenshotBase64 && typeof body.screenshotBase64 === "string") {
-      try {
-        const matches = body.screenshotBase64.match(/^data:image\/([a-zA-Z0-9+.-]+);base64,(.+)$/);
-        let ext = "jpg";
-        let base64Data = body.screenshotBase64;
-
-        if (matches && matches.length === 3) {
-          ext = matches[1].replace("+xml", "").toLowerCase();
-          if (ext === "jpeg") ext = "jpg";
-          base64Data = matches[2];
-        }
-
-        const buffer = Buffer.from(base64Data, "base64");
-        const uploadsDir = path.join(process.cwd(), "public", "uploads");
-        await fs.mkdir(uploadsDir, { recursive: true });
-
-        const filename = `receipt_${Date.now()}_${Math.random().toString(36).substring(2, 7)}.${ext}`;
-        const filePath = path.join(uploadsDir, filename);
-        await fs.writeFile(filePath, buffer);
-        screenshotUrl = `/uploads/${filename}`;
-      } catch (uploadErr) {
-        console.error("[RECEIPT UPLOAD ERROR]", uploadErr);
-      }
-    }
-
-    // Determine host for screenshot URL
-    const hostHeader = request.headers.get("x-forwarded-host") || request.headers.get("host") || "localhost:3000";
-    const proto = request.headers.get("x-forwarded-proto") || (hostHeader.includes("localhost") ? "http" : "https");
-    const fullScreenshotUrl = screenshotUrl ? `${proto}://${hostHeader}${screenshotUrl}` : undefined;
-
     const record = {
       registrationId,
       timestamp: new Date().toISOString(),
       fullName: body.fullName.trim(),
       phone: body.phone.trim(),
       email: body.email.trim(),
+      age: body.age?.trim() || "",
       sessionBatch: body.sessionBatch || "Outdoor Parkour & Freerunning (Mon, Wed & Fri 6:00 AM)",
       message: body.message?.trim() || "",
-      amount: body.amount || 2500,
-      upiReference: body.upiReference.trim(),
-      bankAccountName: body.bankAccountName?.trim() || "",
-      status: "PENDING_VERIFICATION",
+      riskAgreed: body.riskAgreed ?? true,
+      status: "PENDING_CONTACT",
     };
 
-    // Log structured event for easy indexing and server logs
+    // Log structured event for server records
     console.log("[TEAM NARA REGISTRATION]", JSON.stringify(record, null, 2));
 
     // Construct formatted WhatsApp message
@@ -79,19 +44,17 @@ export async function POST(request: Request) {
       "🔥 *TEAM NARA — OUTDOOR CLASS ADMISSION*",
       "",
       `📋 *Registration ID:* ${registrationId}`,
-      `👤 *Student Name:* ${body.fullName.trim()}`,
+      `👤 *Name:* ${body.fullName.trim()}`,
+      `🔢 *Age:* ${body.age?.trim() || "N/A"}`,
       `📞 *Phone:* ${body.phone.trim()}`,
       `✉️ *Email:* ${body.email.trim()}`,
       `🏃 *Class:* ${body.sessionBatch || "Outdoor Parkour & Freerunning"}`,
-      `💰 *Admission Fee Paid:* ₹${body.amount || 2500} (Monthly Fee: ₹2,000)`,
-      `🏦 *Name as in Bank Account:* ${body.bankAccountName?.trim() || "N/A"}`,
-      `💳 *UPI Ref / UTR:* ${body.upiReference.trim()}`,
+      `💰 *Admission Fee:* ₹2,500 (Monthly: ₹2,000)`,
       `👟 *Coaching:* Team NARA Trainers`,
       `📅 *Schedule:* Mon, Wed & Fri • 6:00 AM – 7:30 AM`,
       `🧘 *Requirements:* Yoga mat & bottle of water`,
-      `📸 *Payment Screenshot:* (Attaching screenshot below in this chat)`,
       "",
-      `🎉 _"We look forward to seeing you in class!"_`,
+      `✅ *Risk Awareness:* Participant has acknowledged the physical risks of parkour and freerunning.`,
     ];
 
     if (body.message?.trim()) {
@@ -103,10 +66,9 @@ export async function POST(request: Request) {
 
     return NextResponse.json<RegistrationResponse>({
       success: true,
-      message: "Your registration is received. Our team will verify your payment and confirm your spot shortly.",
+      message: "Registration details received. Our coach will reach out to you shortly.",
       registrationId,
       data: record,
-      screenshotUrl: fullScreenshotUrl || screenshotUrl,
       whatsappUrl,
     });
   } catch (error: unknown) {

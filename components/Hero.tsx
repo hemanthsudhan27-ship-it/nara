@@ -2,23 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, ChevronDown, Users, Zap, CalendarCheck } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
 interface HeroProps {
   onOpenRegister: () => void;
 }
-
-const STATS = [
-  { icon: Users, label: "Coaching", value: "Experienced Team" },
-  { icon: CalendarCheck, label: "Class Days", value: "Mon / Wed / Fri" },
-  { icon: Zap, label: "Morning Class", value: "6:00 – 7:30 AM" },
-];
-
-const HOW_IT_WORKS = [
-  { step: "01", title: "Apply for Admission", desc: "Admission Fee ₹2,500 (Monthly: ₹2,000) via quick UPI." },
-  { step: "02", title: "Show Up Outdoors", desc: "Mon, Wed & Fri at 6:00 AM across Calicut. Bring yoga mat & water." },
-  { step: "03", title: "Move with Coaches", desc: "Step-by-step parkour progressions from basics to dynamic flow." },
-];
 
 export default function Hero({ onOpenRegister }: HeroProps) {
   const handleScrollDown = (e: React.MouseEvent) => {
@@ -102,36 +90,7 @@ export default function Hero({ onOpenRegister }: HeroProps) {
             </button>
           </div>
 
-          {/* Social Proof Stats Strip */}
-          <div className="flex flex-wrap items-center gap-3 sm:gap-6 pt-2">
-            {STATS.map(({ icon: Icon, label, value }) => (
-              <div key={label} className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-brand-orange/15 border border-brand-orange/25 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-3.5 h-3.5 text-brand-orange" />
-                </div>
-                <div>
-                  <p className="text-sm sm:text-base font-black text-white leading-none">{value}</p>
-                  <p className="text-[10px] text-neutral-500 font-mono uppercase tracking-wider leading-none mt-0.5">{label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
 
-          {/* How It Works — 3 Step Visual */}
-          <div className="pt-3 sm:pt-5 border-t border-white/10">
-            <p className="text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-3">How it works</p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              {HOW_IT_WORKS.map(({ step, title, desc }) => (
-                <div key={step} className="flex items-start gap-3 flex-1">
-                  <span className="text-2xl font-black font-headline text-brand-orange/40 leading-none flex-shrink-0 mt-0.5">{step}</span>
-                  <div>
-                    <p className="text-xs font-bold text-white uppercase tracking-wide">{title}</p>
-                    <p className="text-[11px] text-neutral-400 mt-0.5 leading-relaxed">{desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
 

@@ -13,6 +13,13 @@ import {
 } from "lucide-react";
 import { useRegister } from "@/context/RegisterContext";
 import { BATCHES, FAQS } from "@/lib/sessionsData";
+import TestimonialsStrip from "@/components/TestimonialsStrip";
+
+const HOW_IT_WORKS = [
+  { step: "01", title: "Apply for Admission", desc: "Complete the registration form and pay ₹2,500 via UPI. You'll receive a WhatsApp welcome with class details." },
+  { step: "02", title: "Show Up Outdoors", desc: "Mon, Wed & Fri at 6:00 AM across Calicut. Bring your yoga mat & water bottle." },
+  { step: "03", title: "Move with Coaches", desc: "Step-by-step parkour progressions from grounded basics to dynamic movement flow." },
+];
 
 const spotsConfig = {
   open:        { label: (n: number) => `${n} Spots Open`,    dot: "bg-green-400",  text: "text-green-400",  border: "border-green-400/30",  bg: "bg-green-400/10" },
@@ -48,6 +55,24 @@ export default function SessionsClient() {
               Currently, we conduct our outdoor Parkour &amp; Freerunning classes at
               different locations across Calicut. Led by experienced Team NARA trainers.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works — 3 Steps */}
+      <section className="py-10 sm:py-14 bg-[#0f0f0f] border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-6">How it works</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-8">
+            {HOW_IT_WORKS.map(({ step, title, desc }) => (
+              <div key={step} className="flex items-start gap-4">
+                <span className="text-4xl font-black font-headline text-brand-orange/25 leading-none flex-shrink-0 mt-0.5">{step}</span>
+                <div>
+                  <p className="text-sm font-bold text-white uppercase tracking-wide">{title}</p>
+                  <p className="text-xs text-neutral-400 mt-1.5 leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -288,67 +313,33 @@ export default function SessionsClient() {
         </div>
       </section>
 
-      {/* Training Grounds in Calicut */}
-      <section className="py-20 sm:py-28 bg-brand-cream text-brand-dark">
+      {/* Training Grounds in Calicut — Compact */}
+      <section className="py-14 sm:py-20 bg-brand-cream text-brand-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
-                TRAINING SPOTS
-              </span>
-              <h2 className="text-3xl sm:text-5xl font-black font-headline tracking-[0.06em] uppercase text-brand-dark">
-                CALICUT IS OUR GYM
-              </h2>
-              <div className="space-y-4 text-neutral-700 text-sm sm:text-base leading-relaxed">
-                <div className="p-4 rounded-2xl bg-white shadow-sm border border-neutral-200">
-                  <h3 className="font-bold text-neutral-900 font-headline uppercase text-lg">
-                    1. South Beach Promenade
-                  </h3>
-                  <p className="text-xs text-neutral-600 mt-1">
-                    Smooth granite ledges, broad sea-facing steps, low railings,
-                    and soft sandy areas ideal for drilling rail balances, safety
-                    vaults, and soft landings.
-                  </p>
-                </div>
-                <div className="p-4 rounded-2xl bg-white shadow-sm border border-neutral-200">
-                  <h3 className="font-bold text-neutral-900 font-headline uppercase text-lg">
-                    2. Mananchira Square Perimeter
-                  </h3>
-                  <p className="text-xs text-neutral-600 mt-1">
-                    Heritage walls and architectural steps provide varied height
-                    progressions for cat leaps, wall runs, and precision stride drills.
-                  </p>
-                </div>
-                <div className="p-4 rounded-2xl bg-white shadow-sm border border-neutral-200">
-                  <h3 className="font-bold text-neutral-900 font-headline uppercase text-lg">
-                    3. Coastal Pier Breakwater
-                  </h3>
-                  <p className="text-xs text-neutral-600 mt-1">
-                    Open horizons and elevated concrete pads where we hold our
-                    sunset jams and freerunning flow challenges. Check our{" "}
-                    <Link href="/gallery" className="text-brand-orange font-bold hover:underline">
-                      photo archive
-                    </Link>{" "}
-                    for training frames.
-                  </p>
-                </div>
+          <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
+            TRAINING SPOTS
+          </span>
+          <h2 className="text-2xl sm:text-4xl font-black font-headline tracking-[0.06em] uppercase text-brand-dark mt-1 mb-8">
+            CALICUT IS OUR GYM
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { name: "South Beach Promenade", desc: "Granite ledges, sea-facing steps & sandy areas. Perfect for vaults, balances & soft landings." },
+              { name: "Mananchira Square", desc: "Heritage walls & architectural steps for cat leaps, wall runs & precision stride drills." },
+              { name: "Coastal Pier Breakwater", desc: "Open horizons & elevated concrete pads for sunset jams and freerunning challenges." },
+            ].map((spot, i) => (
+              <div key={i} className="p-5 rounded-2xl bg-white shadow-sm border border-neutral-200 hover:border-brand-orange/40 transition">
+                <span className="text-brand-orange font-mono font-bold text-xs">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="font-black text-brand-dark font-headline uppercase text-base mt-1">{spot.name}</h3>
+                <p className="text-xs text-neutral-600 mt-2 leading-relaxed">{spot.desc}</p>
               </div>
-            </div>
-
-            <div className="lg:col-span-6">
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900">
-                <Image
-                  src="/images/IMG_3115.PNG"
-                  alt="Parkour athletes practicing cat pass and precision jumps on Calicut beach breakwater"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Testimonials — social proof before the final ask */}
+      <TestimonialsStrip theme="dark" heading="What Our Members Say" />
 
       {/* Frequently Asked Questions */}
       <section className="py-20 sm:py-28 bg-[#141414] border-t border-white/10">

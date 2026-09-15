@@ -2,14 +2,14 @@ export interface RegistrationData {
   fullName: string;
   phone: string;
   email: string;
+  age?: string;
   sessionBatch: string;
   message?: string;
+  riskAgreed?: boolean;
+  // Legacy fields kept for API compatibility — no longer collected in the form
   upiReference?: string;
   bankAccountName?: string;
-  amount: number;
-  screenshotBase64?: string;
-  screenshotName?: string;
-  screenshotUrl?: string;
+  amount?: number;
 }
 
 export interface RegistrationResponse {
@@ -17,7 +17,6 @@ export interface RegistrationResponse {
   message: string;
   registrationId?: string;
   data?: RegistrationData;
-  screenshotUrl?: string;
   whatsappUrl?: string;
   error?: string;
 }

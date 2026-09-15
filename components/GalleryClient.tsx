@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ZoomIn, X, Instagram, ArrowRight } from "lucide-react";
 import { EXTENDED_GALLERY, type GalleryItem } from "@/lib/galleryData";
+import { useRegister } from "@/context/RegisterContext";
 
 const CATEGORIES = [
   { id: "all", label: "All Frames" },
@@ -15,8 +16,16 @@ const CATEGORIES = [
 ];
 
 export default function GalleryClient() {
+  const { openRegister } = useRegister();
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+  const [showFloatingCta, setShowFloatingCta] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowFloatingCta(window.scrollY > 500);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const filteredItems =
     activeCategory === "all"
@@ -118,13 +127,13 @@ export default function GalleryClient() {
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <Link
-                href="/sessions"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-orange hover:bg-brand-orange-hover text-white rounded-xl text-xs font-mono font-bold uppercase tracking-wider transition"
+              <button
+                onClick={() => openRegister()}
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-orange hover:bg-brand-orange-hover text-white rounded-xl text-xs font-mono font-bold uppercase tracking-wider transition shadow-lg shadow-brand-orange/25"
               >
-                <span>View Batches &amp; Fees</span>
+                <span>Join a Session</span>
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </button>
               <a
                 href="https://instagram.com/teamnara.in"
                 target="_blank"
@@ -138,6 +147,24 @@ export default function GalleryClient() {
           </div>
         </div>
       </section>
+
+      {/* Floating CTA pill — appears after scrolling past gallery images */}
+      <div
+        className={`fixed bottom-6 right-6 z-40 transition-all duration-500 ${
+          showFloatingCta
+            ? "translate-y-0 opacity-100 pointer-events-auto"
+            : "translate-y-8 opacity-0 pointer-events-none"
+        }`}
+      >
+        <button
+          onClick={() => openRegister()}
+          className="group flex items-center gap-2.5 pl-4 pr-5 py-3 bg-brand-orange hover:bg-brand-orange-hover text-white rounded-full shadow-2xl shadow-brand-orange/40 text-xs font-bold uppercase tracking-wider transition-all hover:scale-105 active:scale-95"
+        >
+          <span className="w-2 h-2 rounded-full bg-white animate-ping" />
+          <span>Want to train these moves?</span>
+          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+        </button>
+      </div>
 
       {/* Lightbox Dialog */}
       {selectedImage && (

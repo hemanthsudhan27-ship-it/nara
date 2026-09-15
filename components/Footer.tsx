@@ -8,11 +8,8 @@ import { Instagram, MapPin, Mail, ArrowUp, Phone } from "lucide-react";
 const WHATSAPP_COMMUNITY_LINK = "https://chat.whatsapp.com/teamnara"; // Replace with real invite link
 
 const FOOTER_NAV = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   { label: "Sessions", href: "/sessions" },
-  { label: "What We Do", href: "/what-we-do" },
-  { label: "Community", href: "/community" },
+  { label: "About", href: "/about" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
@@ -140,29 +137,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* SEO Keyword Hub / Movement Directory Strip */}
-        <div className="py-6 border-b border-white/10 text-[11px] text-neutral-400 space-y-2">
-          <p className="font-mono uppercase text-brand-orange font-bold tracking-wider">
-            Popular Movement Searches &amp; Topics:
-          </p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1.5 font-normal">
-            <Link href="/sessions" className="hover:text-white transition">Parkour Classes Calicut</Link>
-            <span className="text-neutral-600">•</span>
-            <Link href="/what-we-do" className="hover:text-white transition">Freerunning Flow Kerala</Link>
-            <span className="text-neutral-600">•</span>
-            <Link href="/sessions" className="hover:text-white transition">Parkour Training Fees Kozhikode</Link>
-            <span className="text-neutral-600">•</span>
-            <Link href="/community" className="hover:text-white transition">Calicut Beach Sunset Jams</Link>
-            <span className="text-neutral-600">•</span>
-            <Link href="/what-we-do" className="hover:text-white transition">Martial Arts Tricking Kerala</Link>
-            <span className="text-neutral-600">•</span>
-            <Link href="/gallery" className="hover:text-white transition">Kerala Traceurs Action Frames</Link>
-            <span className="text-neutral-600">•</span>
-            <Link href="/about" className="hover:text-white transition">Team NARA Movement Method</Link>
-            <span className="text-neutral-600">•</span>
-            <Link href="/contact" className="hover:text-white transition">South Beach Promenade Spot Guide</Link>
-          </div>
-        </div>
 
         {/* Bottom Bar */}
         <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-neutral-500 text-center sm:text-left">

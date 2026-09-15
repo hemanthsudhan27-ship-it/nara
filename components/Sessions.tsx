@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MapPin, Calendar, Award } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface SessionsProps {
   onOpenRegister: (batch?: string) => void;
@@ -114,62 +114,6 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
           </div>
         </div>
 
-        {/* Row of 3 Icon + Label Stats Below */}
-        <div className="mt-12 sm:mt-24 pt-8 sm:pt-10 border-t border-neutral-300/80 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-          {/* Stat 1: Location */}
-          <div className="flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white/80 border border-neutral-200/80 shadow-sm hover:border-brand-orange/40 transition">
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange flex-shrink-0">
-              <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
-            </div>
-            <div>
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-500 font-mono">
-                Locations
-              </span>
-              <h3 className="text-base sm:text-lg font-black font-headline uppercase text-brand-dark mt-0.5">
-                Across Calicut
-              </h3>
-              <p className="text-xs text-neutral-600 mt-1">
-                Outdoor spots &amp; coastal grounds in Kozhikode
-              </p>
-            </div>
-          </div>
-
-          {/* Stat 2: Schedule */}
-          <div className="flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white/80 border border-neutral-200/80 shadow-sm hover:border-brand-orange/40 transition">
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange flex-shrink-0">
-              <Calendar className="w-5 h-5 sm:w-6 sm:h-6" />
-            </div>
-            <div>
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-500 font-mono">
-                Class Schedule
-              </span>
-              <h3 className="text-base sm:text-lg font-black font-headline uppercase text-brand-dark mt-0.5">
-                Mon, Wed &amp; Fri
-              </h3>
-              <p className="text-xs text-neutral-600 mt-1">
-                ⏰ 6:00 AM – 7:30 AM
-              </p>
-            </div>
-          </div>
-
-          {/* Stat 3: Fees & Coaching */}
-          <div className="flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white/80 border border-neutral-200/80 shadow-sm hover:border-brand-orange/40 transition">
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange flex-shrink-0">
-              <Award className="w-5 h-5 sm:w-6 sm:h-6" />
-            </div>
-            <div>
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-500 font-mono">
-                Fees &amp; Coaching
-              </span>
-              <h3 className="text-base sm:text-lg font-black font-headline uppercase text-brand-dark mt-0.5">
-                ₹2,500 Adm • Team NARA
-              </h3>
-              <p className="text-xs text-neutral-600 mt-1">
-                Monthly: ₹2,000 • Bring yoga mat &amp; water
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

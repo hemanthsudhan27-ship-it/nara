@@ -8,6 +8,21 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/what-we-do',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/community',
+        destination: '/about',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
+

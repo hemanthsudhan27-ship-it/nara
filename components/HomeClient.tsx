@@ -5,8 +5,8 @@ import Hero from "@/components/Hero";
 import Sessions from "@/components/Sessions";
 import WhatWeDo from "@/components/WhatWeDo";
 import Community from "@/components/Community";
-import WhoCanJoin from "@/components/WhoCanJoin";
 import Gallery from "@/components/Gallery";
+import TestimonialsStrip from "@/components/TestimonialsStrip";
 import CtaBanner from "@/components/CtaBanner";
 import { useRegister } from "@/context/RegisterContext";
 
@@ -15,25 +15,25 @@ export default function HomeClient() {
 
   return (
     <>
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section — inspire, hook, one CTA */}
       <Hero onOpenRegister={() => openRegister()} />
 
-      {/* 2. Outdoor Parkour Sessions (Light Section) */}
+      {/* 2. Sessions Preview — schedule hook, no fee wall yet */}
       <Sessions onOpenRegister={(batch) => openRegister(batch)} />
 
-      {/* 3. What We Do (Dark 5-Column Grid) */}
+      {/* 3. What We Do — 5-discipline credibility grid */}
       <WhatWeDo />
 
-      {/* 4. A Community That Moves (Light Section) */}
+      {/* 4. Community Story — short version, build connection */}
       <Community />
 
-      {/* 5. Who Can Join? (Split 3-Column Band) */}
-      <WhoCanJoin onOpenRegister={(batch) => openRegister(batch)} />
+      {/* 5. Testimonials Strip — social proof before the ask */}
+      <TestimonialsStrip theme="dark" heading="What Movers Say" />
 
-      {/* 6. Gallery Section (Dark 5-Action Thumbnails) */}
+      {/* 6. Gallery Sneakpeek — aspiration, inspire action */}
       <Gallery />
 
-      {/* 7. CTA Banner (Solid Orange Full-Width) */}
+      {/* 7. Final CTA Banner */}
       <CtaBanner onOpenRegister={() => openRegister()} />
     </>
   );

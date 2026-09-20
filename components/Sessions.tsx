@@ -62,10 +62,12 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
                   <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-neutral-500 block">
                     Fee Structure
                   </span>
-                  <p className="font-extrabold text-brand-orange mt-0.5">
-                    Admission Fee: ₹2,500
-                  </p>
-                  <p className="text-xs text-neutral-600">Monthly Fee: ₹2,000</p>
+                  <div>
+                    <h5 className="font-bold text-sm text-brand-dark">
+                      Trial Session: ₹499
+                    </h5>
+                    <p className="text-xs text-neutral-600">Single Class Pass</p>
+                  </div>
                 </div>
               </div>
               <div className="pt-2 border-t border-neutral-100 flex items-center gap-2 text-xs text-neutral-600">
@@ -80,7 +82,7 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
                 onClick={() => onOpenRegister("Outdoor Parkour & Freerunning — Mon, Wed & Fri (6:00 AM – 7:30 AM)")}
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-brand-orange hover:bg-brand-orange-hover text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition shadow-lg shadow-brand-orange/20 active:scale-98"
               >
-                <span>Register for Admission (₹2,500)</span>
+                <span>Book Trial Session (₹499)</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <Link

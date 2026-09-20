@@ -43,7 +43,7 @@ export default function CtaBanner({ onOpenRegister }: CtaBannerProps) {
                 href="/sessions"
                 className="inline-flex items-center gap-2 text-xs uppercase font-mono font-bold tracking-wider text-black bg-white/90 hover:bg-white px-4 py-2 rounded-xl transition shadow"
               >
-                <span>View Class Schedule &amp; Fees (₹2,500) →</span>
+                <span>Book a Trial Session (₹499) →</span>
               </Link>
             </div>
           </div>

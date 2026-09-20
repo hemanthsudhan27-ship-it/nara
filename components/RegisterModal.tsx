@@ -22,6 +22,8 @@ interface FormData {
   age: string;
   sessionBatch: string;
   message: string;
+  upiReference?: string;
+  bankAccountName?: string;
 }
 
 export default function RegisterModal({

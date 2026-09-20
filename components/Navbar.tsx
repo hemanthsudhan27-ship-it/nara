@@ -69,12 +69,9 @@ export default function Navbar({ onOpenRegister }: NavbarProps) {
               className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200"
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex items-center">
             <span className="font-headline text-2xl sm:text-3xl font-black tracking-[0.08em] text-brand-orange leading-none group-hover:brightness-110 transition-colors duration-200">
               NARA
-            </span>
-            <span className="text-[8px] sm:text-[9px] font-mono font-bold tracking-[0.2em] text-neutral-400 uppercase leading-none mt-1">
-              Calicut
             </span>
           </div>
         </Link>

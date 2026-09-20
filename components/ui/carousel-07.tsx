@@ -22,7 +22,7 @@ export interface Slide {
 export const defaultSlides: Slide[] = [
   {
     image: "/photos/IMG_2282.webp",
-    title: "Sea Wall Precision",
+    title: "Precision Jump",
     description: "Explosive leaps and obstacle clearance on the Calicut coastline.",
     badge: "Parkour",
   },
@@ -34,16 +34,16 @@ export const defaultSlides: Slide[] = [
   },
   {
     image: "/images/IMG_3116.PNG",
-    title: "Sunset Beach Jam",
+    title: "Outdoor Sessions",
     description: "Athletes flowing together against the golden Arabian sea horizon.",
     badge: "Community",
   },
-  {
+  /* {
     image: "/photos/IMG_2268.webp",
     title: "Sunrise Flow",
     description: "Patience, balance strides, and early morning movement clarity.",
     badge: "Freerunning",
-  },
+  }, */
   {
     image: "/photos/IMG_2900.webp",
     title: "Mobility & Prep",
@@ -52,7 +52,7 @@ export const defaultSlides: Slide[] = [
   },
   {
     image: "/photos/IMG_2920.webp",
-    title: "Coastal Vaults",
+    title: "Vaults",
     description: "Vaulting through urban obstacles along Calicut South Beach.",
     badge: "Vaults",
   },

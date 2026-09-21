@@ -26,6 +26,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
     {
+      url: `${baseUrl}/coaches`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.9,
+      images: [
+        `${baseUrl}/coaches/renjith/IMG_2007.webp`,
+        `${baseUrl}/coaches/renjith/IMG_9167.webp`,
+        `${baseUrl}/coaches/nithin/IMG_8202.JPG.webp`,
+        `${baseUrl}/coaches/nithin/IMG_5413.JPG.webp`,
+      ],
+    },
+    {
       url: `${baseUrl}/what-we-do`,
       lastModified: currentDate,
       changeFrequency: "weekly",

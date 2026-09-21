@@ -12,6 +12,7 @@ interface RegisterModalProps {
 }
 
 const BATCH_OPTIONS = [
+  "Batch 1: Wandru (Outdoor Parkour & Freerunning) — Mon, Wed & Fri (6:00 AM – 7:30 AM)",
   "Outdoor Parkour & Freerunning — Mon, Wed & Fri (6:00 AM – 7:30 AM)",
 ];
 

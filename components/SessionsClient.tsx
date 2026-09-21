@@ -236,18 +236,16 @@ export default function SessionsClient() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-wider block">
-                      Coaching Team
+                      Lead Coaches &bull; Batch 1: Wandru
                     </span>
-                    <h5 className="text-base font-bold text-white truncate">Team NARA Coaches</h5>
-                    <a
-                      href="https://instagram.com/teamnara.in"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-brand-orange hover:underline inline-flex items-center gap-1 font-mono"
+                    <h5 className="text-base font-bold text-white truncate">Coach Renjith &amp; Coach Nithin</h5>
+                    <Link
+                      href="/coaches"
+                      className="text-xs text-brand-orange hover:underline inline-flex items-center gap-1 font-mono font-bold"
                     >
-                      <span>Follow on Instagram</span>
+                      <span>Meet the Coaches</span>
                       <ArrowRight className="w-3 h-3" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

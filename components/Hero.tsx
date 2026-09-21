@@ -49,10 +49,10 @@ export default function Hero({ onOpenRegister }: HeroProps) {
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
       </div>
 
-      {/* Main Hero Content — situated over the cloud section (right side) */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto py-8 sm:py-12">
+      {/* Main Hero Content — situated over the sky/clouds section (right side) */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto py-6 sm:py-10">
         <div className="flex justify-end w-full">
-          <div className="w-full sm:max-w-xl lg:max-w-2xl flex flex-col items-start lg:items-end text-left lg:text-right space-y-4 sm:space-y-6">
+          <div className="w-full sm:max-w-xl lg:max-w-lg flex flex-col items-start lg:items-end text-left lg:text-right space-y-3.5 sm:space-y-4">
             
             {/* Top Eyebrow */}
             <div className="space-y-1.5">
@@ -64,13 +64,13 @@ export default function Hero({ onOpenRegister }: HeroProps) {
               </p>
             </div>
 
-            {/* TEAM NARA Headline */}
+            {/* TEAM NARA Headline — sized to fit gracefully inside the sky pocket */}
             <div>
               <h1 
-                className="font-montserrat font-black text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl leading-[0.92] tracking-[0.03em] sm:tracking-[0.05em] uppercase select-none drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]"
+                className="font-montserrat font-black text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl leading-[0.95] tracking-[0.03em] sm:tracking-[0.04em] uppercase select-none drop-shadow-[0_8px_25px_rgba(0,0,0,0.9)]"
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
-                <span className="block text-white hover:tracking-[0.06em] transition-all duration-300 whitespace-nowrap">
+                <span className="block text-white hover:tracking-[0.05em] transition-all duration-300 whitespace-nowrap">
                   TEAM NARA
                 </span>
               </h1>
@@ -78,7 +78,7 @@ export default function Hero({ onOpenRegister }: HeroProps) {
 
             {/* Tagline */}
             <div>
-              <p className="text-sm xs:text-base sm:text-lg md:text-xl font-bold tracking-[0.16em] sm:tracking-[0.25em] text-neutral-100 uppercase leading-snug drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)]">
+              <p className="text-xs xs:text-sm sm:text-base md:text-lg font-bold tracking-[0.16em] sm:tracking-[0.22em] text-neutral-100 uppercase leading-snug drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)]">
                 ADAPT. EVOLVE. KEEP MOVING.
               </p>
             </div>

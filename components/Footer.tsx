@@ -124,7 +124,7 @@ export default function Footer() {
                   href="/sessions"
                   className="text-xs text-brand-orange hover:underline font-mono uppercase font-bold"
                 >
-                  Outdoor Parkour Trial Session (₹499) →
+                  Outdoor Parkour Trial Session (₹500) →
                 </Link>
                 <Link
                   href="/contact"

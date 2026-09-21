@@ -82,7 +82,7 @@ export default function ContactClient() {
                     <span>Fees &amp; Requirements</span>
                   </div>
                   <p className="text-xs text-neutral-300">
-                    Trial Session: <strong className="text-white">₹499</strong> (one-time)
+                    Trial Session: <strong className="text-white">₹500</strong> (one-time)
                   </p>
                   <div className="text-[11px] text-brand-orange font-mono pt-1">
                     ⚠ Required: Bring your own yoga mat &amp; water bottle

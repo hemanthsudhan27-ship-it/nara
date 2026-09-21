@@ -29,6 +29,7 @@ const config: Config = {
         body: ["'Poppins'", "var(--font-body)", "sans-serif"],
         sub: ["'Poppins'", "var(--font-body)", "sans-serif"],
         mono: ["'Poppins'", "ui-monospace", "monospace"],
+        montserrat: ["'Montserrat'", "sans-serif"],
       },
       letterSpacing: {
         tighter: "-0.04em",

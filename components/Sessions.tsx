@@ -64,7 +64,7 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
                   </span>
                   <div>
                     <h5 className="font-bold text-sm text-brand-dark">
-                      Trial Session: ₹499
+                      Trial Session: ₹500
                     </h5>
                     <p className="text-xs text-neutral-600">Single Class Pass</p>
                   </div>
@@ -82,7 +82,7 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
                 onClick={() => onOpenRegister("Outdoor Parkour & Freerunning — Mon, Wed & Fri (6:00 AM – 7:30 AM)")}
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-brand-orange hover:bg-brand-orange-hover text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition shadow-lg shadow-brand-orange/20 active:scale-98"
               >
-                <span>Book Trial Session (₹499)</span>
+                <span>Book Trial Session (₹500)</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <Link

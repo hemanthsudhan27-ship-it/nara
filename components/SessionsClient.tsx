@@ -16,7 +16,7 @@ import { BATCHES, FAQS } from "@/lib/sessionsData";
 import TestimonialsStrip from "@/components/TestimonialsStrip";
 
 const HOW_IT_WORKS = [
-  { step: "01", title: "Book a Trial", desc: "Complete the registration form and pay ₹499 via UPI. You'll receive a WhatsApp welcome with class details." },
+  { step: "01", title: "Book a Trial", desc: "Complete the registration form and pay ₹500 via UPI. You'll receive a WhatsApp welcome with class details." },
   { step: "02", title: "Show Up Outdoors", desc: "Mon, Wed & Fri at 6:00 AM across Calicut. Bring your yoga mat & water bottle." },
   { step: "03", title: "Move with Coaches", desc: "Step-by-step parkour progressions from grounded basics to dynamic movement flow." },
 ];
@@ -189,7 +189,7 @@ export default function SessionsClient() {
                       onClick={() => openRegister("Outdoor Parkour & Freerunning — Mon, Wed & Fri (6:00 AM – 7:30 AM)")}
                       className="w-full py-4 px-6 bg-brand-orange hover:bg-brand-orange-hover text-white font-extrabold text-sm uppercase tracking-wider rounded-2xl transition flex items-center justify-center gap-3 shadow-xl shadow-brand-orange/25 active:scale-98"
                     >
-                      <span>Book Trial Session (₹499)</span>
+                      <span>Book Trial Session (₹500)</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                     <p className="text-center text-xs text-neutral-400 mt-2 font-mono">
@@ -222,7 +222,7 @@ export default function SessionsClient() {
                     </div>
                     <div className="text-right">
                       <span className="text-3xl font-black font-headline text-brand-orange">
-                        ₹499
+                        ₹500
                       </span>
                       <span className="text-[10px] text-neutral-400 block font-mono">one-time</span>
                     </div>
@@ -284,13 +284,13 @@ export default function SessionsClient() {
             <div className="bg-[#141414]/95 backdrop-blur-md border-t border-white/10 px-4 py-3 flex items-center gap-3">
               <div className="flex-1 min-w-0">
                 <p className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest leading-none">Admission Open</p>
-                <p className="text-xs font-bold text-white truncate mt-0.5">Mon, Wed &amp; Fri · 6:00 AM · ₹499</p>
+                <p className="text-xs font-bold text-white truncate mt-0.5">Mon, Wed &amp; Fri · 6:00 AM · ₹500</p>
               </div>
               <button
                 onClick={() => openRegister("Outdoor Parkour & Freerunning — Mon, Wed & Fri (6:00 AM – 7:30 AM)")}
                 className="flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 bg-brand-orange hover:bg-brand-orange-hover text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition shadow-lg shadow-brand-orange/30 active:scale-95"
               >
-                <span>Book Trial (₹499)</span>
+                <span>Book Trial (₹500)</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>

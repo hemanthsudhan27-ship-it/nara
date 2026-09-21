@@ -29,7 +29,7 @@ export default function Hero({ onOpenRegister }: HeroProps) {
       {/* Background Image with Lighter, Cinematic Gradients */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/landing.PNG"
+          src="/images/nara.jpg"
           alt="Team NARA Parkour athletes on ledge overlooking clouds"
           fill
           priority
@@ -66,9 +66,12 @@ export default function Hero({ onOpenRegister }: HeroProps) {
 
             {/* TEAM NARA Headline */}
             <div>
-              <h1 className="font-headline font-black text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl leading-[0.92] tracking-[0.03em] sm:tracking-[0.05em] uppercase select-none drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
+              <h1 
+                className="font-montserrat font-black text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl leading-[0.92] tracking-[0.03em] sm:tracking-[0.05em] uppercase select-none drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]"
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
+              >
                 <span className="block text-white hover:tracking-[0.06em] transition-all duration-300 whitespace-nowrap">
-                  TEAM <span className="text-brand-orange drop-shadow-[0_0_35px_rgba(244,87,30,0.65)]">NARA</span>
+                  TEAM NARA
                 </span>
               </h1>
             </div>

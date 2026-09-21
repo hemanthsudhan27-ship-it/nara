@@ -149,7 +149,7 @@ export default function RegisterModal({
       `📞 *Phone:* ${formData.phone.trim()}`,
       `✉️ *Email:* ${formData.email.trim()}`,
       `🏃 *Class:* ${formData.sessionBatch}`,
-      `💰 *Trial Session Fee:* ₹499`,
+      `💰 *Trial Session Fee:* ₹500`,
       `🏦 *Bank A/c Name:* ${formData.bankAccountName || ""}`,
       `🧾 *UPI UTR:* ${formData.upiReference || ""}`,
       `👟 *Coaching:* Team NARA Trainers`,
@@ -311,7 +311,7 @@ export default function RegisterModal({
                 </div>
                 <div className="flex items-center justify-between text-neutral-300 border-t border-white/5 pt-2">
                   <span>📅 Mon, Wed &amp; Fri • 6:00 AM – 7:30 AM</span>
-                  <span className="font-bold text-white">Trial: ₹499</span>
+                  <span className="font-bold text-white">Trial: ₹500</span>
                 </div>
                 <p className="text-[11px] text-neutral-400 leading-snug">
                   Conducting across Calicut. <span className="text-brand-orange font-semibold">Note:</span> Please bring your own yoga mat &amp; water bottle for every session.
@@ -459,7 +459,7 @@ export default function RegisterModal({
                       Trial Session Fee
                     </span>
                     <h4 className="text-2xl font-bold font-headline text-white">
-                      ₹499
+                      ₹500
                     </h4>
                   </div>
                 </div>
@@ -498,7 +498,7 @@ export default function RegisterModal({
                       <span>Payment Verification</span>
                     </div>
                     <p className="text-[11px] text-neutral-300 leading-relaxed">
-                      Pay the ₹499 fee using any UPI app, or transfer directly to the UPI ID below. Tap QR to enlarge.
+                      Pay the ₹500 fee using any UPI app, or transfer directly to the UPI ID below. Tap QR to enlarge.
                     </p>
 
                     <div className="flex items-center justify-center sm:justify-start gap-2 pt-1">
@@ -739,7 +739,7 @@ export default function RegisterModal({
                 UPI PAYMENT QR
               </h3>
               <p className="text-xs text-neutral-400">
-                Trial Session: <strong className="text-white">₹499</strong>
+                Trial Session: <strong className="text-white">₹500</strong>
               </p>
             </div>
 

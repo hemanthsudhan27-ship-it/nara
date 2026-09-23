@@ -13,8 +13,6 @@ import {
 } from "lucide-react";
 import { useRegister } from "@/context/RegisterContext";
 import { BATCHES, FAQS } from "@/lib/sessionsData";
-import TestimonialsStrip from "@/components/TestimonialsStrip";
-
 const HOW_IT_WORKS = [
   { step: "01", title: "Book a Trial", desc: "Complete the registration form and pay ₹500 via UPI. You'll receive a WhatsApp welcome with class details." },
   { step: "02", title: "Show Up Outdoors", desc: "Mon, Wed & Fri at 6:00 AM across Calicut. Bring your yoga mat & water bottle." },
@@ -321,9 +319,6 @@ export default function SessionsClient() {
         </div>
       </section>
 
-      {/* Testimonials — social proof before the final ask */}
-      <TestimonialsStrip theme="dark" heading="What Our Members Say" />
-
       {/* Frequently Asked Questions */}
       <section className="py-20 sm:py-28 bg-[#141414] border-t border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -370,12 +365,6 @@ export default function SessionsClient() {
             >
               Book Trial Session Now →
             </button>
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition"
-            >
-              Contact Coach for Queries
-            </Link>
           </div>
         </div>
       </section>

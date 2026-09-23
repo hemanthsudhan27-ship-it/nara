@@ -1,0 +1,28 @@
+List of Redundant CTA Buttons Removed
+====================================
+
+Reason for Removal: 
+These secondary buttons created a "loop effect" where users would infinitely navigate between informational pages instead of taking the primary action (Registering for a session or Trial). By removing these, we prioritize the most important function on each page and avoid user fatigue.
+
+Pages and Components Removed:
+
+1. AboutClient.tsx
+- Removed: "View Schedule & Batches" button
+- Removed: "Contact Coaches" button
+- Why: Focuses the user entirely on the primary CTA "Register for a Session". They already read the about page, so now they should book a session.
+
+2. CoachesClient.tsx
+- Removed: "View Schedule & Fees" button
+- Why: After reading about the coaches, the most important action is to join their batch ("Join Batch 1: Wandru"). Linking back to the sessions page creates a redundant loop.
+
+3. SessionsClient.tsx
+- Removed: "Contact Coach for Queries" button
+- Why: The user is on the Sessions page and should be focused solely on "Book Trial Session Now".
+
+4. WhatWeDoClient.tsx
+- Removed: "Our Movement Philosophy" (Link to About page)
+- Why: The user just read about the disciplines. The primary action is to "Join Next Session in Calicut". Sending them to the About page creates an endless reading loop instead of converting them to a registration.
+
+5. CommunityClient.tsx
+- Removed: "View Jam Photo Archive" (Link to Gallery)
+- Why: Directly focuses the user on "Join Next Sunday Jam". Looking at photos is lower priority than actually joining the jam.

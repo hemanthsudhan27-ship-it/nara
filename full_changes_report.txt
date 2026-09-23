@@ -1,0 +1,30 @@
+FULL REPORT OF CHANGES COMPLETED TODAY
+=======================================
+
+1. Gallery Data Synchronization
+- Updated `lib/galleryData.ts` to scan and include all valid images found in the local `public/gallery/` directory.
+- Removed outdated entries and prevented any duplicate image listings to ensure a clean gallery display.
+
+2. Homepage & Sessions Imagery Updates
+- Updated the images used in the `components/WhatWeDo.tsx` section to pull directly from the fresh local gallery files.
+- Modified the secondary scroll section in `components/Sessions.tsx` by replacing the small image with a new image from the gallery (`/gallery/IMG_2902.webp`), while explicitly preserving the main hero image on the landing page.
+
+3. Removed Testimonials Section
+- Completely removed the `TestimonialsStrip` component from both the Homepage (`components/HomeClient.tsx`) and the Sessions page (`components/SessionsClient.tsx`) as requested.
+
+4. Removed "Vaults" from Carousel
+- Identified and deleted the "Vaults" slide (which used `IMG_2920.webp`) from the interactive stacked carousel found in `components/ui/carousel-07.tsx`.
+
+5. Removed "What We Do" from About Page
+- Cleaned up `components/AboutClient.tsx` by fully removing the "What We Do" (Disciplines) tab.
+- This involved deleting the `DISCIPLINES` array, removing the tab selection button, and safely replacing the internal "See What We Train" button with a link to the Community section.
+
+6. Cleaned Up Looping/Redundant CTA Buttons
+- Audited the bottom Call-to-Action (CTA) sections across the site to remove secondary buttons that were causing a navigation "loop effect."
+- Removed secondary navigation links (e.g., "View Schedule & Batches", "Contact Coaches", "Our Movement Philosophy", "View Jam Photo Archive") from the following pages to focus the user exclusively on the primary conversion goal (Booking/Registering):
+  - `components/AboutClient.tsx`
+  - `components/CoachesClient.tsx`
+  - `components/SessionsClient.tsx`
+  - `components/WhatWeDoClient.tsx`
+  - `components/CommunityClient.tsx`
+- Created `removed_buttons_report.txt` detailing exactly which buttons were removed from each page and why.

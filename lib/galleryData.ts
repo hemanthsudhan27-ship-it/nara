@@ -9,83 +9,227 @@ export interface GalleryItem {
 
 export const EXTENDED_GALLERY: GalleryItem[] = [
   {
-    id: "p-2282",
-    category: "parkour",
-    title: "Sea Wall Leap & Precision",
-    location: "Calicut Beach Coastal Wall",
-    src: "/photos/IMG_2282.webp",
-    description: "Athlete executing precision landing on coastal granite sea wall in Calicut.",
+    "id": "p-2264",
+    "category": "freerunning",
+    "title": "Morning Promenade Stride",
+    "location": "Calicut Coastal Art Walk",
+    "src": "/gallery/IMG_2264.webp",
+    "description": "Pacing dynamic stride across elevated stone platforms at Calicut beach."
   },
   {
-    id: "p-2899",
-    category: "jams",
-    title: "Team Plaza Lineup & Footwork Drills",
-    location: "South Beach Promenade",
-    src: "/photos/IMG_2899.webp",
-    description: "Team NARA athletes aligning for ground coordination and footwork drills.",
+    "id": "p-2268",
+    "category": "freerunning",
+    "title": "Sunrise Flow & Sun Alignment",
+    "location": "Kozhikode Promenade",
+    "src": "/gallery/IMG_2268.webp",
+    "description": "Freerunning balance stride sequence captured during early morning coastal sunrise."
   },
   {
-    id: "p-2900",
-    category: "jams",
-    title: "Crew Forward Fold Mobility",
-    location: "Calicut Seaside Plazas",
-    src: "/photos/IMG_2900.webp",
-    description: "Pre-session hamstring mobility and joint preparation circle by the sea.",
+    "id": "p-2282",
+    "category": "parkour",
+    "title": "Sea Wall Leap & Precision",
+    "location": "Calicut Beach Coastal Wall",
+    "src": "/gallery/IMG_2282.webp",
+    "description": "Athlete executing precision landing on coastal granite sea wall in Calicut."
   },
   {
-    id: "p-2268",
-    category: "freerunning",
-    title: "Sunrise Flow & Sun Alignment",
-    location: "Kozhikode Promenade",
-    src: "/photos/IMG_2268.webp",
-    description: "Freerunning balance stride sequence captured during early morning coastal sunrise.",
+    "id": "p-2899",
+    "category": "jams",
+    "title": "Team Plaza Lineup & Footwork Drills",
+    "location": "South Beach Promenade",
+    "src": "/gallery/IMG_2899.webp",
+    "description": "Team NARA athletes aligning for ground coordination and footwork drills."
   },
   {
-    id: "p-2264",
-    category: "freerunning",
-    title: "Morning Promenade Stride",
-    location: "Calicut Coastal Art Walk",
-    src: "/photos/IMG_2264.webp",
-    description: "Pacing dynamic stride across elevated stone platforms at Calicut beach.",
+    "id": "p-2900",
+    "category": "jams",
+    "title": "Crew Forward Fold Mobility",
+    "location": "Calicut Seaside Plazas",
+    "src": "/gallery/IMG_2900.webp",
+    "description": "Pre-session hamstring mobility and joint preparation circle by the sea."
   },
   {
-    id: "p-2920",
-    category: "jams",
-    title: "Joint Preparation & Mobility Circle",
-    location: "South Beach Training Ground",
-    src: "/photos/IMG_2920.webp",
-    description: "Warmup routine focusing on ankle and wrist conditioning for safe parkour impact absorption.",
+    "id": "p-2902",
+    "category": "jams",
+    "title": "Calf & Hamstring Stretch Sequence",
+    "location": "Calicut Seaside Plaza",
+    "src": "/gallery/IMG_2902.webp",
+    "description": "Movers practicing deep stretching and flexibility drills before vault sessions."
   },
   {
-    id: "p-2902",
-    category: "jams",
-    title: "Calf & Hamstring Stretch Sequence",
-    location: "Calicut Seaside Plaza",
-    src: "/photos/IMG_2902.webp",
-    description: "Movers practicing deep stretching and flexibility drills before vault sessions.",
+    "id": "gallery-1",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2914.webp",
+    "description": "Dynamic movement and parkour flow."
   },
   {
-    id: "img-3117",
-    category: "parkour",
-    title: "Sunset Landing Mechanics",
-    location: "South Beach Promenade",
-    src: "/images/IMG_3117.PNG",
-    description: "Traceurs mastering silent drop absorption and safety rolls on stone promenades.",
+    "id": "gallery-2",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2918.webp",
+    "description": "Dynamic movement and parkour flow."
   },
   {
-    id: "img-3116",
-    category: "jams",
-    title: "Seaside Squad Flow",
-    location: "Kozhikode Coastal Horizon",
-    src: "/images/IMG_3116.PNG",
-    description: "Full Team NARA crew silhouetted at dusk along the Malabar coastline.",
+    "id": "p-2920",
+    "category": "jams",
+    "title": "Joint Preparation & Mobility Circle",
+    "location": "South Beach Training Ground",
+    "src": "/gallery/IMG_2920.webp",
+    "description": "Warmup routine focusing on ankle and wrist conditioning for safe parkour impact absorption."
   },
   {
-    id: "img-3115",
-    category: "parkour",
-    title: "Cat Pass & Wall Preparation",
-    location: "South Beach Breakwater",
-    src: "/images/IMG_3115.PNG",
-    description: "Athlete preparing kong vault and cat leap mechanics on concrete urban obstacles.",
+    "id": "gallery-3",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2924.webp",
+    "description": "Dynamic movement and parkour flow."
   },
+  {
+    "id": "gallery-4",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2925.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-5",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2929.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-6",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2936.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-7",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2937.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-8",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2978.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-9",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2984.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-10",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2985.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-11",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2986.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-12",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_2993.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-13",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_3004.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-14",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_3027.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-15",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_3035.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-16",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_3038.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-17",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_3041.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-18",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_3058.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-19",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_3093.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-20",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_3095.webp",
+    "description": "Dynamic movement and parkour flow."
+  },
+  {
+    "id": "gallery-21",
+    "category": "parkour",
+    "title": "Parkour Action",
+    "location": "Calicut",
+    "src": "/gallery/IMG_3096.webp",
+    "description": "Dynamic movement and parkour flow."
+  }
 ];

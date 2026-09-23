@@ -105,12 +105,6 @@ export default function CommunityClient() {
                 >
                   Join Next Sunday Jam →
                 </button>
-                <Link
-                  href="/gallery"
-                  className="px-6 py-3.5 bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition"
-                >
-                  View Jam Photo Archive
-                </Link>
               </div>
             </div>
 

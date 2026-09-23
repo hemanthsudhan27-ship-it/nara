@@ -50,12 +50,7 @@ export const defaultSlides: Slide[] = [
     description: "Functional conditioning, joint preparation, and safe landings.",
     badge: "Conditioning",
   },
-  {
-    image: "/photos/IMG_2920.webp",
-    title: "Vaults",
-    description: "Vaulting through urban obstacles along Calicut South Beach.",
-    badge: "Vaults",
-  },
+
   {
     image: "/images/IMG_3117.PNG",
     title: "Landing Mechanics",

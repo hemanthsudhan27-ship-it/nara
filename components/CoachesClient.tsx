@@ -393,12 +393,6 @@ export default function CoachesClient() {
             >
               Join Batch 1: Wandru
             </button>
-            <Link
-              href="/sessions"
-              className="w-full sm:w-auto px-8 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition active:scale-98"
-            >
-              View Schedule &amp; Fees
-            </Link>
           </div>
         </div>
       </section>

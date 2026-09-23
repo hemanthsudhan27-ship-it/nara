@@ -100,7 +100,7 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
               {/* Image Frame */}
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900 group">
                 <Image
-                  src="/images/IMG_3115.PNG"
+                  src="/gallery/IMG_2902.webp"
                   alt="Outdoor Parkour & Freerunning morning training class on Calicut South Beach promenade led by Team NARA coaches"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"

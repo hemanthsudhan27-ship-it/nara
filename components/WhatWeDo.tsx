@@ -53,7 +53,7 @@ And that's exactly what we're here to teach.`,
       "Wall runs & cat leaps",
       "Flow routing & line selection",
     ],
-    image: "/images/IMG_3115.PNG",
+    image: "/gallery/IMG_2914.webp",
   },
   {
     id: "freerunning",
@@ -87,7 +87,7 @@ At NARA, Freerunning is where we take the foundations we've built and start expl
       "Creative line chaining",
       "Spatial awareness & flow state",
     ],
-    image: "/images/IMG_3117.PNG",
+    image: "/gallery/IMG_2268.webp",
   },
   {
     id: "tricking",
@@ -117,7 +117,7 @@ At NARA, Tricking is where we explore the more dynamic and acrobatic side of mov
       "Gainer & flash family",
       "Combo chaining & set-ups",
     ],
-    image: "/images/IMG_3116.PNG",
+    image: "/gallery/IMG_3096.webp",
   },
 ];
 

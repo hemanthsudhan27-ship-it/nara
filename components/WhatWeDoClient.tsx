@@ -233,12 +233,6 @@ export default function WhatWeDoClient() {
             >
               Join Next Session in Calicut →
             </button>
-            <Link
-              href="/about"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition"
-            >
-              Our Movement Philosophy
-            </Link>
           </div>
         </div>
       </section>

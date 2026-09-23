@@ -6,7 +6,6 @@ import Sessions from "@/components/Sessions";
 import WhatWeDo from "@/components/WhatWeDo";
 import Community from "@/components/Community";
 import Gallery from "@/components/Gallery";
-import TestimonialsStrip from "@/components/TestimonialsStrip";
 import CtaBanner from "@/components/CtaBanner";
 import { useRegister } from "@/context/RegisterContext";
 
@@ -26,9 +25,6 @@ export default function HomeClient() {
 
       {/* 4. Community Story — short version, build connection */}
       <Community />
-
-      {/* 5. Testimonials Strip — social proof before the ask */}
-      <TestimonialsStrip theme="dark" heading="What Movers Say" />
 
       {/* 6. Gallery Sneakpeek — aspiration, inspire action */}
       <Gallery />

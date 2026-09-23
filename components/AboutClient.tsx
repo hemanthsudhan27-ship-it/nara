@@ -6,39 +6,6 @@ import Link from "next/link";
 import { ArrowRight, Shield, Heart, Compass, Check } from "lucide-react";
 import { useRegister } from "@/context/RegisterContext";
 
-const DISCIPLINES = [
-  {
-    num: "01",
-    title: "Parkour",
-    desc: "Move from A to B efficiently using only the human body. Real-world spatial intelligence built on Calicut's sea walls, benches, and plazas.",
-    skills: ["Precision Jumps", "Kong & Speed Vaults", "Cat Leaps", "Safety Rolls"],
-  },
-  {
-    num: "02",
-    title: "Freerunning",
-    desc: "Where parkour meets personal expression — flow, style, and aerial fluidity blended into seamless movement transitions.",
-    skills: ["Wall Runs & Tic-Tacs", "Side & Front Flips", "Flow Sequencing", "Bar Swings"],
-  },
-  {
-    num: "03",
-    title: "Tricking",
-    desc: "High-octane aesthetic discipline combining kicks, spins, and flips drawn from Taekwondo, Capoeira, and gymnastics.",
-    skills: ["540 & Tornado Kicks", "Butterfly Twists", "Aerials & Websters", "Corkscrews"],
-  },
-  {
-    num: "04",
-    title: "Workshops",
-    desc: "Custom movement programs for schools, universities, corporate teams, and events across Kerala. Safety-first.",
-    skills: ["Youth Motor Skills", "Stunt Choreography", "Injury Prevention", "Team Bonding"],
-  },
-  {
-    num: "05",
-    title: "Community Jams",
-    desc: "Open jams where beginners train alongside seasoned practitioners. We share spots, trade techniques, and build friendships.",
-    skills: ["Spot Etiquette", "Partner Spotting", "Sunset Gatherings", "City Travel Meets"],
-  },
-];
-
 const COMMUNITY_RULES = [
   {
     title: "No One Trains Alone",
@@ -60,7 +27,7 @@ const COMMUNITY_RULES = [
 
 export default function AboutClient() {
   const { openRegister } = useRegister();
-  const [activeTab, setActiveTab] = useState<"story" | "disciplines" | "community">("story");
+  const [activeTab, setActiveTab] = useState<"story" | "community">("story");
 
   return (
     <div className="bg-[#141414] text-white pt-28 pb-20">
@@ -83,7 +50,7 @@ export default function AboutClient() {
 
           {/* Tab Navigation */}
           <div className="flex flex-wrap gap-2 mt-10">
-            {(["story", "disciplines", "community"] as const).map((tab) => (
+            {(["story", "community"] as const).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -93,7 +60,7 @@ export default function AboutClient() {
                     : "bg-white/5 text-neutral-400 hover:text-white hover:bg-white/10 border border-white/10"
                 }`}
               >
-                {tab === "story" ? "Our Story" : tab === "disciplines" ? "What We Do" : "Community"}
+                {tab === "story" ? "Our Story" : "Community"}
               </button>
             ))}
           </div>
@@ -138,17 +105,11 @@ export default function AboutClient() {
 
                   <div className="pt-2 flex flex-wrap gap-3">
                     <button
-                      onClick={() => setActiveTab("disciplines")}
+                      onClick={() => setActiveTab("community")}
                       className="inline-flex items-center gap-2 px-5 py-3 bg-black hover:bg-neutral-900 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow"
                     >
-                      <span>See What We Train</span>
+                      <span>Our Community</span>
                       <ArrowRight className="w-4 h-4 text-brand-orange" />
-                    </button>
-                    <button
-                      onClick={() => setActiveTab("community")}
-                      className="inline-flex items-center gap-2 px-5 py-3 bg-black/5 hover:bg-black/10 text-brand-dark font-bold text-xs uppercase tracking-wider rounded-xl border border-neutral-300 transition"
-                    >
-                      Our Community
                     </button>
                   </div>
                 </div>
@@ -225,70 +186,6 @@ export default function AboutClient() {
         </>
       )}
 
-      {/* ── TAB: DISCIPLINES ── */}
-      {activeTab === "disciplines" && (
-        <section className="py-20 sm:py-28">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12">
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
-                DISCIPLINES &amp; SPECIALTIES
-              </span>
-              <h2 className="text-3xl sm:text-5xl font-black font-headline tracking-[0.06em] uppercase text-white mt-1">
-                5 PILLARS OF THE NARA METHOD
-              </h2>
-              <p className="text-sm sm:text-base text-neutral-400 mt-3 max-w-2xl">
-                From pure utilitarian obstacle traversal to creative flow and explosive
-                acrobatics. You don&apos;t have to pick just one — our sessions integrate all five.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-              {DISCIPLINES.map((d) => (
-                <div
-                  key={d.num}
-                  className="bg-[#1C1C1C] border border-white/10 rounded-2xl p-6 space-y-4 hover:border-brand-orange/40 transition-all duration-300 hover:-translate-y-1 shadow-xl shadow-black/30"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl font-black font-headline text-brand-orange/30">{d.num}</span>
-                    <h3 className="text-xl font-black font-headline uppercase text-white">{d.title}</h3>
-                  </div>
-                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">{d.desc}</p>
-                  <div className="grid grid-cols-2 gap-1.5 pt-1">
-                    {d.skills.map((skill, i) => (
-                      <div key={i} className="flex items-center gap-1.5 text-[11px] text-neutral-300">
-                        <Check className="w-3 h-3 text-brand-orange flex-shrink-0" />
-                        <span>{skill}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-
-              {/* CTA card */}
-              <div className="bg-brand-orange rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl shadow-brand-orange/20">
-                <div>
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-white/70">
-                    All disciplines, one crew
-                  </span>
-                  <h3 className="text-2xl font-black font-headline uppercase text-white mt-2">
-                    Ready to Start?
-                  </h3>
-                  <p className="text-xs text-white/80 mt-2 leading-relaxed">
-                    Mon, Wed &amp; Fri · 6:00 AM · Outdoors across Calicut
-                  </p>
-                </div>
-                <button
-                  onClick={() => openRegister()}
-                  className="inline-flex items-center gap-2 px-5 py-3 bg-black hover:bg-neutral-900 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow active:scale-98"
-                >
-                  <span>Join a Session</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ── TAB: COMMUNITY ── */}
       {activeTab === "community" && (
@@ -403,18 +300,6 @@ export default function AboutClient() {
             >
               Register for a Session →
             </button>
-            <Link
-              href="/sessions"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-white/20 hover:bg-white/30 text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition active:scale-98"
-            >
-              View Schedule &amp; Batches
-            </Link>
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-black/30 hover:bg-black/40 text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition active:scale-98"
-            >
-              Contact Coaches
-            </Link>
           </div>
         </div>
       </section>

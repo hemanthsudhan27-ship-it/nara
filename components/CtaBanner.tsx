@@ -39,12 +39,13 @@ export default function CtaBanner({ onOpenRegister }: CtaBannerProps) {
             </p>
 
             <div className="pt-2">
-              <Link
-                href="/sessions"
-                className="inline-flex items-center gap-2 text-xs uppercase font-mono font-bold tracking-wider text-black bg-white/90 hover:bg-white px-4 py-2 rounded-xl transition shadow"
+              <button
+                type="button"
+                onClick={() => onOpenRegister()}
+                className="inline-flex items-center gap-2 text-xs uppercase font-mono font-bold tracking-wider text-black bg-white/90 hover:bg-white px-4 py-2 rounded-xl transition shadow cursor-pointer"
               >
                 <span>Book a Trial Session (₹500) →</span>
-              </Link>
+              </button>
             </div>
           </div>
 

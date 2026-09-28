@@ -91,7 +91,7 @@ export default function CommunityClient() {
                 <p className="font-semibold text-neutral-900 border-l-4 border-brand-orange pl-4 py-1">
                   There are no entry fees for our open community jams. All you need is
                   respect for the spot and a willingness to try. Looking for structured weekday classes? Check out our{" "}
-                  <Link href="/sessions" className="text-brand-orange hover:underline font-bold">
+                  <Link href="/#sessions" className="text-brand-orange hover:underline font-bold">
                     coached training schedule
                   </Link>
                   .

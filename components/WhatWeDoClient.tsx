@@ -195,7 +195,7 @@ export default function WhatWeDoClient() {
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
                     <Link
-                      href="/sessions"
+                      href="/#sessions"
                       className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-neutral-300 hover:text-white font-bold text-xs uppercase tracking-wider border border-white/10 transition"
                     >
                       <span>View Batch Schedule</span>

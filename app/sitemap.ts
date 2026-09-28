@@ -17,15 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
     {
-      url: `${baseUrl}/sessions`,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 0.95,
-      images: [
-        `${baseUrl}/images/IMG_3115.PNG`,
-      ],
-    },
-    {
       url: `${baseUrl}/coaches`,
       lastModified: currentDate,
       changeFrequency: "weekly",

@@ -89,7 +89,7 @@ export default function ContactClient() {
                   </div>
                   <div className="pt-2">
                     <Link
-                      href="/sessions"
+                      href="/#sessions"
                       className="text-xs text-brand-orange hover:underline font-mono inline-flex items-center gap-1"
                     >
                       <span>Read full session FAQ &amp; batch breakdown</span>

@@ -20,6 +20,11 @@ const nextConfig = {
         destination: '/about',
         permanent: true,
       },
+      {
+        source: '/sessions',
+        destination: '/#sessions',
+        permanent: false,
+      },
     ];
   },
 };

@@ -79,7 +79,7 @@ export default function WhoCanJoin({ onOpenRegister }: WhoCanJoinProps) {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
             <Link
-              href="/sessions"
+              href="/#sessions"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-neutral-300 hover:text-white text-xs font-bold uppercase tracking-wider border border-white/10 transition"
             >
               <span>View Training Schedule</span>

@@ -1,15 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 
 interface SessionsProps {
   onOpenRegister: (batch?: string) => void;
 }
 
+const SESSION_STEPS = [
+  {
+    num: "01",
+    title: "Book a Trial",
+    desc: "Complete the registration form and pay ₹500 via UPI. You'll receive a WhatsApp welcome with class details.",
+  },
+  {
+    num: "02",
+    title: "Show Up Outdoors",
+    desc: "Mon, Wed & Fri at 6:00 AM across Calicut. Bring your yoga mat & water bottle.",
+  },
+  {
+    num: "03",
+    title: "Move with Coaches",
+    desc: "Step-by-step parkour progressions from grounded basics to dynamic movement flow.",
+  },
+];
+
 export default function Sessions({ onOpenRegister }: SessionsProps) {
+  const [showDetails, setShowDetails] = useState(false);
+
   return (
     <section
       id="sessions"
@@ -17,7 +37,7 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main 2-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Copy, CTA & Eyebrow */}
           <div className="lg:col-span-7 space-y-6">
             {/* Eyebrow */}
@@ -77,7 +97,7 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
             </div>
 
             {/* CTA */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 max-w-xl">
               <button
                 onClick={() => onOpenRegister("Outdoor Parkour & Freerunning — Mon, Wed & Fri (6:00 AM – 7:30 AM)")}
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-brand-orange hover:bg-brand-orange-hover text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition shadow-lg shadow-brand-orange/20 active:scale-98"
@@ -85,13 +105,72 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
                 <span>Book Trial Session (₹500)</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-              <Link
-                href="/sessions"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 sm:py-4 bg-black/5 hover:bg-black/10 text-brand-dark font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl border border-neutral-300 transition"
+              <button
+                type="button"
+                onClick={() => setShowDetails((prev) => !prev)}
+                className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl border transition cursor-pointer ${
+                  showDetails
+                    ? "bg-brand-dark text-white border-brand-dark shadow-md"
+                    : "bg-black/5 hover:bg-black/10 text-brand-dark border-neutral-300"
+                }`}
+                aria-expanded={showDetails}
               >
-                View Full Details &amp; FAQs
-              </Link>
+                <span>{showDetails ? "Hide Details & FAQs" : "View Full Details & FAQs"}</span>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-300 ${
+                    showDetails ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
             </div>
+
+            {/* Revealed 3-Step Flow */}
+            <AnimatePresence>
+              {showDetails && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0, y: -10 }}
+                  animate={{ opacity: 1, height: "auto", y: 0 }}
+                  exit={{ opacity: 0, height: 0, y: -10 }}
+                  transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+                  className="overflow-hidden pt-2 max-w-xl"
+                >
+                  <div className="space-y-3 pt-2 border-t border-neutral-200/80">
+                    <p className="text-[11px] font-mono font-bold uppercase tracking-widest text-brand-orange">
+                      HOW IT WORKS • 3-STEP JOURNEY
+                    </p>
+                    <div className="space-y-3">
+                      {SESSION_STEPS.map((step, idx) => (
+                        <motion.div
+                          key={step.num}
+                          initial={{ opacity: 0, x: -16 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{
+                            duration: 0.35,
+                            delay: idx * 0.1,
+                            ease: [0.4, 0, 0.2, 1],
+                          }}
+                          className="p-4 sm:p-5 rounded-2xl bg-white border border-neutral-200/90 shadow-sm flex items-start gap-4 hover:border-brand-orange/40 transition-colors"
+                        >
+                          <div className="w-10 h-10 rounded-xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center flex-shrink-0">
+                            <span className="font-mono font-black text-sm text-brand-orange">
+                              {step.num}
+                            </span>
+                          </div>
+                          <div className="space-y-1">
+                            <h4 className="font-headline font-black text-base sm:text-lg uppercase tracking-wide text-brand-dark">
+                              {step.title}
+                            </h4>
+                            <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                              {step.desc}
+                            </p>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* Right Column: Visual Photo */}

@@ -2,18 +2,20 @@ import type { Metadata } from "next";
 import CoachesClient from "@/components/CoachesClient";
 
 export const metadata: Metadata = {
-  title: "Meet Our Coaches | Coach Renjith & Coach Nithin | Team NARA",
+  title: "Meet Our Coaches | Coach Wandru, Coach Nithin & Coach Dadu | Team NARA",
   description:
-    "Meet Team NARA coaches: Coach Renjith leading Batch 1 (Wandru) and Coach Nithin specializing in technical freerunning and urban spatial mastery in Calicut, Kerala.",
+    "Meet Team NARA coaches: Coach Wandru (Renjith), Coach Nithin Tom, and Coach Dadu (Sarathnad). Experienced movement pioneers with over 8 years of coaching in Calicut, Kerala.",
   keywords: [
     "Team NARA coaches",
     "Parkour coach Calicut",
     "Coach Renjith Wandru",
-    "Coach Nithin freerunning",
+    "Coach Nithin Tom",
+    "Coach Dadu Sarathnad",
+    "Origins Gym Canada coach",
     "Batch 1 Wandru Calicut",
     "Parkour trainers Kerala",
     "Freerunning mentors Kozhikode",
-    "Street movement coaches India",
+    "Speed parkour India",
   ],
   alternates: {
     canonical: "https://teamnara.in/coaches",
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Meet the Coaches | Team NARA Calicut Parkour",
     description:
-      "Train with Coach Renjith (Batch 1: Wandru) and Coach Nithin. Progressive outdoor parkour, vault dynamics, and freerunning flow on the coast of Calicut.",
+      "Train with Coach Wandru (Renjith), Coach Nithin Tom, and Coach Dadu (Sarathnad). Progressive outdoor parkour, pure speed mechanics, and creative freerunning in Calicut.",
     url: "https://teamnara.in/coaches",
     images: [
       {
@@ -35,6 +37,12 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Coach Nithin aerial urban gap leap",
+      },
+      {
+        url: "/gallery/IMG_2282.webp",
+        width: 1200,
+        height: 800,
+        alt: "Coach Dadu sea wall precision leap at Calicut Beach",
       },
     ],
   },
@@ -78,19 +86,27 @@ const jsonLdCoaches = {
   coach: [
     {
       "@type": "Person",
-      name: "Coach Renjith",
-      jobTitle: "Head Coach & Founder (Lead Trainer, Batch 1: Wandru)",
+      name: "Coach Wandru (Renjith)",
+      jobTitle: "Head Coach (Lead Trainer, Batch 1: Wandru)",
       description:
-        "Head coach leading Batch 1: Wandru with expertise in vault dynamics, precision rail jumps, and coastal acrobatics.",
+        "Training Parkour since 2016–17 with a Karate and martial arts background. Multiple national-level title winner specializing in Freerunning, flips, tricks, and creative movement.",
       image: "https://teamnara.in/coaches/renjith/IMG_2007.webp",
     },
     {
       "@type": "Person",
-      name: "Coach Nithin",
-      jobTitle: "Senior Coach & Technical Movement Architect",
+      name: "Coach Nithin Tom",
+      jobTitle: "Senior Coach & International Parkour Athlete",
       description:
-        "Senior coach specializing in technical freerunning, high-elevation architectural precision, wall climb velocity, and spatial navigation.",
+        "Training Parkour since 2017 with a Track & Field background. Former coach at Origins Gym in Canada, international speed event winner, and one of India’s finest Parkour athletes.",
       image: "https://teamnara.in/coaches/nithin/IMG_8202.JPG.webp",
+    },
+    {
+      "@type": "Person",
+      name: "Coach Dadu (Sarathnad)",
+      jobTitle: "Senior Coach & Movement Pioneer",
+      description:
+        "Training Parkour since 2014 with over 8 years of coaching experience. Focuses on pure movement, flow, and safe progression, helping shape the Kerala parkour scene.",
+      image: "https://teamnara.in/gallery/IMG_2264.webp",
     },
   ],
 };

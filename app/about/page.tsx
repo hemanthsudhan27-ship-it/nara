@@ -4,7 +4,7 @@ import AboutClient from "@/components/AboutClient";
 export const metadata: Metadata = {
   title: "About Us | Kerala's Movement Pioneers | Calicut Parkour",
   description:
-    "Learn about Team NARA, Kerala's pioneering street movement and parkour collective based in Calicut (Kozhikode). Discover our origins on South Beach, safety-first philosophy, and coaching ethos.",
+    "The story of Team NARA: from a few kids learning flips in Calicut to a community built around Parkour, Freerunning, Tricking, and human movement.",
   keywords: [
     "About Team NARA",
     "Parkour Kerala origins",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Team NARA | Kerala's Movement Pioneers",
     description:
-      "Reclaiming Calicut's urban and coastal spaces through parkour, freerunning, and tricking. Discover our origins, values, and coaches.",
+      "NARA comes from Sanskrit meaning human. Discover how a few kids learning flips built Kerala's parkour, freerunning, and tricking community in Calicut.",
     url: "https://teamnara.in/about",
     images: [
       {

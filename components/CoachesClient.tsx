@@ -72,19 +72,52 @@ const NITHIN_PHOTOS: PhotoItem[] = [
   },
 ];
 
+const DADU_PHOTOS: PhotoItem[] = [
+  {
+    src: "/gallery/IMG_2264.webp",
+    alt: "Coach Dadu dynamic promenade stride in Calicut",
+    label: "Promenade Stride",
+  },
+  {
+    src: "/gallery/IMG_2268.webp",
+    alt: "Coach Dadu sunrise balance and flow sequence",
+    label: "Sunrise Flow",
+  },
+  {
+    src: "/gallery/IMG_2282.webp",
+    alt: "Coach Dadu sea wall precision leap at Calicut Beach",
+    label: "Sea Wall Precision",
+  },
+  {
+    src: "/gallery/IMG_2899.webp",
+    alt: "Coach Dadu leading footwork and ground drills",
+    label: "Movement Drills",
+  },
+  {
+    src: "/gallery/IMG_2900.webp",
+    alt: "Coach Dadu pre-session mobility and joint preparation",
+    label: "Joint Mobility",
+  },
+];
+
 export default function CoachesClient() {
   const { openRegister } = useRegister();
 
   const [renjithPhotoIdx, setRenjithPhotoIdx] = useState(0);
   const [nithinPhotoIdx, setNithinPhotoIdx] = useState(0);
+  const [daduPhotoIdx, setDaduPhotoIdx] = useState(0);
 
   const [lightbox, setLightbox] = useState<{
-    coach: "renjith" | "nithin";
+    coach: "renjith" | "nithin" | "dadu";
     idx: number;
   } | null>(null);
 
   const currentPhotos =
-    lightbox?.coach === "renjith" ? RENJITH_PHOTOS : NITHIN_PHOTOS;
+    lightbox?.coach === "renjith"
+      ? RENJITH_PHOTOS
+      : lightbox?.coach === "nithin"
+      ? NITHIN_PHOTOS
+      : DADU_PHOTOS;
   const currentPhoto = lightbox !== null ? currentPhotos[lightbox.idx] : null;
 
   return (
@@ -176,19 +209,16 @@ export default function CoachesClient() {
                   <span>Batch 1 &bull; Wandru</span>
                 </div>
 
-                <h2 className="text-5xl sm:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
-                  RENJITH
+                <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
+                  WANDRU <span className="text-brand-orange">(RENJITH)</span>
                 </h2>
                 <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-400">
-                  Head Coach &bull; Movement Specialist
+                  Head Coach &bull; Freerunning &amp; Movement Specialist
                 </p>
               </div>
 
               <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
-                Coach Renjith leads Team NARA with a focus on grounded vaults,
-                rail precision, and safe acrobatic progressions. He breaks down
-                complex street movements into step-by-step fundamentals tailored
-                for all fitness levels.
+                Training Parkour since around 2016–17, Ranjith comes from a Karate and martial arts background and has been coaching for several years. His strength lies in Freerunning, with a strong focus on flips, tricks and creative movement. He has won multiple national-level titles and is deeply involved in India’s Parkour community, regularly participating in events and staying connected with practitioners across the country.
               </p>
 
               {/* Clean Batch Card: Wandru */}
@@ -245,22 +275,19 @@ export default function CoachesClient() {
             <div className="lg:col-span-6 space-y-6">
               <div className="space-y-2">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-mono font-bold uppercase tracking-wider">
-                  <span>Technical Freerunning</span>
+                  <span>Pure Parkour &bull; Speed Specialist</span>
                 </div>
 
-                <h2 className="text-5xl sm:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
-                  NITHIN
+                <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
+                  NITHIN <span className="text-brand-orange">TOM</span>
                 </h2>
                 <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-400">
-                  Senior Coach &bull; Movement Architect
+                  Senior Coach &bull; International Athlete
                 </p>
               </div>
 
               <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
-                Coach Nithin specializes in high-elevation urban precision,
-                vertical wall climb-up velocity, and aerial momentum. With years of
-                street exploration, he guides movers through spatial awareness,
-                fear management, and high-impact control.
+                Training Parkour since 2017, Nidhin comes from a Track &amp; Field background and has coached at Origins Gym in Canada. He has competed in multiple international competitions and won several Speed event titles. His focus is pure Parkour, and he is regarded as one of India’s finest Parkour athletes.
               </p>
 
               {/* Clean Discipline Card (No batch name) */}
@@ -271,26 +298,26 @@ export default function CoachesClient() {
                       Specialization
                     </span>
                     <h3 className="text-xl sm:text-2xl font-black font-headline tracking-wide uppercase text-white">
-                      URBAN ARCHITECTURE &bull; GAPS
+                      PURE PARKOUR &bull; SPEED
                     </h3>
                   </div>
-                  <span className="text-xs font-mono uppercase px-2.5 py-1 rounded bg-white/5 border border-white/10 text-neutral-300">
-                    Senior Coach
+                  <span className="text-xs font-mono uppercase px-2.5 py-1 rounded bg-brand-orange/10 border border-brand-orange/30 text-brand-orange font-bold">
+                    Origins Gym Coach (Canada)
                   </span>
                 </div>
 
                 <div className="flex flex-wrap gap-2 text-xs font-mono text-neutral-300">
                   <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
-                    High Gap Precision
+                    Pure Parkour
                   </span>
                   <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
-                    Wall Climb Velocity
+                    Track &amp; Field Speed
                   </span>
                   <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
-                    Cat Pass Transits
+                    International Speed Titles
                   </span>
                   <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
-                    Fear Conditioning
+                    Origins Gym (Canada)
                   </span>
                 </div>
 
@@ -363,6 +390,134 @@ export default function CoachesClient() {
                     />
                   </button>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* ════════════════════════════════════════════════════════════════
+            03 // COACH DADU (SARATHNAD)
+        ════════════════════════════════════════════════════════════════ */}
+        <section id="dadu" className="scroll-mt-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Left: Interactive Visual Showcase */}
+            <div className="lg:col-span-6 space-y-4 order-2 lg:order-1">
+              <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 group shadow-2xl">
+                <Image
+                  src={DADU_PHOTOS[daduPhotoIdx].src}
+                  alt={DADU_PHOTOS[daduPhotoIdx].alt}
+                  fill
+                  priority
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+
+                {/* Lightbox Trigger */}
+                <button
+                  onClick={() =>
+                    setLightbox({ coach: "dadu", idx: daduPhotoIdx })
+                  }
+                  className="absolute bottom-4 right-4 p-2.5 rounded-full bg-black/60 hover:bg-brand-orange text-white backdrop-blur-md transition border border-white/15"
+                  aria-label="View full image"
+                >
+                  <Maximize2 className="w-4 h-4" />
+                </button>
+
+                <div className="absolute bottom-4 left-4">
+                  <span className="text-xs font-mono tracking-wider text-neutral-300 uppercase bg-black/60 px-3 py-1 rounded-md backdrop-blur-md border border-white/10">
+                    {DADU_PHOTOS[daduPhotoIdx].label}
+                  </span>
+                </div>
+              </div>
+
+              {/* Thumbnails row to switch photos cleanly */}
+              <div className="grid grid-cols-5 gap-2.5">
+                {DADU_PHOTOS.map((photo, idx) => (
+                  <button
+                    key={photo.src}
+                    onClick={() => setDaduPhotoIdx(idx)}
+                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${
+                      daduPhotoIdx === idx
+                        ? "border-brand-orange ring-2 ring-brand-orange/30 scale-95"
+                        : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
+                    }`}
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={photo.label}
+                      fill
+                      className="object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Clean Profile & Movement Focus */}
+            <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-mono font-bold uppercase tracking-wider">
+                  <span>Pioneer &bull; 8+ Years Coaching</span>
+                </div>
+
+                <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
+                  DADU <span className="text-brand-orange">(SARATHNAD)</span>
+                </h2>
+                <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-400">
+                  Senior Coach &bull; Movement Pioneer
+                </p>
+              </div>
+
+              <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
+                With a background in Parkour since 2014 and over 8 years of coaching experience, Dadu focuses on Parkour, pure movement, flow and safe progression. He has played a key role in building Kerala’s Parkour community and is one of the early practitioners who helped shape the scene in the state.
+              </p>
+
+              {/* Clean Discipline Card */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-[#111111] border border-white/10 space-y-4">
+                <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400 block">
+                      Specialization
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-black font-headline tracking-wide uppercase text-white">
+                      FLOW &bull; SAFE PROGRESSION
+                    </h3>
+                  </div>
+                  <span className="text-xs font-mono uppercase px-2.5 py-1 rounded bg-brand-orange/10 border border-brand-orange/30 text-brand-orange font-bold">
+                    Kerala Scene Pioneer
+                  </span>
+                </div>
+
+                <div className="flex flex-wrap gap-2 text-xs font-mono text-neutral-300">
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    Pure Movement
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    Flow Dynamics
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    Safe Progression
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    8+ Years Coaching
+                  </span>
+                </div>
+
+                <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                  <button
+                    onClick={() => openRegister("Training with Team NARA Coaches")}
+                    className="flex-1 py-3 px-5 bg-white hover:bg-neutral-200 text-black font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center justify-center gap-2 active:scale-98"
+                  >
+                    <span>Train with Team NARA</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+
+                  <Link
+                    href="/contact"
+                    className="px-5 py-3 rounded-xl border border-white/10 text-xs font-mono uppercase tracking-wider text-neutral-300 hover:text-white hover:bg-white/5 transition text-center"
+                  >
+                    Inquire
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -462,7 +617,11 @@ export default function CoachesClient() {
             </div>
             <p className="text-xs font-mono uppercase tracking-widest text-neutral-300 mt-4">
               {currentPhoto.label} &bull; Coach{" "}
-              {lightbox.coach === "renjith" ? "Renjith" : "Nithin"}
+              {lightbox.coach === "renjith"
+                ? "Wandru (Renjith)"
+                : lightbox.coach === "nithin"
+                ? "Nithin Tom"
+                : "Dadu (Sarathnad)"}
             </p>
           </div>
         </div>

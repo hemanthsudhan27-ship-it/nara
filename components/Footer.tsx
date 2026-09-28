@@ -8,7 +8,7 @@ import { Instagram, MapPin, Mail, ArrowUp, Phone } from "lucide-react";
 const WHATSAPP_COMMUNITY_LINK = "https://chat.whatsapp.com/teamnara"; // Replace with real invite link
 
 const FOOTER_NAV = [
-  { label: "Sessions", href: "/sessions" },
+  { label: "Sessions", href: "/#sessions" },
   { label: "Coaches", href: "/coaches" },
   { label: "About", href: "/about" },
   { label: "Gallery", href: "/gallery" },
@@ -122,7 +122,7 @@ export default function Footer() {
               </div>
               <div className="pt-2 flex flex-col gap-1.5">
                 <Link
-                  href="/sessions"
+                  href="/#sessions"
                   className="text-xs text-brand-orange hover:underline font-mono uppercase font-bold"
                 >
                   Outdoor Parkour Trial Session (₹500) →

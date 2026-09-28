@@ -70,64 +70,76 @@ export default function AboutClient() {
       {/* ── TAB: OUR STORY ── */}
       {activeTab === "story" && (
         <>
-          <section className="py-20 sm:py-28 bg-brand-cream text-brand-dark">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div className="lg:col-span-6 space-y-6">
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
-                    OUR STORY
-                  </span>
-                  <h2 className="text-3xl sm:text-5xl font-black font-headline tracking-[0.06em] uppercase text-brand-dark">
-                    HOW NARA STARTED
-                  </h2>
+          <section className="relative py-20 sm:py-28 text-white overflow-hidden">
+            <Image
+              src="/images/about-bg.webp"
+              alt="NARA Movement Background"
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/60" />
+            <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+              <div className="space-y-6 bg-black/40 backdrop-blur-md p-8 sm:p-12 rounded-3xl border border-white/10 shadow-2xl">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
+                  OUR STORY
+                </span>
+                <h2 className="text-3xl sm:text-5xl font-black font-headline tracking-[0.06em] uppercase text-white">
+                  HOW NARA STARTED
+                </h2>
 
-                  <div className="space-y-4 text-neutral-700 text-base sm:text-lg leading-relaxed font-normal">
-                    <p>
-                      Team NARA began with a straightforward question: why should human
-                      movement be confined to four walls and paid gyms?
-                    </p>
-                    <p>
-                      In the early mornings along Calicut Beach, a small group of friends
-                      began gathering to practice landings, balance strides across concrete
-                      ledges, and explore bodyweight coordination. Without fancy trampolines
-                      or foam pits, we honed our discipline directly on hard ground—where
-                      technique, patience, and joint conditioning matter most.
-                    </p>
-                    <p>
-                      Today, Team NARA has evolved into an active brotherhood and sisterhood
-                      of traceurs, trickers, and movers of all skill levels across Kerala.
-                    </p>
-                    <p className="text-sm font-semibold text-neutral-900 border-l-4 border-brand-orange pl-4 py-1">
-                      From beachside concrete benches to seaside promenades, we transform
-                      the city of Calicut into our canvas.
+                <div className="space-y-4 text-neutral-200 text-base sm:text-lg leading-relaxed font-normal">
+                  <p className="text-lg sm:text-xl font-bold text-white font-headline uppercase tracking-wide">
+                    NARA didn’t start as a Parkour team.
+                  </p>
+
+                  <p>
+                    It started with a few random kids who simply wanted to learn flips. That was our introduction to movement too. We wanted to learn how to flip, and along the way, we discovered that there was a whole world beyond just doing flips — there was Parkour, Freerunning, Tricking and a completely different way of looking at movement.
+                  </p>
+
+                  <p>
+                    As more people came together, a few small teams started forming. But, like with any athlete’s journey, life happened. People moved on, priorities changed, and over time, everyone ended up scattered in different places.
+                  </p>
+
+                  <p>
+                    Eventually, a small group of core members came together and decided to build something of our own.
+                  </p>
+
+                  <p className="font-headline font-black text-xl sm:text-2xl uppercase tracking-wide text-brand-orange">
+                    That’s how NARA was born.
+                  </p>
+
+                  <div className="p-5 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-sm space-y-1.5">
+                    <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-brand-orange">
+                      THE MEANING BEHIND THE NAME
+                    </span>
+                    <p className="text-sm sm:text-base text-white leading-relaxed font-medium">
+                      NARA comes from the Sanskrit word <strong>&ldquo;Nara&rdquo;</strong>, meaning human. We called it NARA Movement because, at its core, it was about something very simple — human movement.
                     </p>
                   </div>
 
-                  <div className="pt-2 flex flex-wrap gap-3">
-                    <button
-                      onClick={() => setActiveTab("community")}
-                      className="inline-flex items-center gap-2 px-5 py-3 bg-black hover:bg-neutral-900 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow"
-                    >
-                      <span>Our Community</span>
-                      <ArrowRight className="w-4 h-4 text-brand-orange" />
-                    </button>
+                  <p>
+                    What started with a few people trying to learn flips slowly became a community built around Parkour, movement and the people who kept showing up.
+                  </p>
+
+                  <div className="border-l-4 border-brand-orange pl-4 py-2 space-y-1 bg-gradient-to-r from-brand-orange/10 to-transparent">
+                    <p className="text-sm sm:text-base font-semibold text-white">
+                      And after all these years, that’s still what NARA is about.
+                    </p>
+                    <p className="text-base sm:text-lg font-black font-headline uppercase tracking-wide text-brand-orange">
+                      People. Movement. And the willingness to keep moving forward.
+                    </p>
                   </div>
                 </div>
 
-                <div className="lg:col-span-6">
-                  <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900 group">
-                    <Image
-                      src="/images/IMG_3116.PNG"
-                      alt="Team NARA parkour athletes and coaches gathered at Calicut South Beach during an outdoor movement jam"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                    <div className="absolute bottom-6 left-6 right-6 text-white text-xs font-mono tracking-wider uppercase bg-black/50 backdrop-blur-md p-3 rounded-xl border border-white/20">
-                      Calicut South Beach • Sunset Training Jam
-                    </div>
-                  </div>
+                <div className="pt-4 flex flex-wrap gap-3">
+                  <button
+                    onClick={() => setActiveTab("community")}
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-orange hover:bg-brand-orange-hover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow"
+                  >
+                    <span>Our Community</span>
+                    <ArrowRight className="w-4 h-4 text-white" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -224,7 +236,7 @@ export default function AboutClient() {
                       Join Next Sunday Jam →
                     </button>
                     <Link
-                      href="/sessions"
+                      href="/#sessions"
                       className="px-6 py-3.5 bg-black/5 hover:bg-black/10 text-brand-dark font-bold text-xs uppercase tracking-wider rounded-xl border border-neutral-300 transition"
                     >
                       View Paid Training Schedule

@@ -78,9 +78,9 @@ export default function AboutClient() {
               sizes="100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/60" />
-            <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-              <div className="space-y-6 bg-black/40 backdrop-blur-md p-8 sm:p-12 rounded-3xl border border-white/10 shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/10 sm:to-transparent" />
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+              <div className="max-w-2xl space-y-6">
                 <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
                   OUR STORY
                 </span>
@@ -109,11 +109,11 @@ export default function AboutClient() {
                     That’s how NARA was born.
                   </p>
 
-                  <div className="p-5 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-sm space-y-1.5">
+                  <div className="py-2 space-y-1.5">
                     <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-brand-orange">
                       THE MEANING BEHIND THE NAME
                     </span>
-                    <p className="text-sm sm:text-base text-white leading-relaxed font-medium">
+                    <p className="text-sm sm:text-base text-white/90 leading-relaxed font-medium">
                       NARA comes from the Sanskrit word <strong>&ldquo;Nara&rdquo;</strong>, meaning human. We called it NARA Movement because, at its core, it was about something very simple — human movement.
                     </p>
                   </div>
@@ -122,7 +122,7 @@ export default function AboutClient() {
                     What started with a few people trying to learn flips slowly became a community built around Parkour, movement and the people who kept showing up.
                   </p>
 
-                  <div className="border-l-4 border-brand-orange pl-4 py-2 space-y-1 bg-gradient-to-r from-brand-orange/10 to-transparent">
+                  <div className="border-l-4 border-brand-orange pl-4 py-2 space-y-1 bg-gradient-to-r from-black/40 to-transparent">
                     <p className="text-sm sm:text-base font-semibold text-white">
                       And after all these years, that’s still what NARA is about.
                     </p>

@@ -11,7 +11,6 @@ const FOOTER_NAV = [
   { label: "Sessions", href: "/#sessions" },
   { label: "Coaches", href: "/coaches" },
   { label: "About", href: "/about" },
-  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 

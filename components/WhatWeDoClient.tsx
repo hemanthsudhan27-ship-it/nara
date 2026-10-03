@@ -221,7 +221,7 @@ export default function WhatWeDoClient() {
             You don&apos;t have to pick just one. Our outdoor parkour sessions
             integrate parkour, flow, and acrobatic fundamentals into every session.
             See our visual action archive in the{" "}
-            <Link href="/gallery" className="text-brand-orange font-bold hover:underline">
+            <Link href="/#gallery" className="text-brand-orange font-bold hover:underline">
               gallery
             </Link>
             .

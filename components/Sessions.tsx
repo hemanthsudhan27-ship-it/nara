@@ -37,9 +37,10 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main 2-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Copy, CTA & Eyebrow */}
-          <div className="lg:col-span-7 space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-12 lg:gap-x-16 items-start">
+          
+          {/* 1) Eyebrow & Headline (Left Col on Desktop, Top on Mobile) */}
+          <div className="lg:col-span-7 space-y-6 order-1">
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-brand-orange" />
@@ -53,7 +54,31 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
               PARKOUR &amp; <br className="hidden sm:inline" />
               <span className="text-brand-orange">FREERUNNING</span>
             </h2>
+          </div>
 
+          {/* 2) Visual Photo (Right Col on Desktop, Middle on Mobile) */}
+          <div className="lg:col-span-5 relative order-2 lg:order-2 lg:row-span-2">
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+              {/* Image Frame */}
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900 group">
+                <Image
+                  src="/gallery/IMG_2993.webp"
+                  alt="Outdoor Parkour & Freerunning morning training class on Calicut South Beach promenade led by Team NARA coaches"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90" />
+                <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-mono tracking-wider uppercase bg-black/60 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-white/20 space-y-0.5">
+                  <p className="font-bold text-brand-orange">Coaching: Team NARA</p>
+                  <p className="text-[11px] text-neutral-300">Mon, Wed &amp; Fri • 6:00 AM – 7:30 AM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 3) Details & CTA (Left Col on Desktop, Bottom on Mobile) */}
+          <div className="lg:col-span-7 space-y-6 order-3">
             {/* Realistic Copy */}
             <div className="space-y-4 text-neutral-700 text-sm sm:text-base lg:text-lg leading-relaxed font-normal max-w-xl">
               <p>
@@ -171,27 +196,6 @@ export default function Sessions({ onOpenRegister }: SessionsProps) {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
-
-          {/* Right Column: Visual Photo */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Image Frame */}
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900 group">
-                <Image
-                  src="/gallery/IMG_2993.webp"
-                  alt="Outdoor Parkour & Freerunning morning training class on Calicut South Beach promenade led by Team NARA coaches"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-mono tracking-wider uppercase bg-black/60 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-white/20 space-y-0.5">
-                  <p className="font-bold text-brand-orange">Coaching: Team NARA</p>
-                  <p className="text-[11px] text-neutral-300">Mon, Wed &amp; Fri • 6:00 AM – 7:30 AM</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

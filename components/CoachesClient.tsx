@@ -74,7 +74,7 @@ const NITHIN_PHOTOS: PhotoItem[] = [
 
 const DADU_PHOTOS: PhotoItem[] = [
   {
-    src: "/gallery/IMG_2264.webp",
+    src: "/gallery/IMG_2986.webp",
     alt: "Coach Dadu dynamic promenade stride in Calicut",
     label: "Promenade Stride",
   },
@@ -144,258 +144,7 @@ export default function CoachesClient() {
       {/* ── MAIN CONTENT (Generous Black Space) ── */}
       <div className="py-20 sm:py-32 space-y-28 sm:space-y-40 max-w-6xl mx-auto px-5 sm:px-8">
         {/* ════════════════════════════════════════════════════════════════
-            01 // COACH RENJITH (BATCH 1: WANDRU)
-        ════════════════════════════════════════════════════════════════ */}
-        <section id="renjith" className="scroll-mt-32">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            {/* Left: Interactive Visual Showcase */}
-            <div className="lg:col-span-6 space-y-4 order-2 lg:order-1">
-              <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 group shadow-2xl">
-                <Image
-                  src={RENJITH_PHOTOS[renjithPhotoIdx].src}
-                  alt={RENJITH_PHOTOS[renjithPhotoIdx].alt}
-                  fill
-                  priority
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
-
-                {/* Lightbox Trigger */}
-                <button
-                  onClick={() =>
-                    setLightbox({ coach: "renjith", idx: renjithPhotoIdx })
-                  }
-                  className="absolute bottom-4 right-4 p-2.5 rounded-full bg-black/60 hover:bg-brand-orange text-white backdrop-blur-md transition border border-white/15"
-                  aria-label="View full image"
-                >
-                  <Maximize2 className="w-4 h-4" />
-                </button>
-
-                <div className="absolute bottom-4 left-4">
-                  <span className="text-xs font-mono tracking-wider text-neutral-300 uppercase bg-black/60 px-3 py-1 rounded-md backdrop-blur-md border border-white/10">
-                    {RENJITH_PHOTOS[renjithPhotoIdx].label}
-                  </span>
-                </div>
-              </div>
-
-              {/* Thumbnails row to switch photos cleanly */}
-              <div className="grid grid-cols-4 gap-2.5">
-                {RENJITH_PHOTOS.map((photo, idx) => (
-                  <button
-                    key={photo.src}
-                    onClick={() => setRenjithPhotoIdx(idx)}
-                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${
-                      renjithPhotoIdx === idx
-                        ? "border-brand-orange ring-2 ring-brand-orange/30 scale-95"
-                        : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
-                    }`}
-                  >
-                    <Image
-                      src={photo.src}
-                      alt={photo.label}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Right: Clean Profile & Batch 1: Wandru Details */}
-            <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-              <div className="space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-mono font-bold uppercase tracking-wider">
-                  <Flame className="w-3 h-3" />
-                  <span>Batch 1 &bull; Wandru</span>
-                </div>
-
-                <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
-                  WANDRU <span className="text-brand-orange">(RENJITH)</span>
-                </h2>
-                <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-400">
-                  Head Coach &bull; Freerunning &amp; Movement Specialist
-                </p>
-              </div>
-
-              <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
-                Training Parkour since around 2016–17, Ranjith comes from a Karate and martial arts background and has been coaching for several years. His strength lies in Freerunning, with a strong focus on flips, tricks and creative movement. He has won multiple national-level titles and is deeply involved in India’s Parkour community, regularly participating in events and staying connected with practitioners across the country.
-              </p>
-
-              {/* Clean Batch Card: Wandru */}
-              <div className="p-5 sm:p-6 rounded-2xl bg-[#111111] border border-white/10 space-y-4">
-                <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
-                  <div>
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400 block">
-                      Lead Batch
-                    </span>
-                    <h3 className="text-xl sm:text-2xl font-black font-headline tracking-wide uppercase text-brand-orange">
-                      BATCH 1: WANDRU
-                    </h3>
-                  </div>
-                  <span className="text-xs font-mono uppercase px-2.5 py-1 rounded bg-white/5 border border-white/10 text-neutral-300">
-                    Active
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-neutral-300 font-mono">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" />
-                    <span>Mon, Wed &amp; Fri &bull; 6:00 – 7:30 AM</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" />
-                    <span>South Beach &amp; Promenade</span>
-                  </div>
-                </div>
-
-                <div className="pt-2">
-                  <button
-                    onClick={() =>
-                      openRegister(
-                        "Batch 1: Wandru (Outdoor Parkour & Freerunning) — Mon, Wed & Fri (6:00 AM – 7:30 AM)"
-                      )
-                    }
-                    className="w-full py-3 px-5 bg-brand-orange hover:bg-brand-orange-hover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center justify-center gap-2 active:scale-98 shadow-lg shadow-brand-orange/20"
-                  >
-                    <span>Join Batch 1: Wandru</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════════════════════════════
-            02 // COACH NITHIN (SENIOR COACH - NO BATCH)
-        ════════════════════════════════════════════════════════════════ */}
-        <section id="nithin" className="scroll-mt-32">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            {/* Left: Clean Profile & Movement Focus */}
-            <div className="lg:col-span-6 space-y-6">
-              <div className="space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-mono font-bold uppercase tracking-wider">
-                  <span>Pure Parkour &bull; Speed Specialist</span>
-                </div>
-
-                <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
-                  NITHIN <span className="text-brand-orange">TOM</span>
-                </h2>
-                <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-400">
-                  Senior Coach &bull; International Athlete
-                </p>
-              </div>
-
-              <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
-                Training Parkour since 2017, Nidhin comes from a Track &amp; Field background and has coached at Origins Gym in Canada. He has competed in multiple international competitions and won several Speed event titles. His focus is pure Parkour, and he is regarded as one of India’s finest Parkour athletes.
-              </p>
-
-              {/* Clean Discipline Card (No batch name) */}
-              <div className="p-5 sm:p-6 rounded-2xl bg-[#111111] border border-white/10 space-y-4">
-                <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
-                  <div>
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400 block">
-                      Specialization
-                    </span>
-                    <h3 className="text-xl sm:text-2xl font-black font-headline tracking-wide uppercase text-white">
-                      PURE PARKOUR &bull; SPEED
-                    </h3>
-                  </div>
-                  <span className="text-xs font-mono uppercase px-2.5 py-1 rounded bg-brand-orange/10 border border-brand-orange/30 text-brand-orange font-bold">
-                    Origins Gym Coach (Canada)
-                  </span>
-                </div>
-
-                <div className="flex flex-wrap gap-2 text-xs font-mono text-neutral-300">
-                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
-                    Pure Parkour
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
-                    Track &amp; Field Speed
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
-                    International Speed Titles
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
-                    Origins Gym (Canada)
-                  </span>
-                </div>
-
-                <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                  <button
-                    onClick={() => openRegister()}
-                    className="flex-1 py-3 px-5 bg-white hover:bg-neutral-200 text-black font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center justify-center gap-2 active:scale-98"
-                  >
-                    <span>Train with Team NARA</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-
-                  <Link
-                    href="/contact"
-                    className="px-5 py-3 rounded-xl border border-white/10 text-xs font-mono uppercase tracking-wider text-neutral-300 hover:text-white hover:bg-white/5 transition text-center"
-                  >
-                    Inquire
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Interactive Visual Showcase */}
-            <div className="lg:col-span-6 space-y-4">
-              <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 group shadow-2xl">
-                <Image
-                  src={NITHIN_PHOTOS[nithinPhotoIdx].src}
-                  alt={NITHIN_PHOTOS[nithinPhotoIdx].alt}
-                  fill
-                  priority
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
-
-                {/* Lightbox Trigger */}
-                <button
-                  onClick={() =>
-                    setLightbox({ coach: "nithin", idx: nithinPhotoIdx })
-                  }
-                  className="absolute bottom-4 right-4 p-2.5 rounded-full bg-black/60 hover:bg-brand-orange text-white backdrop-blur-md transition border border-white/15"
-                  aria-label="View full image"
-                >
-                  <Maximize2 className="w-4 h-4" />
-                </button>
-
-                <div className="absolute bottom-4 left-4">
-                  <span className="text-xs font-mono tracking-wider text-neutral-300 uppercase bg-black/60 px-3 py-1 rounded-md backdrop-blur-md border border-white/10">
-                    {NITHIN_PHOTOS[nithinPhotoIdx].label}
-                  </span>
-                </div>
-              </div>
-
-              {/* Thumbnails row to switch photos cleanly */}
-              <div className="grid grid-cols-5 gap-2.5">
-                {NITHIN_PHOTOS.map((photo, idx) => (
-                  <button
-                    key={photo.src}
-                    onClick={() => setNithinPhotoIdx(idx)}
-                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${
-                      nithinPhotoIdx === idx
-                        ? "border-white ring-2 ring-white/30 scale-95"
-                        : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
-                    }`}
-                  >
-                    <Image
-                      src={photo.src}
-                      alt={photo.label}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* ════════════════════════════════════════════════════════════════
-            03 // COACH DADU (SARATHNAD)
+            01 // COACH DADU (SARATHNAD)
         ════════════════════════════════════════════════════════════════ */}
         <section id="dadu" className="scroll-mt-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -518,6 +267,257 @@ export default function CoachesClient() {
                     Inquire
                   </Link>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* ════════════════════════════════════════════════════════════════
+            02 // COACH RENJITH (BATCH 1: WANDRU)
+        ════════════════════════════════════════════════════════════════ */}
+        <section id="renjith" className="scroll-mt-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Left: Interactive Visual Showcase */}
+            <div className="lg:col-span-6 space-y-4 order-2 lg:order-1">
+              <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 group shadow-2xl">
+                <Image
+                  src={RENJITH_PHOTOS[renjithPhotoIdx].src}
+                  alt={RENJITH_PHOTOS[renjithPhotoIdx].alt}
+                  fill
+                  priority
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+
+                {/* Lightbox Trigger */}
+                <button
+                  onClick={() =>
+                    setLightbox({ coach: "renjith", idx: renjithPhotoIdx })
+                  }
+                  className="absolute bottom-4 right-4 p-2.5 rounded-full bg-black/60 hover:bg-brand-orange text-white backdrop-blur-md transition border border-white/15"
+                  aria-label="View full image"
+                >
+                  <Maximize2 className="w-4 h-4" />
+                </button>
+
+                <div className="absolute bottom-4 left-4">
+                  <span className="text-xs font-mono tracking-wider text-neutral-300 uppercase bg-black/60 px-3 py-1 rounded-md backdrop-blur-md border border-white/10">
+                    {RENJITH_PHOTOS[renjithPhotoIdx].label}
+                  </span>
+                </div>
+              </div>
+
+              {/* Thumbnails row to switch photos cleanly */}
+              <div className="grid grid-cols-4 gap-2.5">
+                {RENJITH_PHOTOS.map((photo, idx) => (
+                  <button
+                    key={photo.src}
+                    onClick={() => setRenjithPhotoIdx(idx)}
+                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${
+                      renjithPhotoIdx === idx
+                        ? "border-brand-orange ring-2 ring-brand-orange/30 scale-95"
+                        : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
+                    }`}
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={photo.label}
+                      fill
+                      className="object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Clean Profile & Batch 1: Wandru Details */}
+            <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-mono font-bold uppercase tracking-wider">
+                  <Flame className="w-3 h-3" />
+                  <span>Batch 1 &bull; Wandru</span>
+                </div>
+
+                <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
+                  WANDRU <span className="text-brand-orange">(RENJITH)</span>
+                </h2>
+                <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-400">
+                  Head Coach &bull; Freerunning &amp; Movement Specialist
+                </p>
+              </div>
+
+              <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
+                Training Parkour since around 2016–17, Ranjith comes from a Karate and martial arts background and has been coaching for several years. His strength lies in Freerunning, with a strong focus on flips, tricks and creative movement. He has won multiple national-level titles and is deeply involved in India’s Parkour community, regularly participating in events and staying connected with practitioners across the country.
+              </p>
+
+              {/* Clean Batch Card: Wandru */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-[#111111] border border-white/10 space-y-4">
+                <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400 block">
+                      Lead Batch
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-black font-headline tracking-wide uppercase text-brand-orange">
+                      BATCH 1: WANDRU
+                    </h3>
+                  </div>
+                  <span className="text-xs font-mono uppercase px-2.5 py-1 rounded bg-white/5 border border-white/10 text-neutral-300">
+                    Active
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-neutral-300 font-mono">
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" />
+                    <span>Mon, Wed &amp; Fri &bull; 6:00 – 7:30 AM</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" />
+                    <span>South Beach &amp; Promenade</span>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    onClick={() =>
+                      openRegister(
+                        "Batch 1: Wandru (Outdoor Parkour & Freerunning) — Mon, Wed & Fri (6:00 AM – 7:30 AM)"
+                      )
+                    }
+                    className="w-full py-3 px-5 bg-brand-orange hover:bg-brand-orange-hover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center justify-center gap-2 active:scale-98 shadow-lg shadow-brand-orange/20"
+                  >
+                    <span>Join Batch 1: Wandru</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════════════════════════════
+            03 // COACH NITHIN (SENIOR COACH - NO BATCH)
+        ════════════════════════════════════════════════════════════════ */}
+        <section id="nithin" className="scroll-mt-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Left: Clean Profile & Movement Focus */}
+            <div className="lg:col-span-6 space-y-6">
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-mono font-bold uppercase tracking-wider">
+                  <span>Pure Parkour &bull; Speed Specialist</span>
+                </div>
+
+                <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
+                  NITHIN <span className="text-brand-orange">TOM</span>
+                </h2>
+                <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-400">
+                  Senior Coach &bull; International Athlete
+                </p>
+              </div>
+
+              <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
+                Training Parkour since 2017, Nidhin comes from a Track &amp; Field background and has coached at Origins Gym in Canada. He has competed in multiple international competitions and won several Speed event titles. His focus is pure Parkour, and he is regarded as one of India’s finest Parkour athletes.
+              </p>
+
+              {/* Clean Discipline Card (No batch name) */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-[#111111] border border-white/10 space-y-4">
+                <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400 block">
+                      Specialization
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-black font-headline tracking-wide uppercase text-white">
+                      PURE PARKOUR &bull; SPEED
+                    </h3>
+                  </div>
+                  <span className="text-xs font-mono uppercase px-2.5 py-1 rounded bg-brand-orange/10 border border-brand-orange/30 text-brand-orange font-bold">
+                    Origins Gym Coach (Canada)
+                  </span>
+                </div>
+
+                <div className="flex flex-wrap gap-2 text-xs font-mono text-neutral-300">
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    Pure Parkour
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    Track &amp; Field Speed
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    International Speed Titles
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    Origins Gym (Canada)
+                  </span>
+                </div>
+
+                <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                  <button
+                    onClick={() => openRegister()}
+                    className="flex-1 py-3 px-5 bg-white hover:bg-neutral-200 text-black font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center justify-center gap-2 active:scale-98"
+                  >
+                    <span>Train with Team NARA</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+
+                  <Link
+                    href="/contact"
+                    className="px-5 py-3 rounded-xl border border-white/10 text-xs font-mono uppercase tracking-wider text-neutral-300 hover:text-white hover:bg-white/5 transition text-center"
+                  >
+                    Inquire
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Interactive Visual Showcase */}
+            <div className="lg:col-span-6 space-y-4">
+              <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 group shadow-2xl">
+                <Image
+                  src={NITHIN_PHOTOS[nithinPhotoIdx].src}
+                  alt={NITHIN_PHOTOS[nithinPhotoIdx].alt}
+                  fill
+                  priority
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+
+                {/* Lightbox Trigger */}
+                <button
+                  onClick={() =>
+                    setLightbox({ coach: "nithin", idx: nithinPhotoIdx })
+                  }
+                  className="absolute bottom-4 right-4 p-2.5 rounded-full bg-black/60 hover:bg-brand-orange text-white backdrop-blur-md transition border border-white/15"
+                  aria-label="View full image"
+                >
+                  <Maximize2 className="w-4 h-4" />
+                </button>
+
+                <div className="absolute bottom-4 left-4">
+                  <span className="text-xs font-mono tracking-wider text-neutral-300 uppercase bg-black/60 px-3 py-1 rounded-md backdrop-blur-md border border-white/10">
+                    {NITHIN_PHOTOS[nithinPhotoIdx].label}
+                  </span>
+                </div>
+              </div>
+
+              {/* Thumbnails row to switch photos cleanly */}
+              <div className="grid grid-cols-5 gap-2.5">
+                {NITHIN_PHOTOS.map((photo, idx) => (
+                  <button
+                    key={photo.src}
+                    onClick={() => setNithinPhotoIdx(idx)}
+                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${
+                      nithinPhotoIdx === idx
+                        ? "border-white ring-2 ring-white/30 scale-95"
+                        : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
+                    }`}
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={photo.label}
+                      fill
+                      className="object-cover"
+                    />
+                  </button>
+                ))}
               </div>
             </div>
           </div>

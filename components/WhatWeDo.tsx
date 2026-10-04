@@ -256,21 +256,7 @@ export default function WhatWeDo() {
                           ))}
                         </div>
 
-                        {/* Curriculum */}
-                        <div className="border-t border-white/10 pt-4">
-                          <p className="text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-3">Curriculum</p>
-                          <ul className="space-y-2">
-                            {disc.curriculum.map((item, i) => (
-                              <li
-                                key={i}
-                                className="flex items-start gap-2.5 text-xs text-neutral-400"
-                              >
-                                <span className="mt-[3px] w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                        {/* Removed Curriculum */}
                       </div>
 
                       {/* RIGHT — progression nav strip */}
@@ -303,16 +289,7 @@ export default function WhatWeDo() {
                           ))}
                         </div>
 
-                        {/* Explore Curriculum — bottom of right strip */}
-                        <div className="flex flex-col items-end gap-1.5 text-brand-orange">
-                          <ArrowRight className="w-3.5 h-3.5" />
-                          <span
-                            className="text-[9px] font-mono uppercase tracking-widest"
-                            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
-                          >
-                            Explore Curriculum
-                          </span>
-                        </div>
+                        {/* Removed Explore Curriculum */}
                       </div>
                     </motion.div>
                   )}
@@ -386,24 +363,8 @@ export default function WhatWeDo() {
                             </p>
                           ))}
                         </div>
-                        <div className="border-t border-white/10 pt-4">
-                          <p className="text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-3">Curriculum</p>
-                          <ul className="space-y-2.5">
-                            {disc.curriculum.map((item, i) => (
-                              <li
-                                key={i}
-                                className="flex items-start gap-2.5 text-xs text-neutral-400"
-                              >
-                                <span className="mt-[3px] w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="flex items-center gap-1.5 pt-3 border-t border-white/10 text-[11px] font-mono uppercase tracking-widest text-brand-orange">
-                          <span>Explore Curriculum</span>
-                          <ArrowRight className="w-3 h-3" />
-                        </div>
+                        {/* Removed Curriculum */}
+                        {/* Removed Explore Curriculum */}
                       </div>
                     </motion.div>
                   )}

@@ -51,7 +51,7 @@ export default function Hero({ onOpenRegister }: HeroProps) {
 
       {/* Main Hero Content — situated over the sky/clouds section (right side) */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto py-6 sm:py-10">
-        <div className="flex justify-end w-full">
+        <div className="flex justify-end w-full mt-[45vh] sm:mt-0">
           <div className="w-full sm:max-w-xl lg:max-w-lg flex flex-col items-start lg:items-end text-left lg:text-right space-y-3.5 sm:space-y-4">
             
             {/* Top Eyebrow */}

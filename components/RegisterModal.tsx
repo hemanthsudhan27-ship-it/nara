@@ -143,25 +143,25 @@ export default function RegisterModal({
 
   const buildWhatsAppMessage = () => {
     const lines = [
-      "🔥 *TEAM NARA — TRIAL SESSION REGISTRATION*",
+      "*TEAM NARA — TRIAL SESSION REGISTRATION*",
       "",
-      `👤 *Name:* ${formData.fullName.trim()}`,
-      `🔢 *Age:* ${formData.age.trim()}`,
-      `📞 *Phone:* ${formData.phone.trim()}`,
-      `✉️ *Email:* ${formData.email.trim()}`,
-      `🏃 *Class:* ${formData.sessionBatch}`,
-      `💰 *Trial Session Fee:* ₹500`,
-      `🏦 *Bank A/c Name:* ${formData.bankAccountName || ""}`,
-      `🧾 *UPI UTR:* ${formData.upiReference || ""}`,
-      `👟 *Coaching:* Team NARA Trainers`,
-      `📅 *Schedule:* Mon, Wed & Fri • 6:00 AM – 7:30 AM`,
-      `🧘 *Requirements:* Yoga mat & bottle of water`,
+      `*Name:* ${formData.fullName.trim()}`,
+      `*Age:* ${formData.age.trim()}`,
+      `*Phone:* ${formData.phone.trim()}`,
+      `*Email:* ${formData.email.trim()}`,
+      `*Class:* ${formData.sessionBatch}`,
+      `*Trial Session Fee:* ₹500`,
+      `*Bank A/c Name:* ${formData.bankAccountName || ""}`,
+      `*UPI UTR:* ${formData.upiReference || ""}`,
+      `*Coaching:* Team NARA Trainers`,
+      `*Schedule:* Mon, Wed & Fri • 6:00 AM – 7:30 AM`,
+      `*Requirements:* Yoga mat & bottle of water`,
       "",
-      `✅ *Risk Awareness:* Participant has acknowledged the physical risks of parkour and freerunning.`,
+      `*Risk Awareness:* Participant has acknowledged the physical risks of parkour and freerunning.`,
     ];
 
     if (formData.message?.trim()) {
-      lines.push("", `📝 *Notes:* ${formData.message.trim()}`);
+      lines.push("", `*Notes:* ${formData.message.trim()}`);
     }
 
     return lines.join("\n");
@@ -311,7 +311,7 @@ export default function RegisterModal({
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-neutral-300 border-t border-white/5 pt-2">
-                  <span>📅 Mon, Wed &amp; Fri • 6:00 AM – 7:30 AM</span>
+                  <span>Mon, Wed &amp; Fri • 6:00 AM – 7:30 AM</span>
                   <span className="font-bold text-white">Trial: ₹500</span>
                 </div>
                 <p className="text-[11px] text-neutral-400 leading-snug">
@@ -339,7 +339,7 @@ export default function RegisterModal({
                   />
                 </div>
                 {fieldErrors.fullName && (
-                  <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1"><span>⚠</span> {fieldErrors.fullName}</p>
+                  <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1">{fieldErrors.fullName}</p>
                 )}
               </div>
 
@@ -363,7 +363,7 @@ export default function RegisterModal({
                   />
                 </div>
                 {fieldErrors.phone && (
-                  <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1"><span>⚠</span> {fieldErrors.phone}</p>
+                  <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1">{fieldErrors.phone}</p>
                 )}
               </div>
 
@@ -387,7 +387,7 @@ export default function RegisterModal({
                   />
                 </div>
                 {fieldErrors.email && (
-                  <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1"><span>⚠</span> {fieldErrors.email}</p>
+                  <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1">{fieldErrors.email}</p>
                 )}
               </div>
 
@@ -413,7 +413,7 @@ export default function RegisterModal({
                   />
                 </div>
                 {fieldErrors.age && (
-                  <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1"><span>⚠</span> {fieldErrors.age}</p>
+                  <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1">{fieldErrors.age}</p>
                 )}
               </div>
 
@@ -547,7 +547,7 @@ export default function RegisterModal({
                     }`}
                   />
                   {fieldErrors.upiReference && (
-                    <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1"><span>⚠</span> {fieldErrors.upiReference}</p>
+                    <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1">{fieldErrors.upiReference}</p>
                   )}
                 </div>
 
@@ -569,7 +569,7 @@ export default function RegisterModal({
                     }`}
                   />
                   {fieldErrors.bankAccountName && (
-                    <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1"><span>⚠</span> {fieldErrors.bankAccountName}</p>
+                    <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1">{fieldErrors.bankAccountName}</p>
                   )}
                 </div>
               </div>
@@ -585,7 +585,7 @@ export default function RegisterModal({
                   </span>
                 </div>
                 <p className="text-xs text-neutral-200 leading-relaxed">
-                  📢 <strong>Please upload / send the screenshot of the payment to WhatsApp</strong> (+91 85939 12936). When you submit this form, WhatsApp will open automatically with your trial details and Bank Account Name pre-filled. Simply attach your payment screenshot directly in the WhatsApp chat.
+                  <strong>Please upload / send the screenshot of the payment to WhatsApp</strong> (+91 85939 12936). When you submit this form, WhatsApp will open automatically with your trial details and Bank Account Name pre-filled. Simply attach your payment screenshot directly in the WhatsApp chat.
                 </p>
               </div>
 

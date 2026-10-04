@@ -1,218 +1,38 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Instagram } from "lucide-react";
-import { useRegister } from "@/context/RegisterContext";
-
-const COMMUNITY_RULES = [
-  {
-    title: "No One Trains Alone",
-    desc: "Always look out for the people training next to you. If someone is attempting a new jump or trick, offer an eye, an encouraging word, or a spot.",
-  },
-  {
-    title: "Respect Public Spaces",
-    desc: "Calicut gives us these spaces. We never vandalize or damage public property. We pack out all trash and leave every spot cleaner than we found it.",
-  },
-  {
-    title: "Zero Ego Policy",
-    desc: "Everyone started at zero. We don't judge anyone for their body shape, fitness level, or fear. Humility and mutual encouragement are mandatory.",
-  },
-  {
-    title: "Safety Over Clout",
-    desc: "Never throw a move purely for a camera or social media hype if you don't possess the safe progression and landing mechanics to back it up.",
-  },
-];
-
-const MEMBER_VOICES = [
-  {
-    name: "Faheem K.",
-    role: "Member since 2024",
-    text: "Before NARA, I thought parkour was only for stuntmen in action movies. Joining the Calicut beach sessions showed me that anyone can learn. The coaches are patient, and the sunset jams are the highlight of my week.",
-  },
-  {
-    name: "Ananya S.",
-    role: "Member since 2025",
-    text: "I had zero upper body strength when I started. In 3 months, I cleared my first chest-high vault and learned how to safely roll on grass and concrete. It changed the way I walk through my city.",
-  },
-  {
-    name: "Rohan M.",
-    role: "Tricking Specialist",
-    text: "Training tricking on the beach sand with Team NARA gave me the courage to unlock butterfly twists and corks without fear. The energy of this crew is unmatched anywhere in Kerala.",
-  },
-];
 
 export default function CommunityClient() {
-  const { openRegister } = useRegister();
-
   return (
-    <div className="bg-[#141414] text-white pt-28 pb-20">
-      {/* Header Banner */}
-      <section className="relative py-16 sm:py-24 border-b border-white/10 overflow-hidden bg-gradient-to-b from-[#1c1c1c] to-[#141414]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
-              THE NARA COLLECTIVE
-            </span>
-            <h1 className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-headline tracking-[0.04em] sm:tracking-[0.06em] uppercase text-white leading-[0.92]">
-              A COMMUNITY <br />
-              <span className="text-brand-orange">THAT MOVES</span>
-            </h1>
-            <p className="text-base sm:text-xl text-neutral-300 font-normal leading-relaxed pt-2">
-              More than training sessions, Team NARA is a close-knit movement family in Calicut, Kerala.
-              United by passion, discipline, and the pursuit of human potential.
-            </p>
-          </div>
+    <div className="bg-[#141414] text-white pt-28 pb-20 min-h-[70vh] flex items-center justify-center">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+        <div className="space-y-4">
+          <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
+            THE NARA COLLECTIVE
+          </span>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black font-headline tracking-[0.04em] sm:tracking-[0.06em] uppercase text-white leading-[0.92]">
+            JOIN OUR <br />
+            <span className="text-brand-orange">COMMUNITY</span>
+          </h1>
+          <p className="text-base sm:text-xl text-neutral-300 font-normal leading-relaxed pt-4 max-w-2xl mx-auto">
+            Connect with other movers, stay updated on our latest jams, and become a part of the Team NARA family in Calicut.
+          </p>
         </div>
-      </section>
 
-      {/* The Beach Jam Culture */}
-      <section className="py-20 sm:py-28 bg-brand-cream text-brand-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
-                CULTURE &amp; JAMS
-              </span>
-              <h2 className="text-3xl sm:text-5xl font-black font-headline tracking-[0.06em] uppercase text-brand-dark">
-                THE SUNDAY SUNSET JAM
-              </h2>
-              <div className="space-y-4 text-neutral-700 text-base sm:text-lg leading-relaxed font-normal">
-                <p>
-                  Every Sunday afternoon, as the Arabian Sea horizon turns golden orange,
-                  our community gathers on the South Beach promenade for our open jam.
-                </p>
-                <p>
-                  Portable speakers play rhythmic beats, experienced athletes run warmup
-                  drills, newcomers practice their first wall climbs, and curious locals
-                  stop along the promenade to watch and cheer.
-                </p>
-                <p className="font-semibold text-neutral-900 border-l-4 border-brand-orange pl-4 py-1">
-                  There are no entry fees for our open community jams. All you need is
-                  respect for the spot and a willingness to try. Looking for structured weekday classes? Check out our{" "}
-                  <Link href="/#sessions" className="text-brand-orange hover:underline font-bold">
-                    coached training schedule
-                  </Link>
-                  .
-                </p>
-              </div>
-
-              <div className="pt-2 flex flex-wrap gap-3">
-                <button
-                  onClick={() => openRegister("Weekend Sunset Session — Calicut Beach (5:00 PM)")}
-                  className="px-6 py-3.5 bg-brand-orange hover:bg-brand-orange-hover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow-lg shadow-brand-orange/20"
-                >
-                  Join Next Sunday Jam →
-                </button>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6">
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900">
-                <Image
-                  src="/images/IMG_3116.PNG"
-                  alt="Team NARA movement community gathering during Sunday sunset jam at Calicut South Beach promenade"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
+        <div className="pt-8">
+          <a
+            href="https://chat.whatsapp.com/ChZdKzp4ksbJK3e2v8JXDl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-sm sm:text-base uppercase tracking-wider rounded-xl transition-all shadow-lg shadow-[#25D366]/20 active:scale-95"
+          >
+            <svg className="w-5 h-5 fill-white flex-shrink-0" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            Join WhatsApp Community
+          </a>
         </div>
-      </section>
-
-      {/* Community Code */}
-      <section className="py-20 sm:py-28 bg-[#181818] border-t border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
-              OUR ETHOS
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-black font-headline tracking-[0.06em] uppercase text-white">
-              THE TEAM NARA CODE
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {COMMUNITY_RULES.map((rule, idx) => (
-              <div
-                key={idx}
-                className="p-8 bg-[#141414] border border-white/10 rounded-2xl space-y-3 hover:border-brand-orange/40 transition"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-brand-orange font-mono font-black text-lg">
-                    0{idx + 1}.
-                  </span>
-                  <h3 className="text-lg sm:text-xl font-headline font-black uppercase text-white">
-                    {rule.title}
-                  </h3>
-                </div>
-                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed pl-7 sm:pl-8">
-                  {rule.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Member Testimonials */}
-      <section className="py-14 sm:py-28 bg-[#141414]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
-          <div className="text-center space-y-3">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">
-              VOICES FROM THE SPOT
-            </span>
-            <h2 className="text-2xl xs:text-3xl sm:text-5xl font-black font-headline tracking-[0.04em] sm:tracking-[0.06em] uppercase text-white">
-              WHAT MOVERS SAY
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
-            {MEMBER_VOICES.map((m, idx) => (
-              <div
-                key={idx}
-                className="bg-[#1C1C1C] border border-white/10 rounded-2xl p-5 sm:p-8 space-y-4 flex flex-col justify-between"
-              >
-                <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed italic">
-                  &ldquo;{m.text}&rdquo;
-                </p>
-                <div className="border-t border-white/10 pt-4">
-                  <h3 className="font-headline uppercase font-bold text-white text-sm sm:text-base">
-                    {m.name}
-                  </h3>
-                  <p className="text-xs font-mono text-brand-orange">
-                    {m.role}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Social connection banner */}
-          <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-orange/20 via-[#1C1C1C] to-brand-orange/20 border border-brand-orange/30 flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6">
-            <div className="space-y-1 text-center sm:text-left">
-              <h3 className="text-xl sm:text-2xl font-headline font-black uppercase text-white">
-                Follow Team NARA on Instagram
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-300">
-                Catch daily training clips, session announcements, and jam location pins in Kozhikode.
-              </p>
-            </div>
-            <a
-              href="https://instagram.com/teamnara.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-hover text-white rounded-xl text-xs font-mono font-bold uppercase tracking-wider transition shadow-lg shadow-brand-orange/25 active:scale-98"
-            >
-              <Instagram className="w-4 h-4" />
-              <span>@teamnara.in</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }

@@ -39,7 +39,7 @@ Flips are a part of the movement world, but Parkour isn't built around flips.
 
 As you progress, you can explore more dynamic and acrobatic movements. This is where Freerunning comes into the picture — taking the foundation of Parkour and adding more creativity, style, flow and acrobatics such as flips, spins and twists.
 
-So if you're joining NARA expecting to learn a backflip on your first day, that's probably not where we'll start. 😄
+So if you're joining NARA expecting to learn a backflip on your first day, that's probably not where we'll start.
 
 We'll first build the strength, technique, control and confidence that allow you to eventually perform those movements properly.
 

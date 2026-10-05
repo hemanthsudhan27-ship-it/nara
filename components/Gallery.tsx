@@ -5,37 +5,44 @@ import { Instagram } from "lucide-react";
 
 // 8 real NARA images from /public/gallery/
 const GALLERY_IMAGES = [
+  // 3 Dadu images
   {
-    src: "/gallery/IMG_2899.webp",
-    alt: "Team NARA athletes training together on Calicut South Beach — parkour morning session",
+    src: "/gallery/IMG_2986.webp",
+    alt: "Coach Dadu dynamic promenade stride in Calicut",
   },
   {
-    src: "/gallery/IMG_2914.webp",
-    alt: "NARA traceur executing a precision jump on the Kozhikode coastline",
+    src: "/gallery/IMG_2268.webp",
+    alt: "Coach Dadu sunrise balance and flow sequence",
   },
   {
-    src: "/gallery/IMG_2984.webp",
-    alt: "NARA freerunner in mid-air during a sunset training session at Calicut beach",
+    src: "/gallery/IMG_2282.webp",
+    alt: "Coach Dadu sea wall precision leap at Calicut Beach",
+  },
+  // 3 Renjith images
+  {
+    src: "/coaches/renjith/IMG_2007.webp",
+    alt: "Coach Renjith vaulting over obstacle in Calicut",
   },
   {
-    src: "/gallery/IMG_2993.webp",
-    alt: "Team NARA parkour athletes demonstrating movement flow on urban structures in Kerala",
+    src: "/coaches/renjith/IMG_9167.webp",
+    alt: "Coach Renjith sunset coastal backflip at Calicut Beach",
   },
   {
-    src: "/gallery/IMG_3038.webp",
-    alt: "High-action parkour move by NARA athlete — explosive leap over obstacle on Malabar coast",
+    src: "/coaches/renjith/IMG_1956.webp",
+    alt: "Coach Renjith rail precision jump",
+  },
+  // 3 Nithin images
+  {
+    src: "/coaches/nithin/IMG_8202.JPG.webp",
+    alt: "Coach Nithin aerial urban gap leap",
   },
   {
-    src: "/gallery/IMG_3041.webp",
-    alt: "NARA freerunning squad during a community jam session at South Beach Calicut",
+    src: "/coaches/nithin/IMG_5413.JPG.webp",
+    alt: "Coach Nithin curved wall climb-up",
   },
   {
-    src: "/gallery/IMG_3058.webp",
-    alt: "Team NARA conditioning drill on the coastal promenade — morning parkour training Kerala",
-  },
-  {
-    src: "/gallery/IMG_3093.webp",
-    alt: "NARA athlete clearing a wall run — urban parkour Kozhikode streetscape",
+    src: "/coaches/nithin/IMG_2483.JPG.webp",
+    alt: "Coach Nithin rooftop cat pass",
   },
 ];
 
@@ -123,7 +130,7 @@ export default function Gallery() {
             </div>
           ))}
 
-          {/* Tile 9 - Instagram CTA */}
+          {/* Tile 10 - Instagram CTA */}
           <a
             href="https://www.instagram.com/teamnara.in"
             target="_blank"

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Instagram, MapPin, Mail, ArrowUp, Phone } from "lucide-react";
 
-const WHATSAPP_COMMUNITY_LINK = "https://chat.whatsapp.com/teamnara"; // Replace with real invite link
+const WHATSAPP_COMMUNITY_LINK = "https://chat.whatsapp.com/ChZdKzp4ksbJK3e2v8JXDl";
 
 const FOOTER_NAV = [
   { label: "Sessions", href: "/#sessions" },

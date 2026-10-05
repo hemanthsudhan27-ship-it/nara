@@ -332,13 +332,12 @@ export default function CoachesClient() {
             {/* Right: Clean Profile & Batch 1: Wandru Details */}
             <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
               <div className="space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-mono font-bold uppercase tracking-wider">
-                  <Flame className="w-3 h-3" />
-                  <span>Batch 1 &bull; Wandru</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-mono font-bold uppercase tracking-wider">
+                  <span>Freerunning &bull; Head Coach</span>
                 </div>
 
                 <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
-                  WANDRU <span className="text-brand-orange">(RENJITH)</span>
+                  RENJITH <span className="text-brand-orange">WANDRU</span>
                 </h2>
                 <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-400">
                   Head Coach &bull; Freerunning &amp; Movement Specialist
@@ -349,45 +348,52 @@ export default function CoachesClient() {
                 Training Parkour since around 2016–17, Ranjith comes from a Karate and martial arts background and has been coaching for several years. His strength lies in Freerunning, with a strong focus on flips, tricks and creative movement. He has won multiple national-level titles and is deeply involved in India’s Parkour community, regularly participating in events and staying connected with practitioners across the country.
               </p>
 
-              {/* Clean Batch Card: Wandru */}
+              {/* Clean Specialization Card */}
               <div className="p-5 sm:p-6 rounded-2xl bg-[#111111] border border-white/10 space-y-4">
                 <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
                   <div>
                     <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400 block">
-                      Lead Batch
+                      Specialization
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-black font-headline tracking-wide uppercase text-brand-orange">
-                      BATCH 1: WANDRU
+                    <h3 className="text-xl sm:text-2xl font-black font-headline tracking-wide uppercase text-white">
+                      FREERUNNING &bull; TRICKS
                     </h3>
                   </div>
-                  <span className="text-xs font-mono uppercase px-2.5 py-1 rounded bg-white/5 border border-white/10 text-neutral-300">
-                    Active
+                  <span className="text-xs font-mono uppercase px-2.5 py-1 rounded bg-brand-orange/10 border border-brand-orange/30 text-brand-orange font-bold">
+                    National Champion
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-neutral-300 font-mono">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" />
-                    <span>Mon, Wed &amp; Fri &bull; 6:00 – 7:30 AM</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" />
-                    <span>South Beach &amp; Promenade</span>
-                  </div>
+                <div className="flex flex-wrap gap-2 text-xs font-mono text-neutral-300">
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    Freerunning
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    Flips & Tricks
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    Creative Movement
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">
+                    National Titles
+                  </span>
                 </div>
 
-                <div className="pt-2">
+                <div className="pt-2 flex flex-col sm:flex-row gap-3">
                   <button
-                    onClick={() =>
-                      openRegister(
-                        "Batch 1: Wandru (Outdoor Parkour & Freerunning) — Mon, Wed & Fri (6:00 AM – 7:30 AM)"
-                      )
-                    }
-                    className="w-full py-3 px-5 bg-brand-orange hover:bg-brand-orange-hover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center justify-center gap-2 active:scale-98 shadow-lg shadow-brand-orange/20"
+                    onClick={() => openRegister("Training with Team NARA Coaches")}
+                    className="flex-1 py-3 px-5 bg-white hover:bg-neutral-200 text-black font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center justify-center gap-2 active:scale-98"
                   >
-                    <span>Join Batch 1: Wandru</span>
+                    <span>Train with Team NARA</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
+
+                  <Link
+                    href="/contact"
+                    className="px-5 py-3 rounded-xl border border-white/10 text-xs font-mono uppercase tracking-wider text-neutral-300 hover:text-white hover:bg-white/5 transition text-center"
+                  >
+                    Inquire
+                  </Link>
                 </div>
               </div>
             </div>
@@ -539,14 +545,10 @@ export default function CoachesClient() {
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={() =>
-                openRegister(
-                  "Batch 1: Wandru (Outdoor Parkour & Freerunning) — Mon, Wed & Fri (6:00 AM – 7:30 AM)"
-                )
-              }
+              onClick={() => openRegister("Training with Team NARA Coaches")}
               className="w-full sm:w-auto px-8 py-3.5 bg-brand-orange hover:bg-brand-orange-hover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow-lg shadow-brand-orange/20 active:scale-98"
             >
-              Join Batch 1: Wandru
+              Train with Team NARA
             </button>
           </div>
         </div>

@@ -104,7 +104,7 @@ export default function RegisterModal({
       if (isNaN(n) || n < 12 || n > 60) return "Age must be between 12 and 60.";
     }
     if (name === "upiReference") {
-      if (!value.trim()) return "UPI Transaction ID is required.";
+      // Optional field now
     }
     if (name === "bankAccountName") {
       if (!value.trim()) return "Bank Account Name is required.";
@@ -532,12 +532,11 @@ export default function RegisterModal({
               <div className="space-y-4 mt-4">
                 <div>
                   <label htmlFor="upiReference" className="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">
-                    UPI Transaction ID / UTR Number <span className="text-brand-orange">*</span>
+                    UPI Transaction ID / UTR Number <span className="text-neutral-500 font-normal normal-case">(Optional)</span>
                   </label>
                   <input
                     id="upiReference"
                     type="text"
-                    required
                     placeholder="e.g. 423589123456"
                     value={formData.upiReference || ""}
                     onChange={(e) => handleFieldChange("upiReference", e.target.value)}

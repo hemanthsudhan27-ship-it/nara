@@ -4,12 +4,12 @@ import CoachesClient from "@/components/CoachesClient";
 export const metadata: Metadata = {
   title: "Meet Our Coaches | Coach Wandru, Coach Nithin & Coach Dadu | Team NARA",
   description:
-    "Meet Team NARA coaches: Coach Wandru (Renjith), Coach Nithin Tom, and Coach Dadu (Sarathnad). Experienced movement pioneers with over 8 years of coaching in Calicut, Kerala.",
+    "Meet Team NARA coaches: Coach Wandru (Renjith), Coach Nithin, and Coach Dadu (Sarathnad). Experienced movement pioneers with over 8 years of coaching in Calicut, Kerala.",
   keywords: [
     "Team NARA coaches",
     "Parkour coach Calicut",
     "Coach Renjith Wandru",
-    "Coach Nithin Tom",
+    "Coach Nithin",
     "Coach Dadu Sarathnad",
     "Origins Gym Canada coach",
     "Batch 1 Wandru Calicut",
@@ -23,9 +23,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Meet the Coaches | Team NARA Calicut Parkour",
     description:
-      "Train with Coach Wandru (Renjith), Coach Nithin Tom, and Coach Dadu (Sarathnad). Progressive outdoor parkour, pure speed mechanics, and creative freerunning in Calicut.",
+      "Train with Coach Wandru (Renjith), Coach Nithin, and Coach Dadu (Sarathnad). Progressive outdoor parkour, pure speed mechanics, and creative freerunning in Calicut.",
     url: "https://teamnara.in/coaches",
     images: [
+      {
+        url: "/coaches/renjith/wandru.webp",
+        width: 896,
+        height: 1280,
+        alt: "Coach Wandru (Renjith) Head Coach Team NARA",
+      },
+      {
+        url: "/coaches/nithin/nithin.webp",
+        width: 1200,
+        height: 1600,
+        alt: "Coach Nithin Senior Coach Team NARA",
+      },
       {
         url: "/coaches/renjith/IMG_9167.webp",
         width: 1200,
@@ -90,15 +102,15 @@ const jsonLdCoaches = {
       jobTitle: "Head Coach (Lead Trainer, Batch 1: Wandru)",
       description:
         "Training Parkour since 2016–17 with a Karate and martial arts background. Multiple national-level title winner specializing in Freerunning, flips, tricks, and creative movement.",
-      image: "https://teamnara.in/coaches/renjith/IMG_2007.webp",
+      image: "https://teamnara.in/coaches/renjith/wandru.webp",
     },
     {
       "@type": "Person",
-      name: "Coach Nithin Tom",
+      name: "Coach Nithin",
       jobTitle: "Senior Coach & International Parkour Athlete",
       description:
         "Training Parkour since 2017 with a Track & Field background. Former coach at Origins Gym in Canada, international speed event winner, and one of India’s finest Parkour athletes.",
-      image: "https://teamnara.in/coaches/nithin/IMG_8202.JPG.webp",
+      image: "https://teamnara.in/coaches/nithin/nithin.webp",
     },
     {
       "@type": "Person",

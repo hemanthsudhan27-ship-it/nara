@@ -22,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
       images: [
+        `${baseUrl}/coaches/renjith/wandru.webp`,
+        `${baseUrl}/coaches/nithin/nithin.webp`,
         `${baseUrl}/coaches/renjith/IMG_2007.webp`,
         `${baseUrl}/coaches/renjith/IMG_9167.webp`,
         `${baseUrl}/coaches/nithin/IMG_8202.JPG.webp`,

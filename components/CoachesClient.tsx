@@ -23,6 +23,11 @@ interface PhotoItem {
 
 const RENJITH_PHOTOS: PhotoItem[] = [
   {
+    src: "/coaches/renjith/wandru.webp",
+    alt: "Coach Wandru (Renjith) Head Coach Team NARA",
+    label: "Coach Wandru",
+  },
+  {
     src: "/coaches/renjith/IMG_2007.webp",
     alt: "Coach Renjith vaulting over obstacle in Calicut",
     label: "Vault Dynamics",
@@ -45,6 +50,11 @@ const RENJITH_PHOTOS: PhotoItem[] = [
 ];
 
 const NITHIN_PHOTOS: PhotoItem[] = [
+  {
+    src: "/coaches/nithin/nithin.webp",
+    alt: "Coach Nithin Senior Coach Team NARA",
+    label: "Coach Nithin",
+  },
   {
     src: "/coaches/nithin/IMG_8202.JPG.webp",
     alt: "Coach Nithin aerial urban gap leap",
@@ -307,7 +317,7 @@ export default function CoachesClient() {
               </div>
 
               {/* Thumbnails row to switch photos cleanly */}
-              <div className="grid grid-cols-4 gap-2.5">
+              <div className="grid grid-cols-5 gap-2.5">
                 {RENJITH_PHOTOS.map((photo, idx) => (
                   <button
                     key={photo.src}
@@ -413,7 +423,7 @@ export default function CoachesClient() {
                 </div>
 
                 <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black font-headline tracking-[0.04em] uppercase text-white leading-none">
-                  NITHIN <span className="text-brand-orange">TOM</span>
+                  <span className="text-brand-orange">NITHIN</span>
                 </h2>
                 <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-400">
                   Senior Coach &bull; International Athlete
@@ -421,7 +431,7 @@ export default function CoachesClient() {
               </div>
 
               <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
-                Training Parkour since 2017, Nidhin comes from a Track &amp; Field background and has coached at Origins Gym in Canada. He has competed in multiple international competitions and won several Speed event titles. His focus is pure Parkour, and he is regarded as one of India’s finest Parkour athletes.
+                Training Parkour since 2017, Nithin comes from a Track &amp; Field background and has coached at Origins Gym in Canada. He has competed in multiple international competitions and won several Speed event titles. His focus is pure Parkour, and he is regarded as one of India’s finest Parkour athletes.
               </p>
 
               {/* Clean Discipline Card (No batch name) */}
@@ -505,7 +515,7 @@ export default function CoachesClient() {
               </div>
 
               {/* Thumbnails row to switch photos cleanly */}
-              <div className="grid grid-cols-5 gap-2.5">
+              <div className="grid grid-cols-6 gap-2 sm:gap-2.5">
                 {NITHIN_PHOTOS.map((photo, idx) => (
                   <button
                     key={photo.src}
@@ -622,7 +632,7 @@ export default function CoachesClient() {
               {lightbox.coach === "renjith"
                 ? "Wandru (Renjith)"
                 : lightbox.coach === "nithin"
-                ? "Nithin Tom"
+                ? "Nithin"
                 : "Dadu (Sarathnad)"}
             </p>
           </div>

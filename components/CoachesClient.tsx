@@ -2,16 +2,11 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
-  ArrowRight,
   Maximize2,
   X,
   ChevronLeft,
   ChevronRight,
-  Clock,
-  MapPin,
-  Flame,
 } from "lucide-react";
 import { useRegister } from "@/context/RegisterContext";
 
@@ -126,8 +121,8 @@ export default function CoachesClient() {
     lightbox?.coach === "renjith"
       ? RENJITH_PHOTOS
       : lightbox?.coach === "nithin"
-      ? NITHIN_PHOTOS
-      : DADU_PHOTOS;
+        ? NITHIN_PHOTOS
+        : DADU_PHOTOS;
   const currentPhoto = lightbox !== null ? currentPhotos[lightbox.idx] : null;
 
   return (
@@ -194,11 +189,10 @@ export default function CoachesClient() {
                   <button
                     key={photo.src}
                     onClick={() => setDaduPhotoIdx(idx)}
-                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${
-                      daduPhotoIdx === idx
-                        ? "border-brand-orange ring-2 ring-brand-orange/30 scale-95"
-                        : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
-                    }`}
+                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${daduPhotoIdx === idx
+                      ? "border-brand-orange ring-2 ring-brand-orange/30 scale-95"
+                      : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
+                      }`}
                   >
                     <Image
                       src={photo.src}
@@ -260,23 +254,6 @@ export default function CoachesClient() {
                     8+ Years Coaching
                   </span>
                 </div>
-
-                <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                  <button
-                    onClick={() => openRegister("Training with Team NARA Coaches")}
-                    className="flex-1 py-3 px-5 bg-white hover:bg-neutral-200 text-black font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center justify-center gap-2 active:scale-98"
-                  >
-                    <span>Train with Team NARA</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-
-                  <Link
-                    href="/contact"
-                    className="px-5 py-3 rounded-xl border border-white/10 text-xs font-mono uppercase tracking-wider text-neutral-300 hover:text-white hover:bg-white/5 transition text-center"
-                  >
-                    Inquire
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
@@ -322,11 +299,10 @@ export default function CoachesClient() {
                   <button
                     key={photo.src}
                     onClick={() => setRenjithPhotoIdx(idx)}
-                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${
-                      renjithPhotoIdx === idx
-                        ? "border-brand-orange ring-2 ring-brand-orange/30 scale-95"
-                        : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
-                    }`}
+                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${renjithPhotoIdx === idx
+                      ? "border-brand-orange ring-2 ring-brand-orange/30 scale-95"
+                      : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
+                      }`}
                   >
                     <Image
                       src={photo.src}
@@ -388,23 +364,6 @@ export default function CoachesClient() {
                     National Titles
                   </span>
                 </div>
-
-                <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                  <button
-                    onClick={() => openRegister("Training with Team NARA Coaches")}
-                    className="flex-1 py-3 px-5 bg-white hover:bg-neutral-200 text-black font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center justify-center gap-2 active:scale-98"
-                  >
-                    <span>Train with Team NARA</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-
-                  <Link
-                    href="/contact"
-                    className="px-5 py-3 rounded-xl border border-white/10 text-xs font-mono uppercase tracking-wider text-neutral-300 hover:text-white hover:bg-white/5 transition text-center"
-                  >
-                    Inquire
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
@@ -464,23 +423,6 @@ export default function CoachesClient() {
                     Origins Gym (Canada)
                   </span>
                 </div>
-
-                <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                  <button
-                    onClick={() => openRegister()}
-                    className="flex-1 py-3 px-5 bg-white hover:bg-neutral-200 text-black font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center justify-center gap-2 active:scale-98"
-                  >
-                    <span>Train with Team NARA</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-
-                  <Link
-                    href="/contact"
-                    className="px-5 py-3 rounded-xl border border-white/10 text-xs font-mono uppercase tracking-wider text-neutral-300 hover:text-white hover:bg-white/5 transition text-center"
-                  >
-                    Inquire
-                  </Link>
-                </div>
               </div>
             </div>
 
@@ -520,11 +462,10 @@ export default function CoachesClient() {
                   <button
                     key={photo.src}
                     onClick={() => setNithinPhotoIdx(idx)}
-                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${
-                      nithinPhotoIdx === idx
-                        ? "border-white ring-2 ring-white/30 scale-95"
-                        : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
-                    }`}
+                    className={`relative aspect-square rounded-xl overflow-hidden border transition-all ${nithinPhotoIdx === idx
+                      ? "border-white ring-2 ring-white/30 scale-95"
+                      : "border-white/10 opacity-50 hover:opacity-100 hover:border-white/30"
+                      }`}
                   >
                     <Image
                       src={photo.src}
@@ -632,8 +573,8 @@ export default function CoachesClient() {
               {lightbox.coach === "renjith"
                 ? "Wandru (Renjith)"
                 : lightbox.coach === "nithin"
-                ? "Nithin"
-                : "Dadu (Sarathnad)"}
+                  ? "Nithin"
+                  : "Dadu (Sarathnad)"}
             </p>
           </div>
         </div>

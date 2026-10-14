@@ -355,7 +355,7 @@ export default function CoachesClient() {
               </div>
 
               <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
-                Training Parkour since around 2016–17, Ranjith comes from a Karate and martial arts background and has been coaching for several years. His strength lies in Freerunning, with a strong focus on flips, tricks and creative movement. He has won multiple national-level titles and is deeply involved in India’s Parkour community, regularly participating in events and staying connected with practitioners across the country.
+                Training Parkour since around 2016–17, Renjith comes from a Karate and martial arts background and has been coaching for several years. His strength lies in Freerunning, with a strong focus on flips, tricks and creative movement. He has won multiple national-level titles and is deeply involved in India’s Parkour community, regularly participating in events and staying connected with practitioners across the country.
               </p>
 
               {/* Clean Specialization Card */}

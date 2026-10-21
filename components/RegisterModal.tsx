@@ -549,7 +549,7 @@ export default function RegisterModal({
                   </span>
                 </div>
                 <p className="text-xs text-neutral-200 leading-relaxed">
-                  <strong>Please upload / send the screenshot of the payment to WhatsApp</strong> (+91 85939 12936). When you submit this form, WhatsApp will open automatically with your trial details and Bank Account Name pre-filled. Simply attach your payment screenshot directly in the WhatsApp chat.
+                  <strong>Please upload / send the screenshot of the payment to WhatsApp</strong>. When you submit this form, WhatsApp will open automatically with your trial details and Bank Account Name pre-filled. Simply attach your payment screenshot directly in the WhatsApp chat.
                 </p>
               </div>
 

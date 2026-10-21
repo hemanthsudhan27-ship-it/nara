@@ -111,9 +111,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brand-orange flex-shrink-0" />
-                <a href="tel:+918593912936" className="hover:text-white transition">
-                  +91 85939 12936
-                </a>
+                <span>Contact via WhatsApp</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-orange flex-shrink-0" />

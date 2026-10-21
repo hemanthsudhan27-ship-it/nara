@@ -592,7 +592,7 @@ export default function RegisterModal({
 
               <button
                 type="submit"
-                disabled={!riskAgreed || isSubmitting || !formData.upiReference?.trim() || !formData.bankAccountName?.trim()}
+                disabled={!riskAgreed || isSubmitting || !formData.bankAccountName?.trim()}
                 className="w-full py-3.5 px-4 rounded-xl bg-brand-orange hover:bg-brand-orange-hover disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold text-sm tracking-wide transition flex items-center justify-center gap-2 shadow-lg shadow-brand-orange/20 mt-4"
               >
                 {isSubmitting ? (

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { X, CheckCircle2, Calendar, User, Phone, Mail, AlertTriangle, Hash, ShieldCheck, Check, Copy, ZoomIn } from "lucide-react";
+import { X, CheckCircle2, User, Phone, Mail, AlertTriangle, Hash, ShieldCheck, Check, Copy, ZoomIn } from "lucide-react";
 import confetti from "canvas-confetti";
 import Image from "next/image";
 
@@ -11,17 +11,11 @@ interface RegisterModalProps {
   defaultBatch?: string;
 }
 
-const BATCH_OPTIONS = [
-  "Batch 1: Wandru (Outdoor Parkour & Freerunning) — Mon, Wed & Fri (6:00 AM – 7:30 AM)",
-  "Outdoor Parkour & Freerunning — Mon, Wed & Fri (6:00 AM – 7:30 AM)",
-];
-
 interface FormData {
   fullName: string;
   phone: string;
   email: string;
   age: string;
-  sessionBatch: string;
   message: string;
   upiReference?: string;
   bankAccountName?: string;
@@ -30,7 +24,6 @@ interface FormData {
 export default function RegisterModal({
   isOpen,
   onClose,
-  defaultBatch,
 }: RegisterModalProps) {
   const [step, setStep] = useState<1 | 2>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -42,7 +35,6 @@ export default function RegisterModal({
     phone: "",
     email: "",
     age: "",
-    sessionBatch: defaultBatch || BATCH_OPTIONS[0],
     message: "",
   });
   const [riskAgreed, setRiskAgreed] = useState(false);
@@ -51,12 +43,6 @@ export default function RegisterModal({
   const [closeGuard, setCloseGuard] = useState(false);
 
   const isDirty = !!(formData.fullName || formData.phone || formData.email || formData.age);
-
-  useEffect(() => {
-    if (defaultBatch) {
-      setFormData((prev) => ({ ...prev, sessionBatch: defaultBatch }));
-    }
-  }, [defaultBatch]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -149,7 +135,7 @@ export default function RegisterModal({
       `*Age:* ${formData.age.trim()}`,
       `*Phone:* ${formData.phone.trim()}`,
       `*Email:* ${formData.email.trim()}`,
-      `*Class:* ${formData.sessionBatch}`,
+      `*Class:* Outdoor Parkour & Freerunning`,
       `*Trial Session Fee:* ₹500`,
       `*Bank A/c Name:* ${formData.bankAccountName || ""}`,
       `*UPI UTR:* ${formData.upiReference || ""}`,
@@ -236,7 +222,6 @@ export default function RegisterModal({
       phone: "",
       email: "",
       age: "",
-      sessionBatch: BATCH_OPTIONS[0],
       message: "",
     });
     onClose();
@@ -415,26 +400,6 @@ export default function RegisterModal({
                 {fieldErrors.age && (
                   <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1">{fieldErrors.age}</p>
                 )}
-              </div>
-
-              {/* Session Batch */}
-              <div>
-                <label htmlFor="sessionBatch" className="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">
-                  Preferred Session / Batch <span className="text-brand-orange">*</span>
-                </label>
-                <div className="relative">
-                  <Calendar className="w-4 h-4 text-brand-orange absolute left-3.5 top-3 sm:top-3.5 pointer-events-none" />
-                  <select
-                    id="sessionBatch"
-                    value={formData.sessionBatch}
-                    onChange={(e) => setFormData({ ...formData, sessionBatch: e.target.value })}
-                    className="w-full pl-10 pr-8 py-2.5 sm:py-3 bg-[#1C1C1C] border border-white/10 rounded-xl text-white focus:outline-none focus:border-brand-orange transition text-base sm:text-sm appearance-none cursor-pointer"
-                  >
-                    {BATCH_OPTIONS.map((batch) => (
-                      <option key={batch} value={batch} className="bg-[#1C1C1C] text-white">{batch}</option>
-                    ))}
-                  </select>
-                </div>
               </div>
 
               {/* Optional notes */}
@@ -678,8 +643,8 @@ export default function RegisterModal({
                   <span className="text-white">{formData.phone}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-neutral-500">Batch:</span>
-                  <span className="text-white truncate max-w-[180px]">{formData.sessionBatch}</span>
+                  <span className="text-neutral-500">Class:</span>
+                  <span className="text-white truncate max-w-[200px]">Outdoor Parkour &amp; Freerunning</span>
                 </div>
                 <div className="flex justify-between border-t border-white/10 pt-1.5">
                   <span className="text-neutral-500">Risk Acknowledged:</span>

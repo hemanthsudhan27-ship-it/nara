@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Coach Nithin",
     "Coach Dadu Sarathnad",
     "Origins Gym Canada coach",
-    "Batch 1 Wandru Calicut",
+    "Outdoor Parkour Calicut",
     "Parkour trainers Kerala",
     "Freerunning mentors Kozhikode",
     "Speed parkour India",
@@ -99,7 +99,7 @@ const jsonLdCoaches = {
     {
       "@type": "Person",
       name: "Coach Wandru (Renjith)",
-      jobTitle: "Head Coach (Lead Trainer, Batch 1: Wandru)",
+      jobTitle: "Head Coach & Movement Specialist",
       description:
         "Training Parkour since 2016–17 with a Karate and martial arts background. Multiple national-level title winner specializing in Freerunning, flips, tricks, and creative movement.",
       image: "https://teamnara.in/coaches/renjith/wandru.webp",

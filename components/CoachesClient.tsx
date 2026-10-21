@@ -259,7 +259,7 @@ export default function CoachesClient() {
           </div>
         </section>
         {/* ════════════════════════════════════════════════════════════════
-            02 // COACH RENJITH (BATCH 1: WANDRU)
+            02 // COACH RENJITH (WANDRU)
         ════════════════════════════════════════════════════════════════ */}
         <section id="renjith" className="scroll-mt-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -315,7 +315,7 @@ export default function CoachesClient() {
               </div>
             </div>
 
-            {/* Right: Clean Profile & Batch 1: Wandru Details */}
+            {/* Right: Clean Profile Details */}
             <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
               <div className="space-y-2">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-mono font-bold uppercase tracking-wider">
